@@ -24,10 +24,10 @@ class MockAirlineConnector:
         clean_last = last_name.strip().capitalize() if last_name else "Garcia"
 
         if self.airline_code == AirlineCode.VOLARIS.value:
+            flight_1 = f"Y4 {ref}" if len(ref) <= 6 else "Y4 700"
             return {
                 "passengers": [
-                    {"id": "P1", "display_name": "Max Nino Ortega"},
-                    {"id": "P2", "display_name": "Karina Valencia"},
+                    {"id": "P1", "display_name": f"Karina {clean_last}"},
                 ],
                 "payment_summary": {
                     "amount": 14287.00,
