@@ -24,9 +24,38 @@ class MockAirlineConnector:
         clean_last = last_name.strip().capitalize() if last_name else "Garcia"
 
         if self.airline_code == AirlineCode.VOLARIS.value:
+            if ref in ("XY895L", "XY895"):
+                p1_name = f"Jonathon {clean_last}" if clean_last != "Garcia" else "Jonathon Martinez"
+                return {
+                    "passengers": [
+                        {"id": "P1", "display_name": p1_name},
+                        {"id": "P2", "display_name": "Brenda Montoya"},
+                    ],
+                    "payment_summary": {
+                        "amount": 3850.00,
+                        "currency": "MXN",
+                        "method": "Tarjeta",
+                        "status": "PAID",
+                    },
+                    "segments": [
+                        {
+                            "flight_number": "Y4 895",
+                            "departure_airport": "TIJ",
+                            "arrival_airport": "MEX",
+                            "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
+                            "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
+                            "operational_status": "SCHEDULED",
+                            "gate": "A14",
+                            "terminal": "T1",
+                            "seat": "Sin asignar",
+                            "boarding_group": "Grupo B",
+                        }
+                    ],
+                }
+
             num = "".join(filter(str.isdigit, ref))
-            flight_1 = "Y4 700" if ref == "LCYD6C" else (f"Y4 {num}" if num else f"Y4 {ref[:6]}")
-            passenger_name = f"Karina {clean_last}" if ref == "LCYD6C" else f"Pasajero {clean_last}"
+            flight_1 = "Y4 700" if ref == "LCYD6C" else (f"Y4 {num}" if num else f"Y4 895")
+            passenger_name = f"Karina {clean_last}" if ref == "LCYD6C" else f"Jonathon {clean_last}"
             return {
                 "passengers": [
                     {"id": "P1", "display_name": passenger_name},
@@ -40,12 +69,12 @@ class MockAirlineConnector:
                 "segments": [
                     {
                         "flight_number": flight_1,
-                        "departure_airport": "MEX",
-                        "arrival_airport": "ORD" if ref == "LCYD6C" else "TIJ",
-                        "scheduled_departure": datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
+                        "departure_airport": "TIJ" if ref != "LCYD6C" else "MEX",
+                        "arrival_airport": "MEX" if ref != "LCYD6C" else "ORD",
+                        "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC) if ref != "LCYD6C" else datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
+                        "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC) if ref != "LCYD6C" else datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
                         "operational_status": "SCHEDULED",
-                        "gate": "A12",
+                        "gate": "A14",
                         "terminal": "T1",
                         "seat": "Sin asignar",
                         "boarding_group": "Grupo B",

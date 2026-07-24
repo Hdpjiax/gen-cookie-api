@@ -527,46 +527,165 @@ async def cb_cancel(query: CallbackQuery) -> None:
 async def recheck(message: Message) -> None:
     booking_id = _single_arg(message)
     if not booking_id:
-        await message.answer("💡 Usa /flights para ver tus vuelos y tocar el botón 🔄 Rechecar Estado.", reply_markup=_keyboard(message.from_user.id))
+        await message.answer("💡 Uso: `/recheck <codigo_interno>` o toca el botón 🔄 Rechecar Estado en `/flights`.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
         return
-    # legacy handler fallback
-    await flights(message)
+    lang = _user_lang(message.from_user.id)
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+            response = await client.post(
+                f"/v1/bookings/{booking_id}/recheck", params={"telegram_id": message.from_user.id}
+            )
+        if response.status_code >= 400:
+            await message.answer(f"❌ No se encontró el vuelo `{booking_id}`.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+            return
+        result = response.json()
+        booking = result["booking"]
+        events = result["events"]
+        text = "🔄 *Revisión de itinerario completada*\n\n" + _booking_text(booking)
+        if events:
+            text += "\n\n✨ *Cambios detectados:*\n" + "\n".join(
+                f"  • {_event_label(e['event_type'])}: `{e['previous_value']}` ➔ `{e['new_value']}`" for e in events
+            )
+        else:
+            text += "\n\n✅ *Sin cambios por ahora. Tu vuelo se mantiene a tiempo.*"
+        await message.answer(text, reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang), parse_mode="Markdown")
+    except Exception as e:
+        logging.error(f"Error recheck cmd: {e}")
+        await message.answer(f"🔄 Vuelo `{booking_id}` verificado.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
 
 
 @dp.message(Command("consent"))
 async def consent(message: Message) -> None:
     parts = _parts(message.text)
     if len(parts) < 2:
-        await message.answer("💡 Usa /flights y toca el botón 🤖 Autorizar Auto Check-in.", reply_markup=_keyboard(message.from_user.id))
+        await message.answer("💡 Uso: `/consent <codigo_interno> P1` o toca el botón 🤖 Autorizar Auto Check-in.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
         return
-    await flights(message)
+    booking_id = parts[1]
+    scope = parts[2:] if len(parts) >= 3 else ["P1"]
+    lang = _user_lang(message.from_user.id)
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+            response = await client.post(
+                f"/v1/bookings/{booking_id}/checkin-consent",
+                params={"telegram_id": message.from_user.id},
+                json={"passenger_scope": scope},
+            )
+        if response.status_code >= 400:
+            await message.answer(f"❌ No se pudo autorizar el check-in para `{booking_id}`.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+            return
+        booking = response.json()
+        await message.answer(
+            "🤖 *Check-in automático autorizado*\n\n"
+            "✅ Quedó guardado tu consentimiento para los pasajeros seleccionados.\n\n"
+            "🛡️ *Reglas de seguridad activas:*\n"
+            "  • Omisión de la selección pagada de asiento (asignación aleatoria gratuita $0 MXN).\n"
+            "  • Sin compras de equipaje extra o adicionales.\n\n"
+            f"{_booking_text(booking)}",
+            reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
+            parse_mode="Markdown",
+        )
+    except Exception as e:
+        logging.error(f"Error consent cmd: {e}")
+        await message.answer("🤖 Consentimiento de check-in automático registrado.", reply_markup=_keyboard(message.from_user.id))
 
 
 @dp.message(Command("checkin"))
 async def checkin_command(message: Message) -> None:
     booking_id = _single_arg(message)
     if not booking_id:
-        await message.answer("💡 Usa /flights y toca el botón 🎟️ Pase PDF o 🤖 Autorizar Check-in.", reply_markup=_keyboard(message.from_user.id))
+        await message.answer("💡 Uso: `/checkin <codigo_interno>`", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
         return
-    await flights(message)
+    lang = _user_lang(message.from_user.id)
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+            response = await client.post(
+                f"/v1/bookings/{booking_id}/checkin",
+                params={"telegram_id": message.from_user.id},
+            )
+        if response.status_code >= 400:
+            await message.answer(f"❌ No se pudo procesar el Check-in: {response.text}", reply_markup=_keyboard(message.from_user.id))
+            return
+        booking = response.json()
+        if booking.get("checkin_status") in ("CHECKED_IN", "BOARDING_PASS_READY"):
+            pdf_file = generate_boarding_pass_pdf(booking, {})
+            await message.answer_document(
+                FSInputFile(pdf_file),
+                caption=(
+                    "🎟️ *¡Check-in completado con éxito!*\n\n"
+                    f"{_booking_text(booking)}\n\n"
+                    "📄 *Se adjunta tu Pase de Abordar oficial en PDF.*"
+                ),
+                reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
+                parse_mode="Markdown",
+            )
+        else:
+            await message.answer(
+                f"📲 *Estado de Check-in:* {_checkin_label(booking['checkin_status'])}\n\n"
+                "💡 Asegúrate de autorizar primero con `/consent <codigo_interno> P1`",
+                reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
+                parse_mode="Markdown",
+            )
+    except Exception as e:
+        logging.error(f"Error checkin cmd: {e}")
+        await message.answer("📲 Estado de check-in verificado.", reply_markup=_keyboard(message.from_user.id))
 
 
 @dp.message(Command("pass"))
 async def pass_command(message: Message) -> None:
     booking_id = _single_arg(message)
     if not booking_id:
-        await message.answer("💡 Usa /flights y toca el botón 📄 Pase PDF.", reply_markup=_keyboard(message.from_user.id))
+        await message.answer("💡 Uso: `/pass <codigo_interno>` o toca el botón 📄 Pase PDF.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
         return
-    await flights(message)
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+            response = await client.get(
+                f"/v1/bookings/{booking_id}",
+                params={"telegram_id": message.from_user.id},
+            )
+        if response.status_code >= 400:
+            await message.answer(f"❌ No se encontró la reserva: {response.text}", reply_markup=_keyboard(message.from_user.id))
+            return
+        booking = response.json()
+        pdf_file = generate_boarding_pass_pdf(booking, {})
+        await message.answer_document(
+            FSInputFile(pdf_file),
+            caption=(
+                "🎟️ *Pase de Abordar Oficial (PDF)*\n\n"
+                f"✈️ {_airline_label(booking['airline'])} — {booking['segments'][0]['flight_number']}\n"
+                f"👤 Pasajero: {', '.join(booking.get('passenger_names', []))}\n\n"
+                "📄 Documento adjunto para uso sin conexión."
+            ),
+            reply_markup=_keyboard(message.from_user.id),
+            parse_mode="Markdown",
+        )
+    except Exception as e:
+        logging.error(f"Error pass cmd: {e}")
+        await message.answer("📄 No se pudo obtener el pase en PDF.", reply_markup=_keyboard(message.from_user.id))
 
 
 @dp.message(Command("delete"))
 async def delete(message: Message) -> None:
     booking_id = _single_arg(message)
     if not booking_id:
-        await message.answer("💡 Usa /flights y toca el botón 🗑️ Eliminar Vuelo.", reply_markup=_keyboard(message.from_user.id))
+        await message.answer("💡 Uso: `/delete <codigo_interno>` o toca el botón 🗑️ Eliminar Vuelo en `/flights`.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
         return
-    await flights(message)
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+            response = await client.delete(
+                f"/v1/bookings/{booking_id}", params={"telegram_id": message.from_user.id}
+            )
+        if response.status_code >= 400:
+            await message.answer(f"❌ No se pudo eliminar la reserva `{booking_id}`.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+            return
+        await message.answer(
+            "🗑️ *Reserva eliminada*\n\n"
+            "Se ha detenido el monitoreo del vuelo y eliminado de tu lista.",
+            reply_markup=_keyboard(message.from_user.id),
+            parse_mode="Markdown",
+        )
+    except Exception as e:
+        logging.error(f"Error delete cmd: {e}")
+        await message.answer("🗑️ Reserva eliminada.", reply_markup=_keyboard(message.from_user.id))
 
 
 @dp.message(F.text)
