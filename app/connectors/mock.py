@@ -23,7 +23,7 @@ class MockAirlineConnector:
         ref = booking_ref.upper()
         clean_last = last_name.strip().capitalize() if last_name else "Garcia"
 
-        if self.airline_code == AirlineCode.VOLARIS.value and ref == "LCYD6C":
+        if self.airline_code == AirlineCode.VOLARIS.value:
             return {
                 "passengers": [
                     {"id": "P1", "display_name": "Max Nino Ortega"},

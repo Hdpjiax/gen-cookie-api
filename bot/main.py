@@ -246,17 +246,56 @@ async def _create_booking(message: Message, airline: str, pnr: str, last_name: s
         "pnr": pnr,
         "last_name": last_name,
     }
-    async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
-        response = await client.post("/v1/bookings", json=payload)
-    if response.status_code >= 400:
-        await message.answer(
-            "❌ No pude agregar esa reserva.\n\n"
-            "Por favor revisa que el código y apellido estén correctos, y que elegiste la aerolínea correspondiente.",
-            reply_markup=_keyboard(message.from_user.id),
-        )
-        return
-    booking = response.json()
-    await message.answer(_booking_added_text(booking), reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+            response = await client.post("/v1/bookings", json=payload)
+        if response.status_code >= 400:
+            await message.answer(
+                "❌ No pude agregar esa reserva.\n\n"
+                "Por favor revisa que el código y apellido estén correctos, y que elegiste la aerolínea correspondiente.",
+                reply_markup=_keyboard(message.from_user.id),
+            )
+            return
+        booking = response.json()
+        await message.answer(_booking_added_text(booking), reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+    except Exception as e:
+        logging.error(f"Error HTTP en _create_booking ({settings.api_base_url}): {e}")
+        try:
+            from app.schemas import BookingCreate
+            from app.services.bookings import booking_service
+            booking_obj = await booking_service.create_booking(BookingCreate(**payload))
+            booking_dict = {
+                "id": str(booking_obj.id),
+                "airline": booking_obj.airline.value,
+                "passenger_names": booking_obj.passenger_names,
+                "segments": [
+                    {
+                        "flight_number": seg.flight_number,
+                        "departure_airport": seg.departure_airport,
+                        "arrival_airport": seg.arrival_airport,
+                        "scheduled_departure": seg.scheduled_departure.isoformat(),
+                        "operational_status": seg.operational_status,
+                        "terminal": seg.terminal,
+                        "gate": seg.gate,
+                        "seat": seg.seat,
+                    }
+                    for seg in booking_obj.segments
+                ],
+                "checkin_status": booking_obj.checkin_status.value,
+                "payment_summary": {
+                    "amount": booking_obj.payment_summary.amount,
+                    "currency": booking_obj.payment_summary.currency,
+                    "method": booking_obj.payment_summary.method,
+                } if booking_obj.payment_summary else None,
+            }
+            await message.answer(_booking_added_text(booking_dict), reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+        except Exception as inner_e:
+            logging.error(f"Error fallback en _create_booking: {inner_e}")
+            await message.answer(
+                "❌ Ocurrió un error al procesar la reserva.\n\n"
+                "Asegúrate de que la API esté iniciada y las variables de entorno configuradas.",
+                reply_markup=_keyboard(message.from_user.id),
+            )
 
 
 @dp.message(Command("flights"))
