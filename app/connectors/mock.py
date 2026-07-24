@@ -1,6 +1,33 @@
+import hashlib
 from datetime import UTC, datetime, timedelta
 
 from app.domain.models import AirlineCode
+
+AIRPORT_PAIRS = [
+    ("MEX", "CUN"),
+    ("TIJ", "MEX"),
+    ("MEX", "GDL"),
+    ("MTY", "CUN"),
+    ("CJS", "MEX"),
+    ("MEX", "ORD"),
+    ("MEX", "LAX"),
+    ("GDL", "TIJ"),
+    ("SFO", "MEX"),
+    ("CUN", "MTY"),
+    ("MEX", "IAH"),
+    ("MTY", "MEX"),
+]
+
+FIRST_NAMES = [
+    "Jonathon",
+    "Mariana",
+    "Carlos",
+    "Karina",
+    "Alejandro",
+    "Sofia",
+    "Mateo",
+    "Valentina",
+]
 
 
 class MockAirlineConnector:
@@ -23,245 +50,243 @@ class MockAirlineConnector:
         ref = booking_ref.upper()
         clean_last = last_name.strip().capitalize() if last_name else "Garcia"
 
-        if self.airline_code == AirlineCode.VOLARIS.value:
-            if ref in ("XY895L", "XY895"):
-                p1_name = f"Jonathon {clean_last}" if clean_last != "Garcia" else "Jonathon Martinez"
-                return {
-                    "passengers": [
-                        {"id": "P1", "display_name": p1_name},
-                        {"id": "P2", "display_name": "Brenda Montoya"},
-                    ],
-                    "payment_summary": {
-                        "amount": 3850.00,
-                        "currency": "MXN",
-                        "method": "Tarjeta",
-                        "status": "PAID",
-                    },
-                    "segments": [
-                        {
-                            "flight_number": "Y4 895",
-                            "departure_airport": "TIJ",
-                            "arrival_airport": "MEX",
-                            "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
-                            "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
-                            "operational_status": "SCHEDULED",
-                            "gate": "A14",
-                            "terminal": "T1",
-                            "seat": "Sin asignar",
-                            "boarding_group": "Grupo B",
-                        }
-                    ],
-                }
-
-            num = "".join(filter(str.isdigit, ref))
-            flight_1 = "Y4 700" if ref == "LCYD6C" else (f"Y4 {num}" if num else f"Y4 895")
-            passenger_name = f"Karina {clean_last}" if ref == "LCYD6C" else f"Jonathon {clean_last}"
-            return {
-                "passengers": [
-                    {"id": "P1", "display_name": passenger_name},
-                ],
-                "payment_summary": {
-                    "amount": 14287.00 if ref == "LCYD6C" else 3850.00,
-                    "currency": "MXN",
-                    "method": "Tarjeta",
-                    "status": "PAID",
-                },
-                "segments": [
-                    {
-                        "flight_number": flight_1,
-                        "departure_airport": "TIJ" if ref != "LCYD6C" else "MEX",
-                        "arrival_airport": "MEX" if ref != "LCYD6C" else "ORD",
-                        "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC) if ref != "LCYD6C" else datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC) if ref != "LCYD6C" else datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
-                        "operational_status": "SCHEDULED",
-                        "gate": "A14",
-                        "terminal": "T1",
-                        "seat": "Sin asignar",
-                        "boarding_group": "Grupo B",
-                    }
-                ],
-            }
-
-        if self.airline_code == AirlineCode.AEROMEXICO.value:
-            flight_1 = "AM 452" if "452" in ref else ("AM " + ref[2:] if ref.startswith("AM") and ref[2:].isdigit() else "AM 116")
-            flight_2 = "AM 453" if "452" in ref else "AM 115"
-            dep_1, arr_1 = ("MEX", "GDL") if "452" in ref or "GDL" in ref else ("CJS", "MEX")
-            dep_2, arr_2 = ("GDL", "MEX") if "452" in ref or "GDL" in ref else ("MEX", "CJS")
-            return {
-                "passengers": [
-                    {"id": "P1", "display_name": f"Mariana {clean_last}"}
-                ],
-                "payment_summary": {
-                    "amount": 5420.00,
-                    "currency": "MXN",
-                    "method": "Tarjeta (Visa)",
-                    "status": "PAID",
-                },
-                "segments": [
-                    {
-                        "flight_number": flight_1,
-                        "departure_airport": dep_1,
-                        "arrival_airport": arr_1,
-                        "scheduled_departure": datetime(2026, 7, 27, 9, 57, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 7, 27, 9, 57, tzinfo=UTC),
-                        "operational_status": "SCHEDULED",
-                        "gate": "24",
-                        "terminal": "T2",
-                        "seat": "Aleatorio (Sin selección previa)",
-                        "boarding_group": "Grupo 2",
-                    },
-                    {
-                        "flight_number": flight_2,
-                        "departure_airport": dep_2,
-                        "arrival_airport": arr_2,
-                        "scheduled_departure": datetime(2026, 7, 31, 10, 30, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 7, 31, 10, 30, tzinfo=UTC),
-                        "operational_status": "SCHEDULED",
-                        "gate": "62",
-                        "terminal": "T2",
-                        "seat": "Aleatorio (Sin selección previa)",
-                        "boarding_group": "Grupo 2",
-                    },
-                ],
-            }
-
-        if self.airline_code == AirlineCode.VIVA.value:
-            flight_1 = "VB 452" if "452" in ref else ("VB " + ref[2:] if ref.startswith("VB") and ref[2:].isdigit() else "VB 1124")
-            flight_2 = "VB 453" if "452" in ref else "VB 1125"
-            return {
-                "passengers": [
-                    {"id": "P1", "display_name": f"Carlos {clean_last}"}
-                ],
-                "payment_summary": {
-                    "amount": 2450.00,
-                    "currency": "MXN",
-                    "method": "Tarjeta (Mastercard)",
-                    "status": "PAID",
-                },
-                "segments": [
-                    {
-                        "flight_number": flight_1,
-                        "departure_airport": "MTY",
-                        "arrival_airport": "CUN",
-                        "scheduled_departure": datetime(2026, 8, 5, 14, 20, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 8, 5, 14, 20, tzinfo=UTC),
-                        "operational_status": "SCHEDULED",
-                        "gate": "A4",
-                        "terminal": "T1",
-                        "seat": "Aleatorio (Sin selección previa)",
-                        "boarding_group": "Grupo C",
-                    },
-                    {
-                        "flight_number": "VB 1125",
-                        "departure_airport": "CUN",
-                        "arrival_airport": "MTY",
-                        "scheduled_departure": datetime(2026, 8, 12, 17, 45, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 8, 12, 17, 45, tzinfo=UTC),
-                        "operational_status": "SCHEDULED",
-                        "gate": "B8",
-                        "terminal": "T2",
-                        "seat": "Aleatorio (Sin selección previa)",
-                        "boarding_group": "Grupo C",
-                    },
-                ],
-            }
-
-        if self.airline_code == AirlineCode.UNITED.value:
-            flight_1 = "UA 452" if "452" in ref else ("UA " + ref[2:] if ref.startswith("UA") and ref[2:].isdigit() else "UA 452")
-            return {
-                "passengers": [
-                    {"id": "P1", "display_name": f"Alex {clean_last}"}
-                ],
-                "payment_summary": {
-                    "amount": 6800.00,
-                    "currency": "MXN",
-                    "method": "Tarjeta (Amex)",
-                    "status": "PAID",
-                },
-                "segments": [
-                    {
-                        "flight_number": flight_1,
-                        "departure_airport": "MEX",
-                        "arrival_airport": "IAH",
-                        "scheduled_departure": datetime(2026, 8, 1, 15, 30, tzinfo=UTC),
-                        "estimated_departure": datetime(2026, 8, 1, 15, 30, tzinfo=UTC),
-                        "operational_status": "SCHEDULED",
-                        "gate": "E12",
-                        "terminal": "T1",
-                        "seat": "Aleatorio (Sin selección previa)",
-                        "boarding_group": "Group 3",
-                    }
-                ],
-            }
-
-        departure = datetime.now(UTC).replace(microsecond=0) + timedelta(days=2)
-        return {
-            "passengers": [{"id": "P1", "display_name": f"Pasajero {clean_last}"}],
-            "payment_summary": {
-                "amount": 3200.00,
-                "currency": "MXN",
-                "method": "Tarjeta",
-                "status": "PAID",
-            },
-            "segments": [
-                {
-                    "flight_number": "Y4 452",
-                    "departure_airport": "GDL",
-                    "arrival_airport": "TIJ",
-                    "scheduled_departure": departure,
-                    "estimated_departure": departure,
-                    "operational_status": "SCHEDULED",
-                    "gate": None,
-                    "terminal": "T1",
-                    "seat": "Aleatorio (Sin selección previa)",
-                    "boarding_group": None,
-                }
-            ],
-        }
+        return _build_dynamic_booking(self.airline_code, ref, clean_last)
 
     async def fetch_flight_status(self, booking_ref: str, last_name: str | None = None) -> dict[str, object]:
         self._recheck_count += 1
         booking = await self.retrieve_booking(booking_ref, last_name)
-        segments = booking["segments"]
-        if self._recheck_count > 1:
-            for segment in segments:
-                segment["estimated_departure"] = segment["scheduled_departure"] + timedelta(minutes=45)
-                segment["operational_status"] = "DELAYED"
-                segment["gate"] = "B12"
-        return {"segments": segments, "checkin_status": "CHECKIN_WINDOW_OPEN"}
+        segments = booking.get("segments", [])
+        if segments and self._recheck_count % 2 == 1:
+            segments[0]["gate"] = "Gate 15"
+        return {"booking": booking, "recheck_count": self._recheck_count}
 
     async def get_checkin_eligibility(self, booking_ref: str) -> dict[str, object]:
         return {
             "status": "CHECKIN_WINDOW_OPEN",
-            "eligible": True,
+            "window_opens_at": datetime.now(UTC) - timedelta(hours=2),
+            "window_closes_at": datetime.now(UTC) + timedelta(hours=24),
+            "eligible_passengers": ["P1", "P2"],
         }
 
     async def perform_checkin(
         self, booking_ref: str, passenger_ids: list[str], policy: dict[str, object]
     ) -> dict[str, object]:
-        if policy.get("seat_policy") not in ("skip_seat_selection", "free_only") or policy.get("never_purchase_extras") is not True:
-            return {"status": "ACTION_REQUIRED", "reason": "unsafe_policy"}
-        ref = booking_ref.upper()
+        skip_seat = policy.get("seat_policy") in ("skip_seat_selection", "free_only")
+        no_extras = policy.get("never_purchase_extras") is True
+
+        if not (skip_seat and no_extras):
+            return {
+                "success": False,
+                "status": "ACTION_REQUIRED",
+                "reason": "policy_violation_requires_free_seats_and_no_extras",
+            }
+
         return {
-            "status": "SUCCESS",
-            "checkin_status": "BOARDING_PASS_READY",
-            "assigned_seats": {"P1": "Aleatorio por la aerolínea (Paso de selección saltado)"},
+            "success": True,
+            "status": "BOARDING_PASS_READY",
+            "assigned_seats": {pid: "Aleatorio por la aerolínea (Paso de selección saltado)" for pid in passenger_ids},
             "boarding_passes": [
                 {
-                    "download_url": f"https://api.flights-mx.internal/passes/{ref}_boarding_pass.pdf",
-                    "expires_at": datetime.now(UTC) + timedelta(days=7),
+                    "passenger_id": pid,
+                    "download_url": f"https://official.airline.com/passes/{booking_ref[:8]}_boarding_pass.pdf",
+                    "expires_at": datetime.now(UTC) + timedelta(days=2),
                 }
+                for pid in passenger_ids
             ],
         }
 
     async def retrieve_boarding_passes(self, booking_ref: str) -> list[dict[str, object]]:
-        ref = booking_ref.upper()
         return [
             {
-                "download_url": f"https://api.flights-mx.internal/passes/{ref}_boarding_pass.pdf",
-                "expires_at": datetime.now(UTC) + timedelta(days=7),
+                "passenger_id": "P1",
+                "download_url": f"https://official.airline.com/passes/{booking_ref[:8]}_boarding_pass.pdf",
+                "expires_at": datetime.now(UTC) + timedelta(days=2),
             }
         ]
 
 
-CONNECTORS = {airline: MockAirlineConnector(airline) for airline in AirlineCode}
+def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict[str, object]:
+    hash_digest = hashlib.md5(f"{ref}:{clean_last}:{airline_code}".encode()).hexdigest()
+    seed = int(hash_digest[:8], 16)
+
+    # Specific override for Volaris XY895L screenshot
+    if ref in ("XY895L", "XY895") and airline_code == AirlineCode.VOLARIS.value:
+        p1 = f"Jonathon {clean_last}" if clean_last != "Garcia" else "Jonathon Martinez"
+        return {
+            "passengers": [
+                {"id": "P1", "display_name": p1},
+                {"id": "P2", "display_name": "Brenda Montoya"},
+            ],
+            "payment_summary": {"amount": 3850.00, "currency": "MXN", "method": "Tarjeta", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "Y4 895",
+                    "departure_airport": "TIJ",
+                    "arrival_airport": "MEX",
+                    "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
+                    "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
+                    "operational_status": "SCHEDULED",
+                    "gate": "A14",
+                    "terminal": "T1",
+                    "seat": "Sin asignar",
+                    "boarding_group": "Grupo B",
+                }
+            ],
+        }
+
+    # Specific override for Volaris LCYD6C unit test
+    if ref == "LCYD6C" and airline_code == AirlineCode.VOLARIS.value:
+        return {
+            "passengers": [
+                {"id": "P1", "display_name": "Max Nino Ortega"},
+                {"id": "P2", "display_name": f"Karina {clean_last}"},
+            ],
+            "payment_summary": {"amount": 14287.00, "currency": "MXN", "method": "Tarjeta", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "Y4 700",
+                    "departure_airport": "MEX",
+                    "arrival_airport": "ORD",
+                    "scheduled_departure": datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
+                    "estimated_departure": datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
+                    "operational_status": "SCHEDULED",
+                    "gate": "A12",
+                    "terminal": "T1",
+                    "seat": "Sin asignar",
+                    "boarding_group": "Grupo B",
+                }
+            ],
+        }
+
+    # Specific override for Aeromexico HUIITL unit test
+    if ref == "HUIITL" and airline_code == AirlineCode.AEROMEXICO.value:
+        now_utc = datetime.now(UTC)
+        return {
+            "passengers": [{"id": "P1", "display_name": f"Mariana {clean_last}"}],
+            "payment_summary": {"amount": 5420.00, "currency": "MXN", "method": "Tarjeta (Visa)", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "AM 116",
+                    "departure_airport": "CJS",
+                    "arrival_airport": "MEX",
+                    "scheduled_departure": now_utc + timedelta(hours=12),
+                    "estimated_departure": now_utc + timedelta(hours=12),
+                    "operational_status": "SCHEDULED",
+                    "gate": "24",
+                    "terminal": "T2",
+                    "seat": "Aleatorio (Sin selección previa)",
+                    "boarding_group": "Grupo 2",
+                },
+                {
+                    "flight_number": "AM 115",
+                    "departure_airport": "MEX",
+                    "arrival_airport": "CJS",
+                    "scheduled_departure": now_utc + timedelta(days=4),
+                    "estimated_departure": now_utc + timedelta(days=4),
+                    "operational_status": "SCHEDULED",
+                    "gate": "62",
+                    "terminal": "T2",
+                    "seat": "Aleatorio (Sin selección previa)",
+                    "boarding_group": "Grupo 2",
+                },
+            ],
+        }
+
+    # Specific override for Aeromexico AM452 unit test
+    if ref == "AM452" and airline_code == AirlineCode.AEROMEXICO.value:
+        now_utc = datetime.now(UTC)
+        return {
+            "passengers": [{"id": "P1", "display_name": f"Mariana {clean_last}"}],
+            "payment_summary": {"amount": 5420.00, "currency": "MXN", "method": "Tarjeta (Visa)", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "AM 452",
+                    "departure_airport": "MEX",
+                    "arrival_airport": "GDL",
+                    "scheduled_departure": now_utc + timedelta(hours=12),
+                    "estimated_departure": now_utc + timedelta(hours=12),
+                    "operational_status": "SCHEDULED",
+                    "gate": "24",
+                    "terminal": "T2",
+                    "seat": "Aleatorio (Sin selección previa)",
+                    "boarding_group": "Grupo 2",
+                }
+            ],
+        }
+
+    # Specific override for Viva VIV123 unit test
+    if ref == "VIV123" and airline_code == AirlineCode.VIVA.value:
+        return {
+            "passengers": [{"id": "P1", "display_name": f"Carlos {clean_last}"}],
+            "payment_summary": {"amount": 2450.00, "currency": "MXN", "method": "Tarjeta (Mastercard)", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "VB 1124",
+                    "departure_airport": "MTY",
+                    "arrival_airport": "CUN",
+                    "scheduled_departure": datetime(2026, 8, 5, 14, 20, tzinfo=UTC),
+                    "estimated_departure": datetime(2026, 8, 5, 14, 20, tzinfo=UTC),
+                    "operational_status": "SCHEDULED",
+                    "gate": "A4",
+                    "terminal": "T1",
+                    "seat": "Aleatorio (Sin selección previa)",
+                    "boarding_group": "Grupo C",
+                },
+                {
+                    "flight_number": "VB 1125",
+                    "departure_airport": "CUN",
+                    "arrival_airport": "MTY",
+                    "scheduled_departure": datetime(2026, 8, 12, 17, 45, tzinfo=UTC),
+                    "estimated_departure": datetime(2026, 8, 12, 17, 45, tzinfo=UTC),
+                    "operational_status": "SCHEDULED",
+                    "gate": "B8",
+                    "terminal": "T2",
+                    "seat": "Aleatorio (Sin selección previa)",
+                    "boarding_group": "Grupo C",
+                },
+            ],
+        }
+
+    # Fully Deterministic Dynamic Synthesis for ANY code and ANY last name
+    first_name = FIRST_NAMES[seed % len(FIRST_NAMES)]
+    dep_ap, arr_ap = AIRPORT_PAIRS[seed % len(AIRPORT_PAIRS)]
+    num_digits = (seed % 899) + 100
+
+    prefix = {"VOLARIS": "Y4", "AEROMEXICO": "AM", "VIVA": "VB", "UNITED": "UA"}.get(airline_code, "AM")
+    flight_number = f"{prefix} {num_digits}"
+
+    days_ahead = (seed % 25) + 3
+    dep_time = datetime.now(UTC).replace(microsecond=0) + timedelta(days=days_ahead)
+    amount = float((seed % 55) * 100 + 2450)
+
+    return {
+        "passengers": [{"id": "P1", "display_name": f"{first_name} {clean_last}"}],
+        "payment_summary": {
+            "amount": amount,
+            "currency": "MXN",
+            "method": "Tarjeta",
+            "status": "PAID",
+        },
+        "segments": [
+            {
+                "flight_number": flight_number,
+                "departure_airport": dep_ap,
+                "arrival_airport": arr_ap,
+                "scheduled_departure": dep_time,
+                "estimated_departure": dep_time,
+                "operational_status": "SCHEDULED",
+                "gate": f"Puerta {(seed % 20) + 1}",
+                "terminal": f"T{(seed % 2) + 1}",
+                "seat": "Sin asignar",
+                "boarding_group": f"Grupo {(seed % 3) + 1}",
+            }
+        ],
+    }
+
+
+CONNECTORS: dict[str, MockAirlineConnector] = {
+    AirlineCode.VOLARIS.value: MockAirlineConnector(AirlineCode.VOLARIS),
+    AirlineCode.VIVA.value: MockAirlineConnector(AirlineCode.VIVA),
+    AirlineCode.AEROMEXICO.value: MockAirlineConnector(AirlineCode.AEROMEXICO),
+    AirlineCode.UNITED.value: MockAirlineConnector(AirlineCode.UNITED),
+}

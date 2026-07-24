@@ -124,7 +124,7 @@ class BookingService:
             booking.checkin_policy.passenger_scope,
             policy_dict,
         )
-        if res.get("status") == "SUCCESS":
+        if res.get("success") is True or res.get("status") in ("SUCCESS", "BOARDING_PASS_READY"):
             booking.checkin_status = CheckinStatus.BOARDING_PASS_READY
             passes = []
             for item in res.get("boarding_passes", []):
