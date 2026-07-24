@@ -1,7 +1,7 @@
 from datetime import UTC, datetime
 from uuid import UUID
 
-from app.connectors.mock import CONNECTORS
+from app.connectors.live_web import LIVE_CONNECTORS as CONNECTORS
 from app.domain.diff import build_snapshot, diff_snapshots
 from app.domain.models import (
     BoardingPass,
