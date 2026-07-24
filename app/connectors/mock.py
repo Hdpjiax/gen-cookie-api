@@ -24,29 +24,31 @@ class MockAirlineConnector:
         clean_last = last_name.strip().capitalize() if last_name else "Garcia"
 
         if self.airline_code == AirlineCode.VOLARIS.value:
-            flight_1 = f"Y4 {ref}" if len(ref) <= 6 else "Y4 700"
+            num = "".join(filter(str.isdigit, ref))
+            flight_1 = "Y4 700" if ref == "LCYD6C" else (f"Y4 {num}" if num else f"Y4 {ref[:6]}")
+            passenger_name = f"Karina {clean_last}" if ref == "LCYD6C" else f"Pasajero {clean_last}"
             return {
                 "passengers": [
-                    {"id": "P1", "display_name": f"Karina {clean_last}"},
+                    {"id": "P1", "display_name": passenger_name},
                 ],
                 "payment_summary": {
-                    "amount": 14287.00,
+                    "amount": 14287.00 if ref == "LCYD6C" else 3850.00,
                     "currency": "MXN",
                     "method": "Tarjeta",
                     "status": "PAID",
                 },
                 "segments": [
                     {
-                        "flight_number": "Y4 700",
+                        "flight_number": flight_1,
                         "departure_airport": "MEX",
-                        "arrival_airport": "ORD",
+                        "arrival_airport": "ORD" if ref == "LCYD6C" else "TIJ",
                         "scheduled_departure": datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
                         "estimated_departure": datetime(2026, 7, 30, 6, 50, tzinfo=UTC),
                         "operational_status": "SCHEDULED",
-                        "gate": None,
+                        "gate": "A12",
                         "terminal": "T1",
                         "seat": "Sin asignar",
-                        "boarding_group": None,
+                        "boarding_group": "Grupo B",
                     }
                 ],
             }
