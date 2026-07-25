@@ -248,7 +248,6 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
         }
 
     # Fully Deterministic Dynamic Synthesis for ANY code and ANY last name
-    first_name = FIRST_NAMES[seed % len(FIRST_NAMES)]
     dep_ap, arr_ap = AIRPORT_PAIRS[seed % len(AIRPORT_PAIRS)]
     num_digits = (seed % 899) + 100
 
@@ -260,7 +259,7 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
     amount = float((seed % 55) * 100 + 2450)
 
     return {
-        "passengers": [{"id": "P1", "display_name": f"{first_name} {clean_last}"}],
+        "passengers": [{"id": "P1", "display_name": f"Pasajero {clean_last}"}],
         "payment_summary": {
             "amount": amount,
             "currency": "MXN",
