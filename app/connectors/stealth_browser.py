@@ -3,8 +3,6 @@ import logging
 import random
 from typing import Any
 
-from playwright.async_api import async_playwright
-
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
@@ -26,6 +24,12 @@ class StealthBrowserManager:
     @staticmethod
     async def fetch_airline_page_stealth(url: str, pnr: str, last_name: str) -> str | None:
         """Executes a stealth private incognito browser session with fingerprint noise and zero history trace."""
+        try:
+            from playwright.async_api import async_playwright
+        except ImportError:
+            logging.info("Playwright module not installed, skipping stealth browser navigation.")
+            return None
+
         try:
             async with async_playwright() as p:
                 browser = await p.chromium.launch(
