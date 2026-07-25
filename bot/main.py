@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -10,9 +11,10 @@ if sys.platform == "win32":
 
 import aiohttp
 import httpx
+from aiohttp import web
 from aiogram import Bot, Dispatcher, F
 from aiogram.client.session.aiohttp import AiohttpSession
-from aiogram.exceptions import TelegramNetworkError
+from aiogram.exceptions import TelegramConflictError, TelegramNetworkError
 from aiogram.filters import Command
 from aiogram.types import (
     BotCommand,
@@ -878,6 +880,26 @@ async def _background_monitor_loop(bot: Bot) -> None:
             logging.error(f"Error en worker de monitoreo: {e}")
 
 
+async def _health_handler(request: web.Request) -> web.Response:
+    return web.Response(text="OK", status=200)
+
+
+async def _start_health_server() -> None:
+    port_str = os.getenv("PORT", "10000")
+    try:
+        port = int(port_str)
+        app = web.Application()
+        app.router.add_get("/", _health_handler)
+        app.router.add_get("/health", _health_handler)
+        runner = web.AppRunner(app)
+        await runner.setup()
+        site = web.TCPSite(runner, "0.0.0.0", port)
+        await site.start()
+        logging.info(f"Servidor HTTP de Health Check iniciado en el puerto {port}")
+    except Exception as e:
+        logging.warning(f"Health server note: {e}")
+
+
 async def _safe_set_commands(bot: Bot) -> None:
     for attempt in range(5):
         try:
@@ -895,6 +917,16 @@ async def main() -> None:
     
     session = AiohttpSession(timeout=45.0)
     bot = Bot(settings.telegram_bot_token, session=session)
+
+    # Start lightweight HTTP server for Render port scan health checks
+    await _start_health_server()
+
+    # Clear pending webhooks to avoid polling conflicts
+    try:
+        await bot.delete_webhook(drop_pending_updates=True)
+    except Exception as e:
+        logging.warning(f"Error al limpiar webhook: {e}")
+
     await _safe_set_commands(bot)
     asyncio.create_task(_background_monitor_loop(bot))
 
@@ -902,6 +934,9 @@ async def main() -> None:
         try:
             await dp.start_polling(bot)
             break
+        except TelegramConflictError as e:
+            logging.warning(f"Conflicto de bot de Telegram detectado ({e}). Hay otra instancia ejecutándose. Esperando 10s...")
+            await asyncio.sleep(10)
         except (aiohttp.ClientError, asyncio.TimeoutError, TelegramNetworkError) as e:
             logging.warning(f"Conexión a Telegram interrumpida ({e}). Reintentando en 5 segundos...")
             await asyncio.sleep(5)
