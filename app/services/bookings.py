@@ -14,7 +14,7 @@ from app.domain.models import (
     PaymentSummary,
 )
 from app.repositories.sqlite import SQLiteStore, store_sqlite
-from app.schemas import BookingCreate, CheckinConsentCreate, RecheckRead
+from app.schemas import BookingCreate, CheckinConsentCreate, RecheckRead, SegmentRecheckRead, SegmentDeleteRead
 from app.security.crypto import encrypt_for_storage
 from app.security.url_safety import sanitize_official_url
 
@@ -162,6 +162,44 @@ class BookingService:
             boarding_pass.revoked_at = booking.deleted_at
         self.repository.save()
         return True
+
+    async def recheck_segment(self, booking_id: UUID, telegram_id: int, segment_index: int) -> SegmentRecheckRead | None:
+        """Recheck a specific flight segment."""
+        booking = self.get_booking(booking_id, telegram_id)
+        if booking is None or segment_index >= len(booking.segments):
+            return None
+        segment = booking.segments[segment_index]
+        status = await CONNECTORS[booking.airline].fetch_flight_status(booking.encrypted_locator or "URL_IMPORT")
+        events: list[FlightEvent] = []
+        # Handle both old and new connector response formats
+        new_segments = status.get("booking", {}).get("segments", status.get("segments", []))
+        new_segment_data = new_segments[segment_index] if segment_index < len(new_segments) else {}
+        _update_segment(segment, new_segment_data)
+        booking.checkin_status = CheckinStatus(status.get("checkin_status", booking.checkin_status.value))
+        current = build_snapshot(segment.id, _segment_payload(segment, booking.checkin_status.value))
+        previous = self.repository.snapshots.get(segment.id)
+        for event in diff_snapshots(previous, current):
+            if event.dedupe_key in self.repository.event_keys:
+                continue
+            self.repository.event_keys.add(event.dedupe_key)
+            self.repository.events.setdefault(booking.id, []).append(event)
+            events.append(event)
+        self.repository.snapshots[segment.id] = current
+        self.repository.save()
+        return SegmentRecheckRead(booking=booking, segment_index=segment_index, events=events)
+
+    def delete_segment(self, booking_id: UUID, telegram_id: int, segment_index: int) -> SegmentDeleteRead | None:
+        """Delete a specific flight segment from a booking."""
+        booking = self.get_booking(booking_id, telegram_id)
+        if booking is None or segment_index >= len(booking.segments):
+            return None
+        removed_segment = booking.segments.pop(segment_index)
+        if not booking.segments:
+            # No segments left, delete entire booking
+            self.delete_booking(booking_id, telegram_id)
+            return SegmentDeleteRead(booking_id=booking_id, deleted_segment=removed_segment, booking_deleted=True)
+        self.repository.save()
+        return SegmentDeleteRead(booking_id=booking_id, deleted_segment=removed_segment, booking_deleted=False)
 
 
 def _segment_payload(segment: FlightSegment, checkin_status: str) -> dict[str, object]:

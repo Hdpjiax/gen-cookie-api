@@ -118,3 +118,16 @@ class BoardingPassRead(BaseModel):
     revoked_at: datetime | None = None
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class SegmentRecheckRead(BaseModel):
+    booking: BookingRead
+    segment_index: int
+    events: list[FlightEventRead]
+    checked_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+
+
+class SegmentDeleteRead(BaseModel):
+    booking_id: UUID
+    deleted_segment: SegmentRead
+    booking_deleted: bool

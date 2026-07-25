@@ -1,32 +1,20 @@
 import hashlib
+import logging
 from datetime import UTC, datetime, timedelta
 
 from app.domain.models import AirlineCode
 
+logger = logging.getLogger(__name__)
+
 AIRPORT_PAIRS = [
-    ("MEX", "CUN"),
-    ("TIJ", "MEX"),
-    ("MEX", "GDL"),
-    ("MTY", "CUN"),
-    ("CJS", "MEX"),
-    ("MEX", "ORD"),
-    ("MEX", "LAX"),
-    ("GDL", "TIJ"),
-    ("SFO", "MEX"),
-    ("CUN", "MTY"),
-    ("MEX", "IAH"),
-    ("MTY", "MEX"),
+    ("MEX", "CUN"), ("TIJ", "MEX"), ("MEX", "GDL"), ("MTY", "CUN"),
+    ("CJS", "MEX"), ("MEX", "ORD"), ("MEX", "LAX"), ("GDL", "TIJ"),
+    ("SFO", "MEX"), ("CUN", "MTY"), ("MEX", "IAH"), ("MTY", "MEX"),
 ]
 
 FIRST_NAMES = [
-    "Jonathon",
-    "Mariana",
-    "Carlos",
-    "Karina",
-    "Alejandro",
-    "Sofia",
-    "Mateo",
-    "Valentina",
+    "Jonathon", "Mariana", "Carlos", "Karina", "Alejandro",
+    "Sofia", "Mateo", "Valentina", "Diego", "Isabella",
 ]
 
 
@@ -50,7 +38,15 @@ class MockAirlineConnector:
         ref = booking_ref.upper()
         clean_last = last_name.strip().capitalize() if last_name else "Garcia"
 
-        return _build_dynamic_booking(self.airline_code, ref, clean_last)
+        booking_data = _build_dynamic_booking(self.airline_code, ref, clean_last)
+        if booking_data is None:
+            logger.warning(f"Booking {ref} with last name {clean_last} not found in {self.airline_code} mock data")
+            return {
+                "error": True,
+                "reason": "NOT_FOUND_ON_AIRLINE",
+                "message": f"No se encontró la reserva {ref} ({clean_last}) en {self.airline_code}. Verifique el código y apellido.",
+            }
+        return booking_data
 
     async def fetch_flight_status(self, booking_ref: str, last_name: str | None = None) -> dict[str, object]:
         self._recheck_count += 1
@@ -58,7 +54,7 @@ class MockAirlineConnector:
         segments = booking.get("segments", [])
         if segments and self._recheck_count % 2 == 1:
             segments[0]["gate"] = "Gate 15"
-        return {"booking": booking, "recheck_count": self._recheck_count}
+        return {"segments": segments, "recheck_count": self._recheck_count, "checkin_status": "NOT_ELIGIBLE"}
 
     async def get_checkin_eligibility(self, booking_ref: str) -> dict[str, object]:
         return {
@@ -84,7 +80,7 @@ class MockAirlineConnector:
         return {
             "success": True,
             "status": "BOARDING_PASS_READY",
-            "assigned_seats": {pid: "Aleatorio por la aerolínea (Paso de selección saltado)" for pid in passenger_ids},
+            "assigned_seats": {pid: "Asignado por aerolínea (selección saltada)" for pid in passenger_ids},
             "boarding_passes": [
                 {
                     "passenger_id": pid,
@@ -105,38 +101,17 @@ class MockAirlineConnector:
         ]
 
 
-def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict[str, object]:
+def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict[str, object] | None:
+    """
+    Build booking data. Returns real data ONLY for known test bookings.
+    For unknown bookings, returns None so the system uses live connectors.
+    """
     hash_digest = hashlib.md5(f"{ref}:{clean_last}:{airline_code}".encode()).hexdigest()
     seed = int(hash_digest[:8], 16)
 
-    # Specific override for Volaris XY895L screenshot
-    if ref in ("XY895L", "XY895") and airline_code == AirlineCode.VOLARIS.value:
-        p1 = f"Jonathon {clean_last}" if clean_last != "Garcia" else "Jonathon Martinez"
-        return {
-            "passengers": [
-                {"id": "P1", "display_name": p1},
-                {"id": "P2", "display_name": "Brenda Montoya"},
-            ],
-            "payment_summary": {"amount": 3850.00, "currency": "MXN", "method": "Tarjeta", "status": "PAID"},
-            "segments": [
-                {
-                    "flight_number": "Y4 895",
-                    "departure_airport": "TIJ",
-                    "arrival_airport": "MEX",
-                    "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
-                    "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
-                    "operational_status": "SCHEDULED",
-                    "gate": "A14",
-                    "terminal": "T1",
-                    "seat": "Sin asignar",
-                    "boarding_group": "Grupo B",
-                }
-            ],
-        }
-
-    # Specific override for Volaris LCYD6C unit test
-    if ref == "LCYD6C" and airline_code == AirlineCode.VOLARIS.value:
-        return {
+    # Known test bookings with REAL data from tests
+    known_bookings = {
+        ("VOLARIS", "LCYD6C"): {
             "passengers": [
                 {"id": "P1", "display_name": "Max Nino Ortega"},
                 {"id": "P2", "display_name": f"Karina {clean_last}"},
@@ -156,12 +131,49 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "boarding_group": "Grupo B",
                 }
             ],
-        }
-
-    # Specific override for Aeromexico HUIITL unit test
-    if ref == "HUIITL" and airline_code == AirlineCode.AEROMEXICO.value:
-        now_utc = datetime.now(UTC)
-        return {
+        },
+        ("VOLARIS", "XY895L"): {
+            "passengers": [
+                {"id": "P1", "display_name": f"Jonathon {clean_last}" if clean_last != "Garcia" else "Jonathon Martinez"},
+                {"id": "P2", "display_name": "Brenda Montoya"},
+            ],
+            "payment_summary": {"amount": 3850.00, "currency": "MXN", "method": "Tarjeta", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "Y4 895",
+                    "departure_airport": "TIJ",
+                    "arrival_airport": "MEX",
+                    "scheduled_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
+                    "estimated_departure": datetime(2026, 7, 31, 9, 30, tzinfo=UTC),
+                    "operational_status": "SCHEDULED",
+                    "gate": "A14",
+                    "terminal": "T1",
+                    "seat": "Sin asignar",
+                    "boarding_group": "Grupo B",
+                }
+            ],
+        },
+        ("VOLARIS", "IFS2JW"): {
+            "passengers": [
+                {"id": "P1", "display_name": f"Antonio {clean_last}"},
+            ],
+            "payment_summary": {"amount": 4250.00, "currency": "MXN", "method": "Tarjeta", "status": "PAID"},
+            "segments": [
+                {
+                    "flight_number": "Y4 1234",
+                    "departure_airport": "MEX",
+                    "arrival_airport": "CUN",
+                    "scheduled_departure": datetime(2026, 8, 15, 10, 30, tzinfo=UTC),
+                    "estimated_departure": datetime(2026, 8, 15, 10, 30, tzinfo=UTC),
+                    "operational_status": "SCHEDULED",
+                    "gate": "A8",
+                    "terminal": "T1",
+                    "seat": "Sin asignar",
+                    "boarding_group": "Grupo A",
+                }
+            ],
+        },
+        ("AEROMEXICO", "HUIITL"): {
             "passengers": [{"id": "P1", "display_name": f"Mariana {clean_last}"}],
             "payment_summary": {"amount": 5420.00, "currency": "MXN", "method": "Tarjeta (Visa)", "status": "PAID"},
             "segments": [
@@ -169,8 +181,8 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "flight_number": "AM 116",
                     "departure_airport": "CJS",
                     "arrival_airport": "MEX",
-                    "scheduled_departure": now_utc + timedelta(hours=12),
-                    "estimated_departure": now_utc + timedelta(hours=12),
+                    "scheduled_departure": datetime.now(UTC) + timedelta(hours=12),
+                    "estimated_departure": datetime.now(UTC) + timedelta(hours=12),
                     "operational_status": "SCHEDULED",
                     "gate": "24",
                     "terminal": "T2",
@@ -181,8 +193,8 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "flight_number": "AM 115",
                     "departure_airport": "MEX",
                     "arrival_airport": "CJS",
-                    "scheduled_departure": now_utc + timedelta(days=4),
-                    "estimated_departure": now_utc + timedelta(days=4),
+                    "scheduled_departure": datetime.now(UTC) + timedelta(days=4),
+                    "estimated_departure": datetime.now(UTC) + timedelta(days=4),
                     "operational_status": "SCHEDULED",
                     "gate": "62",
                     "terminal": "T2",
@@ -190,12 +202,8 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "boarding_group": "Grupo 2",
                 },
             ],
-        }
-
-    # Specific override for Aeromexico AM452 unit test
-    if ref == "AM452" and airline_code == AirlineCode.AEROMEXICO.value:
-        now_utc = datetime.now(UTC)
-        return {
+        },
+        ("AEROMEXICO", "AM452"): {
             "passengers": [{"id": "P1", "display_name": f"Mariana {clean_last}"}],
             "payment_summary": {"amount": 5420.00, "currency": "MXN", "method": "Tarjeta (Visa)", "status": "PAID"},
             "segments": [
@@ -203,8 +211,8 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "flight_number": "AM 452",
                     "departure_airport": "MEX",
                     "arrival_airport": "GDL",
-                    "scheduled_departure": now_utc + timedelta(hours=12),
-                    "estimated_departure": now_utc + timedelta(hours=12),
+                    "scheduled_departure": datetime.now(UTC) + timedelta(hours=12),
+                    "estimated_departure": datetime.now(UTC) + timedelta(hours=12),
                     "operational_status": "SCHEDULED",
                     "gate": "24",
                     "terminal": "T2",
@@ -212,11 +220,8 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "boarding_group": "Grupo 2",
                 }
             ],
-        }
-
-    # Specific override for Viva VIV123 unit test
-    if ref == "VIV123" and airline_code == AirlineCode.VIVA.value:
-        return {
+        },
+        ("VIVA", "VIV123"): {
             "passengers": [{"id": "P1", "display_name": f"Carlos {clean_last}"}],
             "payment_summary": {"amount": 2450.00, "currency": "MXN", "method": "Tarjeta (Mastercard)", "status": "PAID"},
             "segments": [
@@ -245,9 +250,15 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
                     "boarding_group": "Grupo C",
                 },
             ],
-        }
+        },
+    }
 
-    # For unmapped codes, return None so the system NEVER invents fake synthetic data
+    key = (airline_code, ref)
+    if key in known_bookings:
+        return known_bookings[key]
+
+    # Return None for unknown bookings - this forces the system to use live connectors
+    # which will try to fetch REAL data from airline systems
     return None
 
 

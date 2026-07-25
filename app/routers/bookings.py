@@ -9,6 +9,8 @@ from app.schemas import (
     CheckinConsentCreate,
     FlightEventRead,
     RecheckRead,
+    SegmentDeleteRead,
+    SegmentRecheckRead,
 )
 from app.services.bookings import booking_service
 
@@ -83,3 +85,19 @@ async def delete_booking(booking_id: UUID, telegram_id: int) -> None:
     deleted = booking_service.delete_booking(booking_id, telegram_id)
     if not deleted:
         raise HTTPException(status_code=404, detail="booking_not_found")
+
+
+@router.post("/{booking_id}/recheck/{segment_index}", response_model=SegmentRecheckRead)
+async def recheck_segment(booking_id: UUID, segment_index: int, telegram_id: int) -> SegmentRecheckRead:
+    result = await booking_service.recheck_segment(booking_id, telegram_id, segment_index)
+    if result is None:
+        raise HTTPException(status_code=404, detail="booking_or_segment_not_found")
+    return result
+
+
+@router.delete("/{booking_id}/segments/{segment_index}", response_model=SegmentDeleteRead)
+async def delete_segment(booking_id: UUID, segment_index: int, telegram_id: int) -> SegmentDeleteRead:
+    result = booking_service.delete_segment(booking_id, telegram_id, segment_index)
+    if result is None:
+        raise HTTPException(status_code=404, detail="booking_or_segment_not_found")
+    return result

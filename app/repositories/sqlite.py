@@ -33,6 +33,7 @@ class SQLiteStore:
         self.event_keys: set[str] = set()
         self.boarding_passes: dict[UUID, list[BoardingPass]] = {}
         self.user_languages: dict[int, str] = {}
+        self.user_notifications: dict[int, bool] = {}
         self._init_db()
         self.load()
 
@@ -107,7 +108,8 @@ class SQLiteStore:
                 """
                 CREATE TABLE IF NOT EXISTS user_preferences (
                     telegram_id INTEGER PRIMARY KEY,
-                    language TEXT DEFAULT 'ES'
+                    language TEXT DEFAULT 'ES',
+                    notifications_enabled INTEGER DEFAULT 1
                 )
                 """
             )
@@ -202,9 +204,10 @@ class SQLiteStore:
                     )
 
             for telegram_id, lang in self.user_languages.items():
+                notif = 1 if self.user_notifications.get(telegram_id, True) else 0
                 cursor.execute(
-                    "INSERT OR REPLACE INTO user_preferences (telegram_id, language) VALUES (?, ?)",
-                    (telegram_id, lang),
+                    "INSERT OR REPLACE INTO user_preferences (telegram_id, language, notifications_enabled) VALUES (?, ?, ?)",
+                    (telegram_id, lang, notif),
                 )
             conn.commit()
 
@@ -278,6 +281,7 @@ class SQLiteStore:
             cursor.execute("SELECT * FROM user_preferences")
             for row in cursor.fetchall():
                 self.user_languages[row["telegram_id"]] = row["language"]
+                self.user_notifications[row["telegram_id"]] = bool(row.get("notifications_enabled", 1))
 
 
 def _encode(value: Any) -> Any:
