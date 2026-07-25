@@ -55,6 +55,11 @@ class LiveAirlineConnector:
         return await StealthBrowserManager.fetch_airline_page_stealth(target_url, pnr, last_name)
 
     async def _fetch_live_airline_data(self, pnr: str, last_name: str) -> dict[str, Any] | None:
+        # First attempt stealth private browser form interaction & API response interception
+        stealth_json = await StealthBrowserManager.fetch_live_booking_stealth(self.airline_code, pnr, last_name)
+        if stealth_json:
+            return self._parse_volaris_live(stealth_json, pnr, last_name)
+
         headers = {"User-Agent": USER_AGENT, "Accept": "application/json"}
         try:
             if self.airline_code == AirlineCode.VOLARIS.value:
