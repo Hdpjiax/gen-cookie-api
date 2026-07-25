@@ -247,40 +247,8 @@ def _build_dynamic_booking(airline_code: str, ref: str, clean_last: str) -> dict
             ],
         }
 
-    # Fully Deterministic Dynamic Synthesis for ANY code and ANY last name
-    dep_ap, arr_ap = AIRPORT_PAIRS[seed % len(AIRPORT_PAIRS)]
-    num_digits = (seed % 899) + 100
-
-    prefix = {"VOLARIS": "Y4", "AEROMEXICO": "AM", "VIVA": "VB", "UNITED": "UA"}.get(airline_code, "AM")
-    flight_number = f"{prefix} {num_digits}"
-
-    days_ahead = (seed % 25) + 3
-    dep_time = datetime.now(UTC).replace(microsecond=0) + timedelta(days=days_ahead)
-    amount = float((seed % 55) * 100 + 2450)
-
-    return {
-        "passengers": [{"id": "P1", "display_name": f"Pasajero {clean_last}"}],
-        "payment_summary": {
-            "amount": amount,
-            "currency": "MXN",
-            "method": "Tarjeta",
-            "status": "PAID",
-        },
-        "segments": [
-            {
-                "flight_number": flight_number,
-                "departure_airport": dep_ap,
-                "arrival_airport": arr_ap,
-                "scheduled_departure": dep_time,
-                "estimated_departure": dep_time,
-                "operational_status": "SCHEDULED",
-                "gate": f"Puerta {(seed % 20) + 1}",
-                "terminal": f"T{(seed % 2) + 1}",
-                "seat": "Sin asignar",
-                "boarding_group": f"Grupo {(seed % 3) + 1}",
-            }
-        ],
-    }
+    # For unmapped codes, return None so the system NEVER invents fake synthetic data
+    return None
 
 
 CONNECTORS: dict[str, MockAirlineConnector] = {

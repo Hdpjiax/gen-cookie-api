@@ -34,6 +34,8 @@ class BookingService:
 
         booking_ref = str(validation["booking_ref"])
         retrieved = await connector.retrieve_booking(booking_ref, payload.last_name)
+        if retrieved.get("error") is True:
+            raise ValueError(str(retrieved.get("reason", "NOT_FOUND_ON_AIRLINE")))
         segments = [FlightSegment(**segment) for segment in retrieved["segments"]]
         booking = Booking(
             telegram_id=payload.telegram_id,

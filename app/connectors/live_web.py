@@ -49,8 +49,16 @@ class LiveAirlineConnector:
         if live_data:
             return live_data
 
-        # 3. Fallback to mock connector if live API is offline
-        return await self.mock_fallback.retrieve_booking(ref, clean_last)
+        # 3. Fallback to mock connector for known test bookings
+        mock_data = await self.mock_fallback.retrieve_booking(ref, clean_last)
+        if mock_data:
+            return mock_data
+
+        return {
+            "error": True,
+            "reason": "NOT_FOUND_ON_AIRLINE",
+            "message": f"No se encontraron datos en vivo para la reserva {ref} ({clean_last}) en {self.airline_code}.",
+        }
 
     async def _fetch_mobile_api_data(self, pnr: str, last_name: str) -> dict[str, Any] | None:
         mobile_ua = MOBILE_USER_AGENTS.get(self.airline_code, "VolarisApp/4.2.0 (iOS; iPhone15,2)")
