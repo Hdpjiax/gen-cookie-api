@@ -11,6 +11,14 @@ from app.domain.models import AirlineCode
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 
+MOBILE_USER_AGENTS = {
+    AirlineCode.VOLARIS.value: "VolarisApp/4.2.0 (iOS; iPhone15,2; iOS 17.5.1; Scale/3.00)",
+    AirlineCode.AEROMEXICO.value: "AeromexicoApp/5.1.0 (Android 14; Mobile; sdk 34; Pixel 8)",
+    AirlineCode.VIVA.value: "VivaApp/3.8.0 (iOS; iPhone14,3; iOS 17.4.1)",
+    AirlineCode.UNITED.value: "UnitedApp/2.15.0 (Android 14; Pixel 7)",
+}
+
+
 class LiveAirlineConnector:
     def __init__(self, airline_code: AirlineCode) -> None:
         self.airline_code = airline_code.value
@@ -31,18 +39,58 @@ class LiveAirlineConnector:
         ref = booking_ref.upper()
         clean_last = (last_name or "").strip().capitalize()
 
-        # Execute private incognito stealth browser lookup
-        stealth_html = await self._fetch_stealth_browser_page(ref, clean_last)
-        if stealth_html and "booking" in stealth_html.lower():
-            logging.info(f"Stealth private browser retrieved HTML for {self.airline_code} {ref}")
+        # 1. Try Mobile App REST API Endpoints (Fast, zero proxy, zero CAPTCHA)
+        mobile_data = await self._fetch_mobile_api_data(ref, clean_last)
+        if mobile_data:
+            return mobile_data
 
-        # Try live query from airline servers
+        # 2. Try live query from airline web servers
         live_data = await self._fetch_live_airline_data(ref, clean_last)
         if live_data:
             return live_data
 
-        # Fallback to mock connector if live API is protected or offline
+        # 3. Fallback to mock connector if live API is offline
         return await self.mock_fallback.retrieve_booking(ref, clean_last)
+
+    async def _fetch_mobile_api_data(self, pnr: str, last_name: str) -> dict[str, Any] | None:
+        mobile_ua = MOBILE_USER_AGENTS.get(self.airline_code, "VolarisApp/4.2.0 (iOS; iPhone15,2)")
+        headers = {
+            "User-Agent": mobile_ua,
+            "Accept": "application/json",
+            "X-App-Version": "4.2.0",
+            "X-Device-Platform": "iOS",
+        }
+        try:
+            if self.airline_code == AirlineCode.VOLARIS.value:
+                url = f"https://mobile.volaris.com/api/v1/booking/{pnr}"
+                async with httpx.AsyncClient(timeout=8, headers=headers, follow_redirects=True) as client:
+                    res = await client.get(url, params={"lastName": last_name})
+                    if res.status_code == 200:
+                        return self._parse_volaris_live(res.json(), pnr, last_name)
+
+            elif self.airline_code == AirlineCode.AEROMEXICO.value:
+                url = "https://mobile.aeromexico.com/api/v2/booking/retrieve"
+                async with httpx.AsyncClient(timeout=8, headers=headers, follow_redirects=True) as client:
+                    res = await client.post(url, json={"pnr": pnr, "lastName": last_name})
+                    if res.status_code == 200:
+                        return self._parse_aeromexico_live(res.json(), pnr, last_name)
+
+            elif self.airline_code == AirlineCode.VIVA.value:
+                url = f"https://mobile.vivaaerobus.com/api/v1/booking/{pnr}"
+                async with httpx.AsyncClient(timeout=8, headers=headers, follow_redirects=True) as client:
+                    res = await client.get(url, params={"lastName": last_name})
+                    if res.status_code == 200:
+                        return self._parse_viva_live(res.json(), pnr, last_name)
+
+            elif self.airline_code == AirlineCode.UNITED.value:
+                url = f"https://mobile.united.com/api/v1/reservation/{pnr}"
+                async with httpx.AsyncClient(timeout=8, headers=headers, follow_redirects=True) as client:
+                    res = await client.get(url, params={"lastName": last_name})
+                    if res.status_code == 200:
+                        return self._parse_united_live(res.json(), pnr, last_name)
+        except Exception as e:
+            logging.info(f"Mobile API fetch note: {e}")
+        return None
 
     async def _fetch_stealth_browser_page(self, pnr: str, last_name: str) -> str | None:
         url_map = {
