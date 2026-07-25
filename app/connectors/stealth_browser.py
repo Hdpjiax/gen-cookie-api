@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 import random
 from typing import Any
 
@@ -18,6 +19,38 @@ VIEWPORTS = [
 ]
 
 
+def parse_proxy_setting(proxy_str: str | None) -> dict[str, str] | None:
+    if not proxy_str:
+        proxy_str = "http://W3Aq827UOfwZVie2:YbHb4zBJXUaMQFhn@geo-dc.floppydata.com:10080"
+    
+    clean = proxy_str.strip()
+    for prefix in ("geolocation://", "http://", "https://"):
+        if clean.startswith(prefix):
+            clean = clean[len(prefix):]
+            break
+
+    parts = clean.split("@")
+    if len(parts) == 2:
+        user_pass = parts[0]
+        host_port_region = parts[1]
+        
+        up_split = user_pass.split(":")
+        username = up_split[0] if len(up_split) > 0 else ""
+        password = up_split[1] if len(up_split) > 1 else ""
+
+        hp_split = host_port_region.split(":")
+        host = hp_split[0]
+        port = hp_split[1] if len(hp_split) > 1 else "10080"
+        
+        return {
+            "server": f"http://{host}:{port}",
+            "username": username,
+            "password": password,
+        }
+
+    return {"server": f"http://{clean}"}
+
+
 class StealthBrowserManager:
     """Manages ephemeral private incognito browser sessions with randomized anti-fingerprinting stealth."""
 
@@ -30,17 +63,22 @@ class StealthBrowserManager:
             logging.info("Playwright module not installed, skipping stealth browser navigation.")
             return None
 
+        proxy_dict = parse_proxy_setting(os.getenv("RESIDENTIAL_PROXY_URL"))
+        launch_kwargs: dict[str, Any] = {
+            "headless": True,
+            "args": [
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-blink-features=AutomationControlled",
+                "--incognito",
+            ],
+        }
+        if proxy_dict:
+            launch_kwargs["proxy"] = proxy_dict
+
         try:
             async with async_playwright() as p:
-                browser = await p.chromium.launch(
-                    headless=True,
-                    args=[
-                        "--no-sandbox",
-                        "--disable-setuid-sandbox",
-                        "--disable-blink-features=AutomationControlled",
-                        "--incognito",
-                    ],
-                )
+                browser = await p.chromium.launch(**launch_kwargs)
 
                 # Randomized fingerprint context parameters
                 random_ua = random.choice(USER_AGENTS)
@@ -87,17 +125,22 @@ class StealthBrowserManager:
         except ImportError:
             return None
 
+        proxy_dict = parse_proxy_setting(os.getenv("RESIDENTIAL_PROXY_URL"))
+        launch_kwargs: dict[str, Any] = {
+            "headless": True,
+            "args": [
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-blink-features=AutomationControlled",
+                "--incognito",
+            ],
+        }
+        if proxy_dict:
+            launch_kwargs["proxy"] = proxy_dict
+
         try:
             async with async_playwright() as p:
-                browser = await p.chromium.launch(
-                    headless=True,
-                    args=[
-                        "--no-sandbox",
-                        "--disable-setuid-sandbox",
-                        "--disable-blink-features=AutomationControlled",
-                        "--incognito",
-                    ],
-                )
+                browser = await p.chromium.launch(**launch_kwargs)
 
                 random_ua = random.choice(USER_AGENTS)
                 random_vp = random.choice(VIEWPORTS)
