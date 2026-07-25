@@ -124,8 +124,11 @@ class LiveAirlineConnector:
                 async with httpx.AsyncClient(timeout=10, headers=headers, follow_redirects=True) as client:
                     res = await client.get(url, params={"lastName": last_name})
                     if res.status_code == 200:
-                        data = res.json()
-                        return self._parse_volaris_live(data, pnr, last_name)
+                        try:
+                            data = res.json()
+                            return self._parse_volaris_live(data, pnr, last_name)
+                        except Exception:
+                            pass
 
             elif self.airline_code == AirlineCode.AEROMEXICO.value:
                 # Aeromexico live PNR endpoint query
@@ -133,8 +136,11 @@ class LiveAirlineConnector:
                 async with httpx.AsyncClient(timeout=10, headers=headers, follow_redirects=True) as client:
                     res = await client.post(url, json={"pnr": pnr, "lastName": last_name})
                     if res.status_code == 200:
-                        data = res.json()
-                        return self._parse_aeromexico_live(data, pnr, last_name)
+                        try:
+                            data = res.json()
+                            return self._parse_aeromexico_live(data, pnr, last_name)
+                        except Exception:
+                            pass
 
             elif self.airline_code == AirlineCode.VIVA.value:
                 # Viva Aerobus live PNR endpoint query
@@ -142,8 +148,11 @@ class LiveAirlineConnector:
                 async with httpx.AsyncClient(timeout=10, headers=headers, follow_redirects=True) as client:
                     res = await client.get(url, params={"lastName": last_name})
                     if res.status_code == 200:
-                        data = res.json()
-                        return self._parse_viva_live(data, pnr, last_name)
+                        try:
+                            data = res.json()
+                            return self._parse_viva_live(data, pnr, last_name)
+                        except Exception:
+                            pass
 
             elif self.airline_code == AirlineCode.UNITED.value:
                 # United live PNR endpoint query
@@ -151,10 +160,13 @@ class LiveAirlineConnector:
                 async with httpx.AsyncClient(timeout=10, headers=headers, follow_redirects=True) as client:
                     res = await client.get(url, params={"lastName": last_name})
                     if res.status_code == 200:
-                        data = res.json()
-                        return self._parse_united_live(data, pnr, last_name)
+                        try:
+                            data = res.json()
+                            return self._parse_united_live(data, pnr, last_name)
+                        except Exception:
+                            pass
         except Exception as e:
-            logging.info(f"Live web query for {self.airline_code} {pnr} returned fallback: {e}")
+            logging.info(f"Live web query for {self.airline_code} {pnr} note: {e}")
         return None
 
     def _parse_volaris_live(self, data: dict[str, Any], pnr: str, last_name: str) -> dict[str, Any]:

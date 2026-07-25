@@ -347,11 +347,23 @@ async def _create_booking(message: Message, airline: str, pnr: str, last_name: s
             )
         except Exception as inner_e:
             logging.error(f"Error fallback en _create_booking: {inner_e}")
-            await message.answer(
-                "❌ Ocurrió un error al procesar la reserva.\n\n"
-                "Asegúrate de que la API esté iniciada y las variables de entorno configuradas.",
-                reply_markup=_keyboard(message.from_user.id),
-            )
+            err_str = str(inner_e)
+            if "NOT_FOUND_ON_AIRLINE" in err_str:
+                await message.answer(
+                    f"⚠️ *No se encontraron datos en vivo para `{pnr}` (`{last_name}`) en {airline}*\n\n"
+                    "La aerolínea no devolvió un boleto activo para ese código y apellido.\n\n"
+                    "💡 *Sugerencia:*\n"
+                    "  • Revisa que la clave de reserva y apellido estén escritos correctamente.\n"
+                    "  • O reenvía el correo/PDF de confirmación de la aerolínea a este chat para agregar tu itinerario en automático.",
+                    reply_markup=_keyboard(message.from_user.id),
+                    parse_mode="Markdown",
+                )
+            else:
+                await message.answer(
+                    "❌ Ocurrió un error al procesar la reserva.\n\n"
+                    "Asegúrate de que la API esté iniciada y las variables de entorno configuradas.",
+                    reply_markup=_keyboard(message.from_user.id),
+                )
 
 
 @dp.message(Command("flights"))
