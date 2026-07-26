@@ -2,17 +2,29 @@ services:
   - type: web
     name: flights-mx-api
     env: python
-    buildCommand: pip install -e .
+    buildCommand: pip install -e . && playwright install chromium
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: APP_SECRET_PEPPER
         generateValue: true
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_BASE_URL
+        sync: false
+      - key: AI_MODEL
+        sync: false
 
   - type: worker
     name: flights-mx-bot
     env: python
-    buildCommand: pip install -e .
+    buildCommand: pip install -e . && playwright install chromium
     startCommand: python -m bot.main
     envVars:
       - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_BASE_URL
+        sync: false
+      - key: AI_MODEL
         sync: false

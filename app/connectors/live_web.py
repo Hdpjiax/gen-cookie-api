@@ -47,12 +47,41 @@ class LiveAirlineConnector:
             except Exception as e:
                 logger.info(f"Mobile API fetch note for {self.airline_code} {ref}: {e}")
 
-        # 2. Try live web query from airline servers
+        # 2. Try live web query from airline servers (Standard HTTP)
         live_data = await self._fetch_live_airline_data(ref, clean_last)
         if live_data:
             return live_data
 
-        # 3. Fallback to mock connector for known test bookings
+        # 3. Try Stealth Browser (Playwright) + AI Extractor
+        try:
+            from app.connectors.stealth_browser import StealthBrowserManager
+            from app.services.ai_extractor import extract_booking_via_llm
+
+            logger.info(f"Attempting Stealth Browser + AI Extractor for {self.airline_code} {ref}")
+            json_data, page_text = await StealthBrowserManager.fetch_live_booking_stealth(self.airline_code, ref, clean_last)
+            
+            # If the stealth browser somehow captured the actual JSON, we can try to parse it
+            if json_data:
+                if self.airline_code == AirlineCode.VOLARIS.value:
+                    return self._parse_volaris_live(json_data, ref, clean_last)
+                elif self.airline_code == AirlineCode.AEROMEXICO.value:
+                    return self._parse_aeromexico_live(json_data, ref, clean_last)
+                elif self.airline_code == AirlineCode.VIVA.value:
+                    return self._parse_viva_live(json_data, ref, clean_last)
+                elif self.airline_code == AirlineCode.UNITED.value:
+                    return self._parse_united_live(json_data, ref, clean_last)
+            
+            # If we only got text/HTML, fallback to LLM
+            if page_text:
+                ai_data = await extract_booking_via_llm(page_text, ref, clean_last)
+                if ai_data:
+                    logger.info(f"Successfully extracted booking via AI for {ref}")
+                    return ai_data
+                    
+        except Exception as e:
+            logger.info(f"Stealth Browser / AI Extractor failed: {e}")
+
+        # 4. Fallback to mock connector for known test bookings
         mock_data = await self.mock_fallback.retrieve_booking(ref, clean_last)
         if mock_data:
             return mock_data

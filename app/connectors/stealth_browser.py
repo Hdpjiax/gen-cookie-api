@@ -118,7 +118,7 @@ class StealthBrowserManager:
             return None
 
     @staticmethod
-    async def fetch_live_booking_stealth(airline_code: str, pnr: str, last_name: str) -> dict[str, Any] | None:
+    async def fetch_live_booking_stealth(airline_code: str, pnr: str, last_name: str) -> tuple[dict[str, Any] | None, str | None]:
         """Executes a stealth private incognito browser session, fills search form, and extracts real booking data."""
         try:
             from playwright.async_api import async_playwright
@@ -209,16 +209,16 @@ class StealthBrowserManager:
                     if submit_btn:
                         await submit_btn.click()
                         await page.wait_for_timeout(3000)
-                except Exception as e:
-                    logging.info(f"Form submission stealth note: {e}")
-
+                # Get page text in case JSON capture fails or it's a raw page
+                page_text = await page.evaluate("document.body.innerText")
+                
                 await context.close()
                 await browser.close()
 
                 if captured_json:
-                    return captured_json[0]
-                return None
+                    return captured_json[0], page_text
+                return None, page_text
 
         except Exception as e:
             logging.info(f"Stealth live booking error: {e}")
-            return None
+            return None, None

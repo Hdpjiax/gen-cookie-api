@@ -26,22 +26,47 @@ class BookingService:
     async def create_booking(self, payload: BookingCreate) -> Booking:
         source_url = sanitize_official_url(payload.source_url, payload.airline) if payload.source_url else None
         connector = CONNECTORS[payload.airline]
-        validation = await connector.validate_input(
-            payload.pnr, payload.last_name, payload.ticket_number, source_url
-        )
-        if validation.get("valid") is not True:
-            raise ValueError(validation.get("reason", "invalid_booking_input"))
+        
+        retrieved = None
+        final_pnr = payload.pnr
+        final_last_name = payload.last_name
+        
+        # 1. If we have a URL, extract from the URL using Stealth Browser + AI
+        if source_url:
+            from app.connectors.stealth_browser import StealthBrowserManager
+            from app.services.ai_extractor import extract_booking_via_llm
+            
+            page_text = await StealthBrowserManager.fetch_airline_page_stealth(source_url, "", "")
+            if page_text:
+                retrieved = await extract_booking_via_llm(page_text, "URL", "URL")
+                if retrieved and retrieved.get("pnr"):
+                    final_pnr = retrieved.get("pnr", final_pnr)
+                    final_last_name = retrieved.get("last_name", final_last_name)
+            
+            if not retrieved or not retrieved.get("segments"):
+                raise ValueError("No se pudo extraer la reserva del link proporcionado.")
+                
+        # 2. If no URL or standard flow, use the standard connector retrieval
+        else:
+            validation = await connector.validate_input(
+                payload.pnr, payload.last_name, payload.ticket_number, source_url
+            )
+            if validation.get("valid") is not True:
+                raise ValueError(validation.get("reason", "invalid_booking_input"))
 
-        booking_ref = str(validation["booking_ref"])
-        retrieved = await connector.retrieve_booking(booking_ref, payload.last_name)
+            booking_ref = str(validation["booking_ref"])
+            retrieved = await connector.retrieve_booking(booking_ref, payload.last_name)
+            final_pnr = booking_ref
+
         if retrieved.get("error") is True:
             raise ValueError(str(retrieved.get("reason", "NOT_FOUND_ON_AIRLINE")))
+            
         segments = [FlightSegment(**segment) for segment in retrieved["segments"]]
         booking = Booking(
             telegram_id=payload.telegram_id,
             airline=payload.airline,
-            encrypted_locator=encrypt_for_storage(payload.pnr),
-            encrypted_last_name=encrypt_for_storage(payload.last_name),
+            encrypted_locator=encrypt_for_storage(final_pnr or "UNKNOWN"),
+            encrypted_last_name=encrypt_for_storage(final_last_name or "UNKNOWN"),
             encrypted_ticket_number=encrypt_for_storage(payload.ticket_number),
             source_type="url" if source_url else "manual",
             segments=segments,
