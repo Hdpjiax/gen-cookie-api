@@ -1,0 +1,7 @@
+{
+  "type": "https://httpstatuses.com/404",
+  "title": "Not Found",
+  "status": 404,
+  "detail": "NFTicket HEYN2G not found.",
+  "instance": "/v1/nftickets/pnr-HEYN2G/actions"
+}

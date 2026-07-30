@@ -105,6 +105,7 @@ def _decode_segment(item: dict[str, Any]) -> FlightSegment:
         terminal=item["terminal"],
         seat=item["seat"],
         boarding_group=item["boarding_group"],
+        is_checked_in=item.get("is_checked_in", False),
     )
 
 

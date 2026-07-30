@@ -10,9 +10,12 @@ logger = logging.getLogger(__name__)
 
 # Initialize OpenAI client (API key must be set in environment variables)
 # Se puede usar OPENAI_API_KEY o AI_API_KEY para proveedores gratis como Groq u OpenRouter.
+from dotenv import load_dotenv
+load_dotenv()
+
 api_key = os.getenv("AI_API_KEY") or os.getenv("OPENAI_API_KEY")
 base_url = os.getenv("AI_BASE_URL") # Deja en None para usar OpenAI por defecto
-model_name = os.getenv("AI_MODEL", "gpt-4o-mini") # Modelo por defecto
+model_name = os.getenv("AI_MODEL", "llama-3.3-70b-versatile") # Modelo por defecto
 
 client = None
 if api_key:
@@ -77,6 +80,8 @@ async def extract_booking_via_llm(page_text: str, pnr: str, last_name: str) -> d
         # Truncate text to avoid token limits if it's a massive HTML page
         safe_text = page_text[:25000]
         
+        with open('debug_page_text.txt', 'w', encoding='utf-8') as df:
+            df.write(safe_text)
         response = await client.chat.completions.create(
             model=model_name,
             messages=[
@@ -88,6 +93,8 @@ async def extract_booking_via_llm(page_text: str, pnr: str, last_name: str) -> d
         )
         
         content = response.choices[0].message.content
+        with open('debug_llm_response.txt', 'w', encoding='utf-8') as df:
+            df.write(str(content))
         if not content:
             return None
             

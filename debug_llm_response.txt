@@ -1,0 +1,12 @@
+{
+  "pnr": "HUIITL",
+   "last_name": "Garcia",
+   "passengers": [],
+   "payment_summary": {
+      "amount": 0.0,
+      "currency": "MXN",
+      "method": "",
+      "status": ""
+   },
+   "segments": []
+}

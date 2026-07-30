@@ -1,0 +1,4546 @@
+[
+  {
+    "selfServiceMoveAvailable": false,
+    "bookingKey": "MTg2OTM4NTk1IUlGUzJKVyFmYWxzZQ--",
+    "recordLocator": "IFS2JW",
+    "currencyCode": "MXN",
+    "systemCode": null,
+    "groupName": null,
+    "locators": {
+      "numericRecordLocator": "171102221910",
+      "parentRecordLocator": null,
+      "parentId": 0,
+      "recordLocators": []
+    },
+    "info": {
+      "status": 2,
+      "paidStatus": 1,
+      "priceStatus": 2,
+      "profileStatus": 1,
+      "bookingType": null,
+      "channelType": 2,
+      "bookedDate": "2026-07-22T06:22:01.243Z",
+      "createdDate": "2026-07-22T06:22:01.243Z",
+      "expirationDate": "2026-07-25T03:45:00Z",
+      "modifiedDate": "2026-07-22T06:22:01.243Z",
+      "modifiedAgentId": 18,
+      "createdAgentId": 21,
+      "owningCarrierCode": "Y4",
+      "changeAllowed": true,
+      "createdUserKey": "MjE-",
+      "modifiedUserKey": "MTg-"
+    },
+    "sales": {
+      "created": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "source": {
+        "isoCountryCode": null,
+        "sourceSystemCode": null,
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "modified": null
+    },
+    "typeOfSale": {
+      "residentCountry": "MX",
+      "promotionCode": "VMX30",
+      "fareTypes": []
+    },
+    "hold": null,
+    "breakdown": {
+      "balanceDue": 0.0,
+      "pointsBalanceDue": 0.0,
+      "authorizedBalanceDue": 0.0,
+      "totalAmount": 4364.0,
+      "totalPoints": 0.0,
+      "totalToCollect": 4364.0,
+      "totalPointsToCollect": 0.0,
+      "totalCharged": 4364.0,
+      "passengerTotals": {
+        "services": {
+          "total": 207.0,
+          "taxes": 33.0,
+          "adjustments": -188.0,
+          "charges": [
+            {
+              "amount": 19.0,
+              "code": "MCES",
+              "detail": "Multiple C",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 19.0,
+              "ticketCode": "MES"
+            },
+            {
+              "amount": -188.0,
+              "code": "MCES",
+              "detail": "Fee OR",
+              "type": 1,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": -188.0,
+              "ticketCode": null
+            },
+            {
+              "amount": 33.0,
+              "code": "MO",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 33.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "specialServices": {
+          "total": 617.0,
+          "taxes": null,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 617.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 617.0,
+              "ticketCode": "XV1"
+            },
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            }
+          ]
+        },
+        "seats": {
+          "total": 719.0,
+          "taxes": 29.0,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 719.0,
+              "code": "SEAT",
+              "detail": "MEX-TIJ",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 719.0,
+              "ticketCode": "SET"
+            },
+            {
+              "amount": 29.0,
+              "code": "MO4",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 29.0,
+              "ticketCode": "MO4"
+            }
+          ]
+        },
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 4364.0
+      },
+      "passengers": {
+        "MCFBRFQ-": {
+          "passengerKey": "MCFBRFQ-",
+          "services": {
+            "total": 207.0,
+            "taxes": 33.0,
+            "adjustments": -188.0,
+            "charges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          },
+          "specialServices": {
+            "total": 617.0,
+            "taxes": null,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              },
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          "seats": {
+            "total": 719.0,
+            "taxes": 29.0,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          "upgrades": null,
+          "spoilage": null,
+          "nameChanges": null,
+          "convenience": null,
+          "infant": null,
+          "totalCost": 4364.0
+        }
+      },
+      "journeyTotals": {
+        "totalAmount": 1827.0,
+        "totalPoints": 0.0,
+        "totalTax": 428.0,
+        "totalDiscount": 1.0
+      },
+      "journeys": {
+        "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_": {
+          "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+          "totalAmount": 1827.0,
+          "totalPoints": 0.0,
+          "totalTax": 428.0,
+          "totalDiscount": 1.0
+        }
+      },
+      "addOnTotals": {
+        "car": null,
+        "hotel": null,
+        "activities": null
+      }
+    },
+    "receivedBy": {
+      "receivedBy": null,
+      "latestReceivedBy": null,
+      "receivedReference": null,
+      "latestReceivedReference": null,
+      "referralCode": null
+    },
+    "contacts": {
+      "P": {
+        "contactTypeCode": "P",
+        "phoneNumbers": [
+          {
+            "type": 0,
+            "number": "18648096173"
+          },
+          {
+            "type": 1,
+            "number": "18648096173"
+          }
+        ],
+        "cultureCode": "en-US",
+        "address": {
+          "lineOne": null,
+          "lineTwo": "PAX;WA;WEB",
+          "lineThree": null,
+          "countryCode": "US",
+          "provinceState": null,
+          "city": null,
+          "postalCode": null
+        },
+        "emailAddress": "alpha123@yahoo.com",
+        "customerNumber": null,
+        "sourceOrganization": null,
+        "distributionOption": 2,
+        "notificationPreference": 1,
+        "companyName": null,
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        }
+      }
+    },
+    "passengers": {
+      "MCFBRFQ-": {
+        "passengerKey": "MCFBRFQ-",
+        "passengerAlternateKey": "MjczNTA0NTQ2",
+        "customerNumber": null,
+        "fees": [
+          {
+            "type": 17,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "BFBW",
+            "detail": null,
+            "passengerFeeKey": "MCEwITE3",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 485.0,
+                "code": "BFBW",
+                "detail": "Bundle Fee",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 485.0,
+                "ticketCode": "BBW"
+              },
+              {
+                "amount": 19.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV1",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV1",
+            "detail": null,
+            "passengerFeeKey": "MCExITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV0",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV0",
+            "detail": null,
+            "passengerFeeKey": "MCEyITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          {
+            "type": 9,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "SEAT",
+            "detail": null,
+            "passengerFeeKey": "MCEzITk-",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "MCES",
+            "detail": null,
+            "passengerFeeKey": "MCE0ITM-",
+            "override": true,
+            "flightReference": null,
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          }
+        ],
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        },
+        "passengerTypeCode": "ADT",
+        "discountCode": null,
+        "bags": [],
+        "program": null,
+        "infant": null,
+        "info": {
+          "nationality": "US",
+          "residentCountry": "US",
+          "gender": 1,
+          "dateOfBirth": "2001-11-16T00:00:00",
+          "familyNumber": null
+        },
+        "travelDocuments": [],
+        "addresses": [],
+        "weightCategory": 1,
+        "emdCoupons": []
+      }
+    },
+    "journeys": [
+      {
+        "flightType": 1,
+        "stops": 0,
+        "designator": {
+          "destination": "TIJ",
+          "origin": "MEX",
+          "arrival": "2026-07-24T00:18:00",
+          "departure": "2026-07-23T21:45:00"
+        },
+        "move": null,
+        "segments": [
+          {
+            "isStandby": false,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "isBlocked": false,
+            "isHosted": true,
+            "isChangeOfGauge": false,
+            "designator": {
+              "destination": "TIJ",
+              "origin": "MEX",
+              "arrival": "2026-07-24T00:18:00",
+              "departure": "2026-07-23T21:45:00"
+            },
+            "isSeatmapViewable": true,
+            "fares": [
+              {
+                "isGoverning": true,
+                "carrierCode": "Y4",
+                "fareKey": "MH5Gfn5ZNH5GSFNTMX4wMDExfn4wfjB_flg-",
+                "classOfService": "F",
+                "classType": null,
+                "fareApplicationType": 0,
+                "fareClassOfService": "F",
+                "fareBasisCode": "FHSS1",
+                "fareSequence": 0,
+                "inboundOutBound": 0,
+                "fareStatus": 0,
+                "isAllotmentMarketFare": false,
+                "originalClassOfService": "F",
+                "ruleNumber": "0011",
+                "productClass": null,
+                "ruleTariff": null,
+                "travelClassCode": "Y",
+                "pricingDate": "2026-07-22T06:18:41.377",
+                "crossReferenceClassOfService": null,
+                "fareDesignator": {
+                  "fareTypeCodes": [
+                    "AG",
+                    "AT",
+                    "BD",
+                    "CC",
+                    "MO",
+                    "OT",
+                    "R",
+                    "WE"
+                  ]
+                },
+                "passengerFares": [
+                  {
+                    "serviceCharges": [
+                      {
+                        "amount": 1828.0,
+                        "code": null,
+                        "detail": null,
+                        "type": 0,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1828.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 1.0,
+                        "code": "PM4DUN",
+                        "detail": "Tarifa Bas",
+                        "type": 1,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 231.0,
+                        "code": "BSCO",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 231.0,
+                        "ticketCode": "BCO"
+                      },
+                      {
+                        "amount": 38.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 38.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 43.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 43.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 73.0,
+                        "code": "MX4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 73.0,
+                        "ticketCode": "MX"
+                      },
+                      {
+                        "amount": 19.0,
+                        "code": "CVFM",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 19.0,
+                        "ticketCode": "CVF"
+                      },
+                      {
+                        "amount": 10.0,
+                        "code": "SPIN",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 10.0,
+                        "ticketCode": "SPI"
+                      },
+                      {
+                        "amount": 14.0,
+                        "code": "MO4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 14.0,
+                        "ticketCode": "MO4"
+                      }
+                    ],
+                    "discountCode": null,
+                    "fareDiscountCode": "PM4DUN",
+                    "ticketFareBasis": null,
+                    "passengerType": "ADT"
+                  }
+                ],
+                "fareLink": 0
+              }
+            ],
+            "segmentKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+            "identifier": {
+              "identifier": "188",
+              "carrierCode": "Y4",
+              "opSuffix": null
+            },
+            "passengerSegment": {
+              "MCFBRFQ-": {
+                "seats": [
+                  {
+                    "compartmentDesignator": "Y",
+                    "penalty": 0,
+                    "unitDesignator": "2F",
+                    "seatInformation": {
+                      "deck": 1,
+                      "seatSet": 4,
+                      "propertyList": {
+                        "BRDZONE": "1",
+                        "WINDOW": "TRUE",
+                        "LEGROOM": "TRUE",
+                        "PET": "TRUE",
+                        "FIRSTDEP": "TRUE",
+                        "LAV": "TRUE",
+                        "DOG": "TRUE",
+                        "PREFER": "TRUE",
+                        "ECONCOMF": "TRUE",
+                        "TCC": "Y"
+                      }
+                    },
+                    "arrivalStation": "TIJ",
+                    "departureStation": "MEX",
+                    "passengerKey": "MCFBRFQ-",
+                    "unitKey": "WTQhMTg4ISAhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCFUSUohMkYhWQ--",
+                    "crossReferenceSeatingPreference": null,
+                    "isPending": false,
+                    "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK"
+                  }
+                ],
+                "passengerKey": "MCFBRFQ-",
+                "activityDate": "2026-07-24T02:58:18.26Z",
+                "boardingSequence": "135",
+                "createdDate": "2026-07-22T06:22:01.243Z",
+                "liftStatus": 2,
+                "modifiedDate": "2026-07-22T06:22:01.243Z",
+                "overBookIndicator": 0,
+                "priorityDate": "2026-07-22T06:22:01.273Z",
+                "timeChanged": false,
+                "verifiedTravelDocs": null,
+                "sourcePointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "pointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "ssrs": [
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFCQjE1ITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "BB15",
+                    "feeCode": "BB15",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFGQVBBITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "FAPA",
+                    "feeCode": "FAPA",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjAhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV0",
+                    "feeCode": "XV0",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjEhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV1",
+                    "feeCode": "XV1",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  }
+                ],
+                "tickets": [],
+                "bags": [],
+                "scores": [],
+                "boardingPassDetail": null,
+                "hasInfant": false,
+                "seatPreferences": {
+                  "seat": 0,
+                  "travelClass": 0,
+                  "advancedPreferences": []
+                },
+                "bundleCode": "BCBW",
+                "verifiedTravelDocuments": null,
+                "referenceNumber": 0,
+                "baggageGroupNumber": null,
+                "stayType": 0,
+                "infantStayType": 0
+              }
+            },
+            "channelType": 2,
+            "cabinOfService": "Y",
+            "externalIdentifier": null,
+            "priorityCode": null,
+            "changeReasonCode": 0,
+            "segmentType": 0,
+            "salesDate": "2026-07-22T06:22:01.243Z",
+            "international": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "legs": [
+              {
+                "legKey": "NjM5MjA0Mzk5MDAwMDAwMDAwIVk0ITE4OCEgIU1FWCFUSUohNTc1MzM0NA--",
+                "operationsInfo": null,
+                "designator": {
+                  "destination": "TIJ",
+                  "origin": "MEX",
+                  "arrival": "2026-07-24T00:18:00",
+                  "departure": "2026-07-23T21:45:00"
+                },
+                "legInfo": {
+                  "departureTimeUtc": "2026-07-24T03:45:00Z",
+                  "arrivalTimeUtc": "2026-07-24T07:18:00Z",
+                  "adjustedCapacity": 237,
+                  "arrivalTerminal": "1",
+                  "arrivalTimeVariant": -420,
+                  "backMoveDays": 0,
+                  "capacity": 239,
+                  "changeOfDirection": false,
+                  "codeShareIndicator": 0,
+                  "departureTerminal": "1",
+                  "departureTimeVariant": -360,
+                  "equipmentType": "B39",
+                  "equipmentTypeSuffix": null,
+                  "eTicket": false,
+                  "irop": false,
+                  "lid": 239,
+                  "marketingCode": null,
+                  "marketingOverride": false,
+                  "operatedByText": null,
+                  "operatingCarrier": null,
+                  "operatingFlightNumber": null,
+                  "operatingOpSuffix": null,
+                  "outMoveDays": 0,
+                  "arrivalTime": "2026-07-24T00:18:00",
+                  "departureTime": "2026-07-23T21:45:00",
+                  "prbcCode": "21X",
+                  "scheduleServiceType": null,
+                  "sold": 234,
+                  "status": 1,
+                  "subjectToGovtApproval": false
+                },
+                "nests": [],
+                "ssrs": [],
+                "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK",
+                "flightReference": "20260723 Y4 188 MEXTIJ"
+              }
+            ],
+            "status": 6
+          }
+        ],
+        "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+        "notForGeneralUser": false
+      }
+    ],
+    "comments": [
+      {
+        "type": 0,
+        "text": "Cliente acepta t\u00e9rminos y condiciones",
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NTYy"
+      },
+      {
+        "type": 0,
+        "text": "MCP is applied",
+        "createdDate": "2026-07-22T06:22:14.043Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI3"
+      },
+      {
+        "type": 0,
+        "text": "MCES Fee is applied",
+        "createdDate": "2026-07-22T06:22:14.047Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI4"
+      },
+      {
+        "type": 0,
+        "text": "Customer not eligible for offer for delay time 3 for Y4188:2026-07-23:MEX:TIJ",
+        "createdDate": "2026-07-25T08:36:53.6Z",
+        "pointOfSale": {
+          "agentCode": "D1022",
+          "domainCode": "EXT",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM3MjQwODIw"
+      }
+    ],
+    "queues": [],
+    "history": [],
+    "payments": [
+      {
+        "paymentKey": "MjYyMDgxNjU3ITEhTUQhMTg2OTM4NTk1",
+        "code": "MD",
+        "approvalDate": "2026-07-22T06:22:05.303Z",
+        "details": {
+          "accountNumberId": 0,
+          "parentPaymentId": null,
+          "accountName": "ariel ramirez alvarez",
+          "accountNumber": null,
+          "expirationDate": null,
+          "text": null,
+          "installments": 0,
+          "binRange": 0,
+          "fields": {
+            "ACCTNO": "552433XXXXXX5489",
+            "Avs::Address1": "1516 half pint loop",
+            "Avs::City": "Fort Mill",
+            "Avs::Country": "US",
+            "Avs::PostalCode": "29708",
+            "Avs::StateOrProvince": "SC",
+            "BillTo::Email": "alpha123@yahoo.com",
+            "BillTo::FirstName": "ariel",
+            "BillTo::IPAddress": "216.218.86.231",
+            "BillTo::LastName": "ramirez alvarez",
+            "BillTo::Phone": "+18648096173",
+            "card_id": "d85d4a20-cc41-4da8-8e9b-e8ee17af4774",
+            "CardHolderFirstName": "ariel",
+            "CardHolderLastName": "ramirez alvarez",
+            "CC::CarrierCode": "Y4",
+            "contact_email": "alpha123@yahoo.com",
+            "DD::Installments": "1",
+            "device_fingerprint": "eyJBQ0NFUlRJRlkiOiJhNDRlMjljMy04ODRjLTQ5NjMtYzVmMy00ZTM4ZjE2NGQ4OTciLCJSSVNLSUZJRUQiOiI5M2U4M2FiMC1kNTZmLTVlMDctYjYyZC1mZjE2ZmQ1ZGNiN2YifQ==",
+            "ExchgRt": "0.0573304307974335472043996334",
+            "FPS::Enabled": "false",
+            "IPAddress": "216.218.86.231",
+            "location": "WWW",
+            "NS::AgentName": "WebAnonymous",
+            "NS::AgentRole": "WAN",
+            "order_token": "69b06e7a-4f78-4c4e-9305-4ee23240ad7b",
+            "OriginalLocation": "WWW",
+            "RateID": "MCPVOLARIS",
+            "SP:PAYID": "120046823",
+            "split_payment_sequence": "0",
+            "TransactionTypeIndicator": "TKT",
+            "ubainformation": "eyJ1YmFJRCI6IjRlMzk2OWQwNmZlMGI2MTI2M2YxODcwYTM3NTE0OGY5ZDY4ZCIsInViYVNlc3Npb25JRCI6IjdjMWU3NjFmNDAyM2RiZjQwOGMzZTc5NWIzMmNmNjUzODlkMSIsInBhZ2VJRCI6MzkwMjM0NzQ0MTUwMjc5MiwiZXZlbnRTb3VyY2UiOiJ3ZWIifQ==",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+          }
+        },
+        "amounts": {
+          "amount": 4364.0,
+          "currencyCode": "MXN",
+          "collected": 250.19,
+          "collectedCurrencyCode": "USD",
+          "quoted": 4364.0,
+          "quotedCurrencyCode": "MXN"
+        },
+        "authorizationCode": "03595S",
+        "authorizationStatus": 4,
+        "fundedDate": "1800-01-01T00:00:00Z",
+        "transactionCode": null,
+        "dcc": {
+          "rateId": "00000000-0000-0000-0000-000000000000",
+          "currencyCode": null,
+          "rateValue": 0.0,
+          "amount": 0.0,
+          "putInState": null,
+          "status": 4,
+          "applicable": false
+        },
+        "threeDSecure": null,
+        "attachments": [],
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "modifiedDate": "2026-07-22T06:22:05.3Z",
+        "type": 0,
+        "status": 3,
+        "transferred": false,
+        "channelType": 2,
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "sourcePointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "deposit": false,
+        "accountId": 0,
+        "voucher": null,
+        "addedToState": true,
+        "createdAgentId": 21,
+        "modifiedAgentId": 18,
+        "reference": 262081657,
+        "passengerVoucher": null
+      }
+    ],
+    "addOns": {},
+    "orders": []
+  },
+  {
+    "selfServiceMoveAvailable": false,
+    "bookingKey": "MTg2OTM4NTk1IUlGUzJKVyFmYWxzZQ--",
+    "recordLocator": "IFS2JW",
+    "currencyCode": "MXN",
+    "systemCode": null,
+    "groupName": null,
+    "locators": {
+      "numericRecordLocator": "171102221910",
+      "parentRecordLocator": null,
+      "parentId": 0,
+      "recordLocators": []
+    },
+    "info": {
+      "status": 2,
+      "paidStatus": 1,
+      "priceStatus": 2,
+      "profileStatus": 1,
+      "bookingType": null,
+      "channelType": 2,
+      "bookedDate": "2026-07-22T06:22:01.243Z",
+      "createdDate": "2026-07-22T06:22:01.243Z",
+      "expirationDate": "2026-07-25T03:45:00Z",
+      "modifiedDate": "2026-07-22T06:22:01.243Z",
+      "modifiedAgentId": 18,
+      "createdAgentId": 21,
+      "owningCarrierCode": "Y4",
+      "changeAllowed": true,
+      "createdUserKey": "MjE-",
+      "modifiedUserKey": "MTg-"
+    },
+    "sales": {
+      "created": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "source": {
+        "isoCountryCode": null,
+        "sourceSystemCode": null,
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "modified": null
+    },
+    "typeOfSale": {
+      "residentCountry": "MX",
+      "promotionCode": "VMX30",
+      "fareTypes": []
+    },
+    "hold": null,
+    "breakdown": {
+      "balanceDue": 0.0,
+      "pointsBalanceDue": 0.0,
+      "authorizedBalanceDue": 0.0,
+      "totalAmount": 4364.0,
+      "totalPoints": 0.0,
+      "totalToCollect": 4364.0,
+      "totalPointsToCollect": 0.0,
+      "totalCharged": 4364.0,
+      "passengerTotals": {
+        "services": {
+          "total": 207.0,
+          "taxes": 33.0,
+          "adjustments": -188.0,
+          "charges": [
+            {
+              "amount": 19.0,
+              "code": "MCES",
+              "detail": "Multiple C",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 19.0,
+              "ticketCode": "MES"
+            },
+            {
+              "amount": -188.0,
+              "code": "MCES",
+              "detail": "Fee OR",
+              "type": 1,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": -188.0,
+              "ticketCode": null
+            },
+            {
+              "amount": 33.0,
+              "code": "MO",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 33.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "specialServices": {
+          "total": 617.0,
+          "taxes": null,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 617.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 617.0,
+              "ticketCode": "XV1"
+            },
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            }
+          ]
+        },
+        "seats": {
+          "total": 719.0,
+          "taxes": 29.0,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 719.0,
+              "code": "SEAT",
+              "detail": "MEX-TIJ",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 719.0,
+              "ticketCode": "SET"
+            },
+            {
+              "amount": 29.0,
+              "code": "MO4",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 29.0,
+              "ticketCode": "MO4"
+            }
+          ]
+        },
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 4364.0
+      },
+      "passengers": {
+        "MCFBRFQ-": {
+          "passengerKey": "MCFBRFQ-",
+          "services": {
+            "total": 207.0,
+            "taxes": 33.0,
+            "adjustments": -188.0,
+            "charges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          },
+          "specialServices": {
+            "total": 617.0,
+            "taxes": null,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              },
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          "seats": {
+            "total": 719.0,
+            "taxes": 29.0,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          "upgrades": null,
+          "spoilage": null,
+          "nameChanges": null,
+          "convenience": null,
+          "infant": null,
+          "totalCost": 4364.0
+        }
+      },
+      "journeyTotals": {
+        "totalAmount": 1827.0,
+        "totalPoints": 0.0,
+        "totalTax": 428.0,
+        "totalDiscount": 1.0
+      },
+      "journeys": {
+        "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_": {
+          "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+          "totalAmount": 1827.0,
+          "totalPoints": 0.0,
+          "totalTax": 428.0,
+          "totalDiscount": 1.0
+        }
+      },
+      "addOnTotals": {
+        "car": null,
+        "hotel": null,
+        "activities": null
+      }
+    },
+    "receivedBy": {
+      "receivedBy": null,
+      "latestReceivedBy": null,
+      "receivedReference": null,
+      "latestReceivedReference": null,
+      "referralCode": null
+    },
+    "contacts": {
+      "P": {
+        "contactTypeCode": "P",
+        "phoneNumbers": [
+          {
+            "type": 0,
+            "number": "18648096173"
+          },
+          {
+            "type": 1,
+            "number": "18648096173"
+          }
+        ],
+        "cultureCode": "en-US",
+        "address": {
+          "lineOne": null,
+          "lineTwo": "PAX;WA;WEB",
+          "lineThree": null,
+          "countryCode": "US",
+          "provinceState": null,
+          "city": null,
+          "postalCode": null
+        },
+        "emailAddress": "alpha123@yahoo.com",
+        "customerNumber": null,
+        "sourceOrganization": null,
+        "distributionOption": 2,
+        "notificationPreference": 1,
+        "companyName": null,
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        }
+      }
+    },
+    "passengers": {
+      "MCFBRFQ-": {
+        "passengerKey": "MCFBRFQ-",
+        "passengerAlternateKey": "MjczNTA0NTQ2",
+        "customerNumber": null,
+        "fees": [
+          {
+            "type": 17,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "BFBW",
+            "detail": null,
+            "passengerFeeKey": "MCEwITE3",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 485.0,
+                "code": "BFBW",
+                "detail": "Bundle Fee",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 485.0,
+                "ticketCode": "BBW"
+              },
+              {
+                "amount": 19.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV1",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV1",
+            "detail": null,
+            "passengerFeeKey": "MCExITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV0",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV0",
+            "detail": null,
+            "passengerFeeKey": "MCEyITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          {
+            "type": 9,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "SEAT",
+            "detail": null,
+            "passengerFeeKey": "MCEzITk-",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "MCES",
+            "detail": null,
+            "passengerFeeKey": "MCE0ITM-",
+            "override": true,
+            "flightReference": null,
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          }
+        ],
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        },
+        "passengerTypeCode": "ADT",
+        "discountCode": null,
+        "bags": [],
+        "program": null,
+        "infant": null,
+        "info": {
+          "nationality": "US",
+          "residentCountry": "US",
+          "gender": 1,
+          "dateOfBirth": "2001-11-16T00:00:00",
+          "familyNumber": null
+        },
+        "travelDocuments": [],
+        "addresses": [],
+        "weightCategory": 1,
+        "emdCoupons": []
+      }
+    },
+    "journeys": [
+      {
+        "flightType": 1,
+        "stops": 0,
+        "designator": {
+          "destination": "TIJ",
+          "origin": "MEX",
+          "arrival": "2026-07-24T00:18:00",
+          "departure": "2026-07-23T21:45:00"
+        },
+        "move": null,
+        "segments": [
+          {
+            "isStandby": false,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "isBlocked": false,
+            "isHosted": true,
+            "isChangeOfGauge": false,
+            "designator": {
+              "destination": "TIJ",
+              "origin": "MEX",
+              "arrival": "2026-07-24T00:18:00",
+              "departure": "2026-07-23T21:45:00"
+            },
+            "isSeatmapViewable": true,
+            "fares": [
+              {
+                "isGoverning": true,
+                "carrierCode": "Y4",
+                "fareKey": "MH5Gfn5ZNH5GSFNTMX4wMDExfn4wfjB_flg-",
+                "classOfService": "F",
+                "classType": null,
+                "fareApplicationType": 0,
+                "fareClassOfService": "F",
+                "fareBasisCode": "FHSS1",
+                "fareSequence": 0,
+                "inboundOutBound": 0,
+                "fareStatus": 0,
+                "isAllotmentMarketFare": false,
+                "originalClassOfService": "F",
+                "ruleNumber": "0011",
+                "productClass": null,
+                "ruleTariff": null,
+                "travelClassCode": "Y",
+                "pricingDate": "2026-07-22T06:18:41.377",
+                "crossReferenceClassOfService": null,
+                "fareDesignator": {
+                  "fareTypeCodes": [
+                    "AG",
+                    "AT",
+                    "BD",
+                    "CC",
+                    "MO",
+                    "OT",
+                    "R",
+                    "WE"
+                  ]
+                },
+                "passengerFares": [
+                  {
+                    "serviceCharges": [
+                      {
+                        "amount": 1828.0,
+                        "code": null,
+                        "detail": null,
+                        "type": 0,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1828.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 1.0,
+                        "code": "PM4DUN",
+                        "detail": "Tarifa Bas",
+                        "type": 1,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 231.0,
+                        "code": "BSCO",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 231.0,
+                        "ticketCode": "BCO"
+                      },
+                      {
+                        "amount": 38.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 38.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 43.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 43.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 73.0,
+                        "code": "MX4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 73.0,
+                        "ticketCode": "MX"
+                      },
+                      {
+                        "amount": 19.0,
+                        "code": "CVFM",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 19.0,
+                        "ticketCode": "CVF"
+                      },
+                      {
+                        "amount": 10.0,
+                        "code": "SPIN",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 10.0,
+                        "ticketCode": "SPI"
+                      },
+                      {
+                        "amount": 14.0,
+                        "code": "MO4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 14.0,
+                        "ticketCode": "MO4"
+                      }
+                    ],
+                    "discountCode": null,
+                    "fareDiscountCode": "PM4DUN",
+                    "ticketFareBasis": null,
+                    "passengerType": "ADT"
+                  }
+                ],
+                "fareLink": 0
+              }
+            ],
+            "segmentKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+            "identifier": {
+              "identifier": "188",
+              "carrierCode": "Y4",
+              "opSuffix": null
+            },
+            "passengerSegment": {
+              "MCFBRFQ-": {
+                "seats": [
+                  {
+                    "compartmentDesignator": "Y",
+                    "penalty": 0,
+                    "unitDesignator": "2F",
+                    "seatInformation": {
+                      "deck": 1,
+                      "seatSet": 4,
+                      "propertyList": {
+                        "BRDZONE": "1",
+                        "WINDOW": "TRUE",
+                        "LEGROOM": "TRUE",
+                        "PET": "TRUE",
+                        "FIRSTDEP": "TRUE",
+                        "LAV": "TRUE",
+                        "DOG": "TRUE",
+                        "PREFER": "TRUE",
+                        "ECONCOMF": "TRUE",
+                        "TCC": "Y"
+                      }
+                    },
+                    "arrivalStation": "TIJ",
+                    "departureStation": "MEX",
+                    "passengerKey": "MCFBRFQ-",
+                    "unitKey": "WTQhMTg4ISAhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCFUSUohMkYhWQ--",
+                    "crossReferenceSeatingPreference": null,
+                    "isPending": false,
+                    "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK"
+                  }
+                ],
+                "passengerKey": "MCFBRFQ-",
+                "activityDate": "2026-07-24T02:58:18.26Z",
+                "boardingSequence": "135",
+                "createdDate": "2026-07-22T06:22:01.243Z",
+                "liftStatus": 2,
+                "modifiedDate": "2026-07-22T06:22:01.243Z",
+                "overBookIndicator": 0,
+                "priorityDate": "2026-07-22T06:22:01.273Z",
+                "timeChanged": false,
+                "verifiedTravelDocs": null,
+                "sourcePointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "pointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "ssrs": [
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFCQjE1ITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "BB15",
+                    "feeCode": "BB15",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFGQVBBITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "FAPA",
+                    "feeCode": "FAPA",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjAhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV0",
+                    "feeCode": "XV0",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjEhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV1",
+                    "feeCode": "XV1",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  }
+                ],
+                "tickets": [],
+                "bags": [],
+                "scores": [],
+                "boardingPassDetail": null,
+                "hasInfant": false,
+                "seatPreferences": {
+                  "seat": 0,
+                  "travelClass": 0,
+                  "advancedPreferences": []
+                },
+                "bundleCode": "BCBW",
+                "verifiedTravelDocuments": null,
+                "referenceNumber": 0,
+                "baggageGroupNumber": null,
+                "stayType": 0,
+                "infantStayType": 0
+              }
+            },
+            "channelType": 2,
+            "cabinOfService": "Y",
+            "externalIdentifier": null,
+            "priorityCode": null,
+            "changeReasonCode": 0,
+            "segmentType": 0,
+            "salesDate": "2026-07-22T06:22:01.243Z",
+            "international": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "legs": [
+              {
+                "legKey": "NjM5MjA0Mzk5MDAwMDAwMDAwIVk0ITE4OCEgIU1FWCFUSUohNTc1MzM0NA--",
+                "operationsInfo": null,
+                "designator": {
+                  "destination": "TIJ",
+                  "origin": "MEX",
+                  "arrival": "2026-07-24T00:18:00",
+                  "departure": "2026-07-23T21:45:00"
+                },
+                "legInfo": {
+                  "departureTimeUtc": "2026-07-24T03:45:00Z",
+                  "arrivalTimeUtc": "2026-07-24T07:18:00Z",
+                  "adjustedCapacity": 237,
+                  "arrivalTerminal": "1",
+                  "arrivalTimeVariant": -420,
+                  "backMoveDays": 0,
+                  "capacity": 239,
+                  "changeOfDirection": false,
+                  "codeShareIndicator": 0,
+                  "departureTerminal": "1",
+                  "departureTimeVariant": -360,
+                  "equipmentType": "B39",
+                  "equipmentTypeSuffix": null,
+                  "eTicket": false,
+                  "irop": false,
+                  "lid": 239,
+                  "marketingCode": null,
+                  "marketingOverride": false,
+                  "operatedByText": null,
+                  "operatingCarrier": null,
+                  "operatingFlightNumber": null,
+                  "operatingOpSuffix": null,
+                  "outMoveDays": 0,
+                  "arrivalTime": "2026-07-24T00:18:00",
+                  "departureTime": "2026-07-23T21:45:00",
+                  "prbcCode": "21X",
+                  "scheduleServiceType": null,
+                  "sold": 234,
+                  "status": 1,
+                  "subjectToGovtApproval": false
+                },
+                "nests": [],
+                "ssrs": [],
+                "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK",
+                "flightReference": "20260723 Y4 188 MEXTIJ"
+              }
+            ],
+            "status": 6
+          }
+        ],
+        "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+        "notForGeneralUser": false
+      }
+    ],
+    "comments": [
+      {
+        "type": 0,
+        "text": "Cliente acepta t\u00e9rminos y condiciones",
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NTYy"
+      },
+      {
+        "type": 0,
+        "text": "MCP is applied",
+        "createdDate": "2026-07-22T06:22:14.043Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI3"
+      },
+      {
+        "type": 0,
+        "text": "MCES Fee is applied",
+        "createdDate": "2026-07-22T06:22:14.047Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI4"
+      },
+      {
+        "type": 0,
+        "text": "Customer not eligible for offer for delay time 3 for Y4188:2026-07-23:MEX:TIJ",
+        "createdDate": "2026-07-25T08:36:53.6Z",
+        "pointOfSale": {
+          "agentCode": "D1022",
+          "domainCode": "EXT",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM3MjQwODIw"
+      }
+    ],
+    "queues": [],
+    "history": [],
+    "payments": [
+      {
+        "paymentKey": "MjYyMDgxNjU3ITEhTUQhMTg2OTM4NTk1",
+        "code": "MD",
+        "approvalDate": "2026-07-22T06:22:05.303Z",
+        "details": {
+          "accountNumberId": 0,
+          "parentPaymentId": null,
+          "accountName": "ariel ramirez alvarez",
+          "accountNumber": null,
+          "expirationDate": null,
+          "text": null,
+          "installments": 0,
+          "binRange": 0,
+          "fields": {
+            "ACCTNO": "552433XXXXXX5489",
+            "Avs::Address1": "1516 half pint loop",
+            "Avs::City": "Fort Mill",
+            "Avs::Country": "US",
+            "Avs::PostalCode": "29708",
+            "Avs::StateOrProvince": "SC",
+            "BillTo::Email": "alpha123@yahoo.com",
+            "BillTo::FirstName": "ariel",
+            "BillTo::IPAddress": "216.218.86.231",
+            "BillTo::LastName": "ramirez alvarez",
+            "BillTo::Phone": "+18648096173",
+            "card_id": "d85d4a20-cc41-4da8-8e9b-e8ee17af4774",
+            "CardHolderFirstName": "ariel",
+            "CardHolderLastName": "ramirez alvarez",
+            "CC::CarrierCode": "Y4",
+            "contact_email": "alpha123@yahoo.com",
+            "DD::Installments": "1",
+            "device_fingerprint": "eyJBQ0NFUlRJRlkiOiJhNDRlMjljMy04ODRjLTQ5NjMtYzVmMy00ZTM4ZjE2NGQ4OTciLCJSSVNLSUZJRUQiOiI5M2U4M2FiMC1kNTZmLTVlMDctYjYyZC1mZjE2ZmQ1ZGNiN2YifQ==",
+            "ExchgRt": "0.0573304307974335472043996334",
+            "FPS::Enabled": "false",
+            "IPAddress": "216.218.86.231",
+            "location": "WWW",
+            "NS::AgentName": "WebAnonymous",
+            "NS::AgentRole": "WAN",
+            "order_token": "69b06e7a-4f78-4c4e-9305-4ee23240ad7b",
+            "OriginalLocation": "WWW",
+            "RateID": "MCPVOLARIS",
+            "SP:PAYID": "120046823",
+            "split_payment_sequence": "0",
+            "TransactionTypeIndicator": "TKT",
+            "ubainformation": "eyJ1YmFJRCI6IjRlMzk2OWQwNmZlMGI2MTI2M2YxODcwYTM3NTE0OGY5ZDY4ZCIsInViYVNlc3Npb25JRCI6IjdjMWU3NjFmNDAyM2RiZjQwOGMzZTc5NWIzMmNmNjUzODlkMSIsInBhZ2VJRCI6MzkwMjM0NzQ0MTUwMjc5MiwiZXZlbnRTb3VyY2UiOiJ3ZWIifQ==",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+          }
+        },
+        "amounts": {
+          "amount": 4364.0,
+          "currencyCode": "MXN",
+          "collected": 250.19,
+          "collectedCurrencyCode": "USD",
+          "quoted": 4364.0,
+          "quotedCurrencyCode": "MXN"
+        },
+        "authorizationCode": "03595S",
+        "authorizationStatus": 4,
+        "fundedDate": "1800-01-01T00:00:00Z",
+        "transactionCode": null,
+        "dcc": {
+          "rateId": "00000000-0000-0000-0000-000000000000",
+          "currencyCode": null,
+          "rateValue": 0.0,
+          "amount": 0.0,
+          "putInState": null,
+          "status": 4,
+          "applicable": false
+        },
+        "threeDSecure": null,
+        "attachments": [],
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "modifiedDate": "2026-07-22T06:22:05.3Z",
+        "type": 0,
+        "status": 3,
+        "transferred": false,
+        "channelType": 2,
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "sourcePointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "deposit": false,
+        "accountId": 0,
+        "voucher": null,
+        "addedToState": true,
+        "createdAgentId": 21,
+        "modifiedAgentId": 18,
+        "reference": 262081657,
+        "passengerVoucher": null
+      }
+    ],
+    "addOns": {},
+    "orders": []
+  },
+  {
+    "selfServiceMoveAvailable": false,
+    "bookingKey": "MTg2OTM4NTk1IUlGUzJKVyFmYWxzZQ--",
+    "recordLocator": "IFS2JW",
+    "currencyCode": "MXN",
+    "systemCode": null,
+    "groupName": null,
+    "locators": {
+      "numericRecordLocator": "171102221910",
+      "parentRecordLocator": null,
+      "parentId": 0,
+      "recordLocators": []
+    },
+    "info": {
+      "status": 2,
+      "paidStatus": 1,
+      "priceStatus": 2,
+      "profileStatus": 1,
+      "bookingType": null,
+      "channelType": 2,
+      "bookedDate": "2026-07-22T06:22:01.243Z",
+      "createdDate": "2026-07-22T06:22:01.243Z",
+      "expirationDate": "2026-07-25T03:45:00Z",
+      "modifiedDate": "2026-07-22T06:22:01.243Z",
+      "modifiedAgentId": 18,
+      "createdAgentId": 21,
+      "owningCarrierCode": "Y4",
+      "changeAllowed": true,
+      "createdUserKey": "MjE-",
+      "modifiedUserKey": "MTg-"
+    },
+    "sales": {
+      "created": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "source": {
+        "isoCountryCode": null,
+        "sourceSystemCode": null,
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "modified": null
+    },
+    "typeOfSale": {
+      "residentCountry": "MX",
+      "promotionCode": "VMX30",
+      "fareTypes": []
+    },
+    "hold": null,
+    "breakdown": {
+      "balanceDue": 0.0,
+      "pointsBalanceDue": 0.0,
+      "authorizedBalanceDue": 0.0,
+      "totalAmount": 4364.0,
+      "totalPoints": 0.0,
+      "totalToCollect": 4364.0,
+      "totalPointsToCollect": 0.0,
+      "totalCharged": 4364.0,
+      "passengerTotals": {
+        "services": {
+          "total": 207.0,
+          "taxes": 33.0,
+          "adjustments": -188.0,
+          "charges": [
+            {
+              "amount": 19.0,
+              "code": "MCES",
+              "detail": "Multiple C",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 19.0,
+              "ticketCode": "MES"
+            },
+            {
+              "amount": -188.0,
+              "code": "MCES",
+              "detail": "Fee OR",
+              "type": 1,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": -188.0,
+              "ticketCode": null
+            },
+            {
+              "amount": 33.0,
+              "code": "MO",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 33.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "specialServices": {
+          "total": 617.0,
+          "taxes": null,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 617.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 617.0,
+              "ticketCode": "XV1"
+            },
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            }
+          ]
+        },
+        "seats": {
+          "total": 719.0,
+          "taxes": 29.0,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 719.0,
+              "code": "SEAT",
+              "detail": "MEX-TIJ",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 719.0,
+              "ticketCode": "SET"
+            },
+            {
+              "amount": 29.0,
+              "code": "MO4",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 29.0,
+              "ticketCode": "MO4"
+            }
+          ]
+        },
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 4364.0
+      },
+      "passengers": {
+        "MCFBRFQ-": {
+          "passengerKey": "MCFBRFQ-",
+          "services": {
+            "total": 207.0,
+            "taxes": 33.0,
+            "adjustments": -188.0,
+            "charges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          },
+          "specialServices": {
+            "total": 617.0,
+            "taxes": null,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              },
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          "seats": {
+            "total": 719.0,
+            "taxes": 29.0,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          "upgrades": null,
+          "spoilage": null,
+          "nameChanges": null,
+          "convenience": null,
+          "infant": null,
+          "totalCost": 4364.0
+        }
+      },
+      "journeyTotals": {
+        "totalAmount": 1827.0,
+        "totalPoints": 0.0,
+        "totalTax": 428.0,
+        "totalDiscount": 1.0
+      },
+      "journeys": {
+        "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_": {
+          "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+          "totalAmount": 1827.0,
+          "totalPoints": 0.0,
+          "totalTax": 428.0,
+          "totalDiscount": 1.0
+        }
+      },
+      "addOnTotals": {
+        "car": null,
+        "hotel": null,
+        "activities": null
+      }
+    },
+    "receivedBy": {
+      "receivedBy": null,
+      "latestReceivedBy": null,
+      "receivedReference": null,
+      "latestReceivedReference": null,
+      "referralCode": null
+    },
+    "contacts": {
+      "P": {
+        "contactTypeCode": "P",
+        "phoneNumbers": [
+          {
+            "type": 0,
+            "number": "18648096173"
+          },
+          {
+            "type": 1,
+            "number": "18648096173"
+          }
+        ],
+        "cultureCode": "en-US",
+        "address": {
+          "lineOne": null,
+          "lineTwo": "PAX;WA;WEB",
+          "lineThree": null,
+          "countryCode": "US",
+          "provinceState": null,
+          "city": null,
+          "postalCode": null
+        },
+        "emailAddress": "alpha123@yahoo.com",
+        "customerNumber": null,
+        "sourceOrganization": null,
+        "distributionOption": 2,
+        "notificationPreference": 1,
+        "companyName": null,
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        }
+      }
+    },
+    "passengers": {
+      "MCFBRFQ-": {
+        "passengerKey": "MCFBRFQ-",
+        "passengerAlternateKey": "MjczNTA0NTQ2",
+        "customerNumber": null,
+        "fees": [
+          {
+            "type": 17,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "BFBW",
+            "detail": null,
+            "passengerFeeKey": "MCEwITE3",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 485.0,
+                "code": "BFBW",
+                "detail": "Bundle Fee",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 485.0,
+                "ticketCode": "BBW"
+              },
+              {
+                "amount": 19.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV1",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV1",
+            "detail": null,
+            "passengerFeeKey": "MCExITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV0",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV0",
+            "detail": null,
+            "passengerFeeKey": "MCEyITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          {
+            "type": 9,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "SEAT",
+            "detail": null,
+            "passengerFeeKey": "MCEzITk-",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "MCES",
+            "detail": null,
+            "passengerFeeKey": "MCE0ITM-",
+            "override": true,
+            "flightReference": null,
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          }
+        ],
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        },
+        "passengerTypeCode": "ADT",
+        "discountCode": null,
+        "bags": [],
+        "program": null,
+        "infant": null,
+        "info": {
+          "nationality": "US",
+          "residentCountry": "US",
+          "gender": 1,
+          "dateOfBirth": "2001-11-16T00:00:00",
+          "familyNumber": null
+        },
+        "travelDocuments": [],
+        "addresses": [],
+        "weightCategory": 1,
+        "emdCoupons": []
+      }
+    },
+    "journeys": [
+      {
+        "flightType": 1,
+        "stops": 0,
+        "designator": {
+          "destination": "TIJ",
+          "origin": "MEX",
+          "arrival": "2026-07-24T00:18:00",
+          "departure": "2026-07-23T21:45:00"
+        },
+        "move": null,
+        "segments": [
+          {
+            "isStandby": false,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "isBlocked": false,
+            "isHosted": true,
+            "isChangeOfGauge": false,
+            "designator": {
+              "destination": "TIJ",
+              "origin": "MEX",
+              "arrival": "2026-07-24T00:18:00",
+              "departure": "2026-07-23T21:45:00"
+            },
+            "isSeatmapViewable": true,
+            "fares": [
+              {
+                "isGoverning": true,
+                "carrierCode": "Y4",
+                "fareKey": "MH5Gfn5ZNH5GSFNTMX4wMDExfn4wfjB_flg-",
+                "classOfService": "F",
+                "classType": null,
+                "fareApplicationType": 0,
+                "fareClassOfService": "F",
+                "fareBasisCode": "FHSS1",
+                "fareSequence": 0,
+                "inboundOutBound": 0,
+                "fareStatus": 0,
+                "isAllotmentMarketFare": false,
+                "originalClassOfService": "F",
+                "ruleNumber": "0011",
+                "productClass": null,
+                "ruleTariff": null,
+                "travelClassCode": "Y",
+                "pricingDate": "2026-07-22T06:18:41.377",
+                "crossReferenceClassOfService": null,
+                "fareDesignator": {
+                  "fareTypeCodes": [
+                    "AG",
+                    "AT",
+                    "BD",
+                    "CC",
+                    "MO",
+                    "OT",
+                    "R",
+                    "WE"
+                  ]
+                },
+                "passengerFares": [
+                  {
+                    "serviceCharges": [
+                      {
+                        "amount": 1828.0,
+                        "code": null,
+                        "detail": null,
+                        "type": 0,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1828.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 1.0,
+                        "code": "PM4DUN",
+                        "detail": "Tarifa Bas",
+                        "type": 1,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 231.0,
+                        "code": "BSCO",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 231.0,
+                        "ticketCode": "BCO"
+                      },
+                      {
+                        "amount": 38.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 38.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 43.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 43.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 73.0,
+                        "code": "MX4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 73.0,
+                        "ticketCode": "MX"
+                      },
+                      {
+                        "amount": 19.0,
+                        "code": "CVFM",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 19.0,
+                        "ticketCode": "CVF"
+                      },
+                      {
+                        "amount": 10.0,
+                        "code": "SPIN",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 10.0,
+                        "ticketCode": "SPI"
+                      },
+                      {
+                        "amount": 14.0,
+                        "code": "MO4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 14.0,
+                        "ticketCode": "MO4"
+                      }
+                    ],
+                    "discountCode": null,
+                    "fareDiscountCode": "PM4DUN",
+                    "ticketFareBasis": null,
+                    "passengerType": "ADT"
+                  }
+                ],
+                "fareLink": 0
+              }
+            ],
+            "segmentKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+            "identifier": {
+              "identifier": "188",
+              "carrierCode": "Y4",
+              "opSuffix": null
+            },
+            "passengerSegment": {
+              "MCFBRFQ-": {
+                "seats": [
+                  {
+                    "compartmentDesignator": "Y",
+                    "penalty": 0,
+                    "unitDesignator": "2F",
+                    "seatInformation": {
+                      "deck": 1,
+                      "seatSet": 4,
+                      "propertyList": {
+                        "BRDZONE": "1",
+                        "WINDOW": "TRUE",
+                        "LEGROOM": "TRUE",
+                        "PET": "TRUE",
+                        "FIRSTDEP": "TRUE",
+                        "LAV": "TRUE",
+                        "DOG": "TRUE",
+                        "PREFER": "TRUE",
+                        "ECONCOMF": "TRUE",
+                        "TCC": "Y"
+                      }
+                    },
+                    "arrivalStation": "TIJ",
+                    "departureStation": "MEX",
+                    "passengerKey": "MCFBRFQ-",
+                    "unitKey": "WTQhMTg4ISAhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCFUSUohMkYhWQ--",
+                    "crossReferenceSeatingPreference": null,
+                    "isPending": false,
+                    "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK"
+                  }
+                ],
+                "passengerKey": "MCFBRFQ-",
+                "activityDate": "2026-07-24T02:58:18.26Z",
+                "boardingSequence": "135",
+                "createdDate": "2026-07-22T06:22:01.243Z",
+                "liftStatus": 2,
+                "modifiedDate": "2026-07-22T06:22:01.243Z",
+                "overBookIndicator": 0,
+                "priorityDate": "2026-07-22T06:22:01.273Z",
+                "timeChanged": false,
+                "verifiedTravelDocs": null,
+                "sourcePointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "pointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "ssrs": [
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFCQjE1ITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "BB15",
+                    "feeCode": "BB15",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFGQVBBITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "FAPA",
+                    "feeCode": "FAPA",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjAhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV0",
+                    "feeCode": "XV0",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjEhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV1",
+                    "feeCode": "XV1",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  }
+                ],
+                "tickets": [],
+                "bags": [],
+                "scores": [],
+                "boardingPassDetail": null,
+                "hasInfant": false,
+                "seatPreferences": {
+                  "seat": 0,
+                  "travelClass": 0,
+                  "advancedPreferences": []
+                },
+                "bundleCode": "BCBW",
+                "verifiedTravelDocuments": null,
+                "referenceNumber": 0,
+                "baggageGroupNumber": null,
+                "stayType": 0,
+                "infantStayType": 0
+              }
+            },
+            "channelType": 2,
+            "cabinOfService": "Y",
+            "externalIdentifier": null,
+            "priorityCode": null,
+            "changeReasonCode": 0,
+            "segmentType": 0,
+            "salesDate": "2026-07-22T06:22:01.243Z",
+            "international": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "legs": [
+              {
+                "legKey": "NjM5MjA0Mzk5MDAwMDAwMDAwIVk0ITE4OCEgIU1FWCFUSUohNTc1MzM0NA--",
+                "operationsInfo": null,
+                "designator": {
+                  "destination": "TIJ",
+                  "origin": "MEX",
+                  "arrival": "2026-07-24T00:18:00",
+                  "departure": "2026-07-23T21:45:00"
+                },
+                "legInfo": {
+                  "departureTimeUtc": "2026-07-24T03:45:00Z",
+                  "arrivalTimeUtc": "2026-07-24T07:18:00Z",
+                  "adjustedCapacity": 237,
+                  "arrivalTerminal": "1",
+                  "arrivalTimeVariant": -420,
+                  "backMoveDays": 0,
+                  "capacity": 239,
+                  "changeOfDirection": false,
+                  "codeShareIndicator": 0,
+                  "departureTerminal": "1",
+                  "departureTimeVariant": -360,
+                  "equipmentType": "B39",
+                  "equipmentTypeSuffix": null,
+                  "eTicket": false,
+                  "irop": false,
+                  "lid": 239,
+                  "marketingCode": null,
+                  "marketingOverride": false,
+                  "operatedByText": null,
+                  "operatingCarrier": null,
+                  "operatingFlightNumber": null,
+                  "operatingOpSuffix": null,
+                  "outMoveDays": 0,
+                  "arrivalTime": "2026-07-24T00:18:00",
+                  "departureTime": "2026-07-23T21:45:00",
+                  "prbcCode": "21X",
+                  "scheduleServiceType": null,
+                  "sold": 234,
+                  "status": 1,
+                  "subjectToGovtApproval": false
+                },
+                "nests": [],
+                "ssrs": [],
+                "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK",
+                "flightReference": "20260723 Y4 188 MEXTIJ"
+              }
+            ],
+            "status": 6
+          }
+        ],
+        "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+        "notForGeneralUser": false
+      }
+    ],
+    "comments": [
+      {
+        "type": 0,
+        "text": "Cliente acepta t\u00e9rminos y condiciones",
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NTYy"
+      },
+      {
+        "type": 0,
+        "text": "MCP is applied",
+        "createdDate": "2026-07-22T06:22:14.043Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI3"
+      },
+      {
+        "type": 0,
+        "text": "MCES Fee is applied",
+        "createdDate": "2026-07-22T06:22:14.047Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI4"
+      },
+      {
+        "type": 0,
+        "text": "Customer not eligible for offer for delay time 3 for Y4188:2026-07-23:MEX:TIJ",
+        "createdDate": "2026-07-25T08:36:53.6Z",
+        "pointOfSale": {
+          "agentCode": "D1022",
+          "domainCode": "EXT",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM3MjQwODIw"
+      }
+    ],
+    "queues": [],
+    "history": [],
+    "payments": [
+      {
+        "paymentKey": "MjYyMDgxNjU3ITEhTUQhMTg2OTM4NTk1",
+        "code": "MD",
+        "approvalDate": "2026-07-22T06:22:05.303Z",
+        "details": {
+          "accountNumberId": 0,
+          "parentPaymentId": null,
+          "accountName": "ariel ramirez alvarez",
+          "accountNumber": null,
+          "expirationDate": null,
+          "text": null,
+          "installments": 0,
+          "binRange": 0,
+          "fields": {
+            "ACCTNO": "552433XXXXXX5489",
+            "Avs::Address1": "1516 half pint loop",
+            "Avs::City": "Fort Mill",
+            "Avs::Country": "US",
+            "Avs::PostalCode": "29708",
+            "Avs::StateOrProvince": "SC",
+            "BillTo::Email": "alpha123@yahoo.com",
+            "BillTo::FirstName": "ariel",
+            "BillTo::IPAddress": "216.218.86.231",
+            "BillTo::LastName": "ramirez alvarez",
+            "BillTo::Phone": "+18648096173",
+            "card_id": "d85d4a20-cc41-4da8-8e9b-e8ee17af4774",
+            "CardHolderFirstName": "ariel",
+            "CardHolderLastName": "ramirez alvarez",
+            "CC::CarrierCode": "Y4",
+            "contact_email": "alpha123@yahoo.com",
+            "DD::Installments": "1",
+            "device_fingerprint": "eyJBQ0NFUlRJRlkiOiJhNDRlMjljMy04ODRjLTQ5NjMtYzVmMy00ZTM4ZjE2NGQ4OTciLCJSSVNLSUZJRUQiOiI5M2U4M2FiMC1kNTZmLTVlMDctYjYyZC1mZjE2ZmQ1ZGNiN2YifQ==",
+            "ExchgRt": "0.0573304307974335472043996334",
+            "FPS::Enabled": "false",
+            "IPAddress": "216.218.86.231",
+            "location": "WWW",
+            "NS::AgentName": "WebAnonymous",
+            "NS::AgentRole": "WAN",
+            "order_token": "69b06e7a-4f78-4c4e-9305-4ee23240ad7b",
+            "OriginalLocation": "WWW",
+            "RateID": "MCPVOLARIS",
+            "SP:PAYID": "120046823",
+            "split_payment_sequence": "0",
+            "TransactionTypeIndicator": "TKT",
+            "ubainformation": "eyJ1YmFJRCI6IjRlMzk2OWQwNmZlMGI2MTI2M2YxODcwYTM3NTE0OGY5ZDY4ZCIsInViYVNlc3Npb25JRCI6IjdjMWU3NjFmNDAyM2RiZjQwOGMzZTc5NWIzMmNmNjUzODlkMSIsInBhZ2VJRCI6MzkwMjM0NzQ0MTUwMjc5MiwiZXZlbnRTb3VyY2UiOiJ3ZWIifQ==",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+          }
+        },
+        "amounts": {
+          "amount": 4364.0,
+          "currencyCode": "MXN",
+          "collected": 250.19,
+          "collectedCurrencyCode": "USD",
+          "quoted": 4364.0,
+          "quotedCurrencyCode": "MXN"
+        },
+        "authorizationCode": "03595S",
+        "authorizationStatus": 4,
+        "fundedDate": "1800-01-01T00:00:00Z",
+        "transactionCode": null,
+        "dcc": {
+          "rateId": "00000000-0000-0000-0000-000000000000",
+          "currencyCode": null,
+          "rateValue": 0.0,
+          "amount": 0.0,
+          "putInState": null,
+          "status": 4,
+          "applicable": false
+        },
+        "threeDSecure": null,
+        "attachments": [],
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "modifiedDate": "2026-07-22T06:22:05.3Z",
+        "type": 0,
+        "status": 3,
+        "transferred": false,
+        "channelType": 2,
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "sourcePointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "deposit": false,
+        "accountId": 0,
+        "voucher": null,
+        "addedToState": true,
+        "createdAgentId": 21,
+        "modifiedAgentId": 18,
+        "reference": 262081657,
+        "passengerVoucher": null
+      }
+    ],
+    "addOns": {},
+    "orders": []
+  },
+  {
+    "selfServiceMoveAvailable": false,
+    "bookingKey": "MTg2OTM4NTk1IUlGUzJKVyFmYWxzZQ--",
+    "recordLocator": "IFS2JW",
+    "currencyCode": "MXN",
+    "systemCode": null,
+    "groupName": null,
+    "locators": {
+      "numericRecordLocator": "171102221910",
+      "parentRecordLocator": null,
+      "parentId": 0,
+      "recordLocators": []
+    },
+    "info": {
+      "status": 2,
+      "paidStatus": 1,
+      "priceStatus": 2,
+      "profileStatus": 1,
+      "bookingType": null,
+      "channelType": 2,
+      "bookedDate": "2026-07-22T06:22:01.243Z",
+      "createdDate": "2026-07-22T06:22:01.243Z",
+      "expirationDate": "2026-07-25T03:45:00Z",
+      "modifiedDate": "2026-07-22T06:22:01.243Z",
+      "modifiedAgentId": 18,
+      "createdAgentId": 21,
+      "owningCarrierCode": "Y4",
+      "changeAllowed": true,
+      "createdUserKey": "MjE-",
+      "modifiedUserKey": "MTg-"
+    },
+    "sales": {
+      "created": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "source": {
+        "isoCountryCode": null,
+        "sourceSystemCode": null,
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "modified": null
+    },
+    "typeOfSale": {
+      "residentCountry": "MX",
+      "promotionCode": "VMX30",
+      "fareTypes": []
+    },
+    "hold": null,
+    "breakdown": {
+      "balanceDue": 0.0,
+      "pointsBalanceDue": 0.0,
+      "authorizedBalanceDue": 0.0,
+      "totalAmount": 4364.0,
+      "totalPoints": 0.0,
+      "totalToCollect": 4364.0,
+      "totalPointsToCollect": 0.0,
+      "totalCharged": 4364.0,
+      "passengerTotals": {
+        "services": {
+          "total": 207.0,
+          "taxes": 33.0,
+          "adjustments": -188.0,
+          "charges": [
+            {
+              "amount": 19.0,
+              "code": "MCES",
+              "detail": "Multiple C",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 19.0,
+              "ticketCode": "MES"
+            },
+            {
+              "amount": -188.0,
+              "code": "MCES",
+              "detail": "Fee OR",
+              "type": 1,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": -188.0,
+              "ticketCode": null
+            },
+            {
+              "amount": 33.0,
+              "code": "MO",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 33.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "specialServices": {
+          "total": 617.0,
+          "taxes": null,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 617.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 617.0,
+              "ticketCode": "XV1"
+            },
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            }
+          ]
+        },
+        "seats": {
+          "total": 719.0,
+          "taxes": 29.0,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 719.0,
+              "code": "SEAT",
+              "detail": "MEX-TIJ",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 719.0,
+              "ticketCode": "SET"
+            },
+            {
+              "amount": 29.0,
+              "code": "MO4",
+              "detail": "MEX-TIJ",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 29.0,
+              "ticketCode": "MO4"
+            }
+          ]
+        },
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 4364.0
+      },
+      "passengers": {
+        "MCFBRFQ-": {
+          "passengerKey": "MCFBRFQ-",
+          "services": {
+            "total": 207.0,
+            "taxes": 33.0,
+            "adjustments": -188.0,
+            "charges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          },
+          "specialServices": {
+            "total": 617.0,
+            "taxes": null,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              },
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          "seats": {
+            "total": 719.0,
+            "taxes": 29.0,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          "upgrades": null,
+          "spoilage": null,
+          "nameChanges": null,
+          "convenience": null,
+          "infant": null,
+          "totalCost": 4364.0
+        }
+      },
+      "journeyTotals": {
+        "totalAmount": 1827.0,
+        "totalPoints": 0.0,
+        "totalTax": 428.0,
+        "totalDiscount": 1.0
+      },
+      "journeys": {
+        "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_": {
+          "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+          "totalAmount": 1827.0,
+          "totalPoints": 0.0,
+          "totalTax": 428.0,
+          "totalDiscount": 1.0
+        }
+      },
+      "addOnTotals": {
+        "car": null,
+        "hotel": null,
+        "activities": null
+      }
+    },
+    "receivedBy": {
+      "receivedBy": null,
+      "latestReceivedBy": null,
+      "receivedReference": null,
+      "latestReceivedReference": null,
+      "referralCode": null
+    },
+    "contacts": {
+      "P": {
+        "contactTypeCode": "P",
+        "phoneNumbers": [
+          {
+            "type": 0,
+            "number": "18648096173"
+          },
+          {
+            "type": 1,
+            "number": "18648096173"
+          }
+        ],
+        "cultureCode": "en-US",
+        "address": {
+          "lineOne": null,
+          "lineTwo": "PAX;WA;WEB",
+          "lineThree": null,
+          "countryCode": "US",
+          "provinceState": null,
+          "city": null,
+          "postalCode": null
+        },
+        "emailAddress": "alpha123@yahoo.com",
+        "customerNumber": null,
+        "sourceOrganization": null,
+        "distributionOption": 2,
+        "notificationPreference": 1,
+        "companyName": null,
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        }
+      }
+    },
+    "passengers": {
+      "MCFBRFQ-": {
+        "passengerKey": "MCFBRFQ-",
+        "passengerAlternateKey": "MjczNTA0NTQ2",
+        "customerNumber": null,
+        "fees": [
+          {
+            "type": 17,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "BFBW",
+            "detail": null,
+            "passengerFeeKey": "MCEwITE3",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 485.0,
+                "code": "BFBW",
+                "detail": "Bundle Fee",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 485.0,
+                "ticketCode": "BBW"
+              },
+              {
+                "amount": 19.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV1",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV1",
+            "detail": null,
+            "passengerFeeKey": "MCExITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 617.0,
+                "code": "XV1",
+                "detail": "TUA DOM",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 617.0,
+                "ticketCode": "XV1"
+              }
+            ]
+          },
+          {
+            "type": 6,
+            "ssrCode": "XV0",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "XV0",
+            "detail": null,
+            "passengerFeeKey": "MCEyITY-",
+            "override": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 0.0,
+                "code": "XV0",
+                "detail": "for free",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 0.0,
+                "ticketCode": "XV0"
+              }
+            ]
+          },
+          {
+            "type": 9,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "SEAT",
+            "detail": null,
+            "passengerFeeKey": "MCEzITk-",
+            "override": true,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 719.0,
+                "code": "SEAT",
+                "detail": "MEX-TIJ",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 719.0,
+                "ticketCode": "SET"
+              },
+              {
+                "amount": 29.0,
+                "code": "MO4",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 29.0,
+                "ticketCode": "MO4"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": true,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "code": "MCES",
+            "detail": null,
+            "passengerFeeKey": "MCE0ITM-",
+            "override": true,
+            "flightReference": null,
+            "note": null,
+            "createdDate": "2026-07-22T06:22:01.243Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 19.0,
+                "code": "MCES",
+                "detail": "Multiple C",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 19.0,
+                "ticketCode": "MES"
+              },
+              {
+                "amount": -188.0,
+                "code": "MCES",
+                "detail": "Fee OR",
+                "type": 1,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": -188.0,
+                "ticketCode": null
+              },
+              {
+                "amount": 33.0,
+                "code": "MO",
+                "detail": "MEX-TIJ",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "MXN",
+                "foreignCurrencyCode": "MXN",
+                "foreignAmount": 33.0,
+                "ticketCode": "MO"
+              }
+            ]
+          }
+        ],
+        "name": {
+          "first": "ariel",
+          "middle": null,
+          "last": "ramirez",
+          "title": "MR",
+          "suffix": null
+        },
+        "passengerTypeCode": "ADT",
+        "discountCode": null,
+        "bags": [],
+        "program": null,
+        "infant": null,
+        "info": {
+          "nationality": "US",
+          "residentCountry": "US",
+          "gender": 1,
+          "dateOfBirth": "2001-11-16T00:00:00",
+          "familyNumber": null
+        },
+        "travelDocuments": [],
+        "addresses": [],
+        "weightCategory": 1,
+        "emdCoupons": []
+      }
+    },
+    "journeys": [
+      {
+        "flightType": 1,
+        "stops": 0,
+        "designator": {
+          "destination": "TIJ",
+          "origin": "MEX",
+          "arrival": "2026-07-24T00:18:00",
+          "departure": "2026-07-23T21:45:00"
+        },
+        "move": null,
+        "segments": [
+          {
+            "isStandby": false,
+            "isConfirming": false,
+            "isConfirmingExternal": false,
+            "isBlocked": false,
+            "isHosted": true,
+            "isChangeOfGauge": false,
+            "designator": {
+              "destination": "TIJ",
+              "origin": "MEX",
+              "arrival": "2026-07-24T00:18:00",
+              "departure": "2026-07-23T21:45:00"
+            },
+            "isSeatmapViewable": true,
+            "fares": [
+              {
+                "isGoverning": true,
+                "carrierCode": "Y4",
+                "fareKey": "MH5Gfn5ZNH5GSFNTMX4wMDExfn4wfjB_flg-",
+                "classOfService": "F",
+                "classType": null,
+                "fareApplicationType": 0,
+                "fareClassOfService": "F",
+                "fareBasisCode": "FHSS1",
+                "fareSequence": 0,
+                "inboundOutBound": 0,
+                "fareStatus": 0,
+                "isAllotmentMarketFare": false,
+                "originalClassOfService": "F",
+                "ruleNumber": "0011",
+                "productClass": null,
+                "ruleTariff": null,
+                "travelClassCode": "Y",
+                "pricingDate": "2026-07-22T06:18:41.377",
+                "crossReferenceClassOfService": null,
+                "fareDesignator": {
+                  "fareTypeCodes": [
+                    "AG",
+                    "AT",
+                    "BD",
+                    "CC",
+                    "MO",
+                    "OT",
+                    "R",
+                    "WE"
+                  ]
+                },
+                "passengerFares": [
+                  {
+                    "serviceCharges": [
+                      {
+                        "amount": 1828.0,
+                        "code": null,
+                        "detail": null,
+                        "type": 0,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1828.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 1.0,
+                        "code": "PM4DUN",
+                        "detail": "Tarifa Bas",
+                        "type": 1,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 1.0,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 231.0,
+                        "code": "BSCO",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 231.0,
+                        "ticketCode": "BCO"
+                      },
+                      {
+                        "amount": 38.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 38.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 43.0,
+                        "code": "PSF1",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 43.0,
+                        "ticketCode": "PF1"
+                      },
+                      {
+                        "amount": 73.0,
+                        "code": "MX4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 73.0,
+                        "ticketCode": "MX"
+                      },
+                      {
+                        "amount": 19.0,
+                        "code": "CVFM",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 19.0,
+                        "ticketCode": "CVF"
+                      },
+                      {
+                        "amount": 10.0,
+                        "code": "SPIN",
+                        "detail": "MEX-TIJ",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 10.0,
+                        "ticketCode": "SPI"
+                      },
+                      {
+                        "amount": 14.0,
+                        "code": "MO4",
+                        "detail": "MEX-TIJ",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "MXN",
+                        "foreignCurrencyCode": "MXN",
+                        "foreignAmount": 14.0,
+                        "ticketCode": "MO4"
+                      }
+                    ],
+                    "discountCode": null,
+                    "fareDiscountCode": "PM4DUN",
+                    "ticketFareBasis": null,
+                    "passengerType": "ADT"
+                  }
+                ],
+                "fareLink": 0
+              }
+            ],
+            "segmentKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+            "identifier": {
+              "identifier": "188",
+              "carrierCode": "Y4",
+              "opSuffix": null
+            },
+            "passengerSegment": {
+              "MCFBRFQ-": {
+                "seats": [
+                  {
+                    "compartmentDesignator": "Y",
+                    "penalty": 0,
+                    "unitDesignator": "2F",
+                    "seatInformation": {
+                      "deck": 1,
+                      "seatSet": 4,
+                      "propertyList": {
+                        "BRDZONE": "1",
+                        "WINDOW": "TRUE",
+                        "LEGROOM": "TRUE",
+                        "PET": "TRUE",
+                        "FIRSTDEP": "TRUE",
+                        "LAV": "TRUE",
+                        "DOG": "TRUE",
+                        "PREFER": "TRUE",
+                        "ECONCOMF": "TRUE",
+                        "TCC": "Y"
+                      }
+                    },
+                    "arrivalStation": "TIJ",
+                    "departureStation": "MEX",
+                    "passengerKey": "MCFBRFQ-",
+                    "unitKey": "WTQhMTg4ISAhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCFUSUohMkYhWQ--",
+                    "crossReferenceSeatingPreference": null,
+                    "isPending": false,
+                    "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK"
+                  }
+                ],
+                "passengerKey": "MCFBRFQ-",
+                "activityDate": "2026-07-24T02:58:18.26Z",
+                "boardingSequence": "135",
+                "createdDate": "2026-07-22T06:22:01.243Z",
+                "liftStatus": 2,
+                "modifiedDate": "2026-07-22T06:22:01.243Z",
+                "overBookIndicator": 0,
+                "priorityDate": "2026-07-22T06:22:01.273Z",
+                "timeChanged": false,
+                "verifiedTravelDocs": null,
+                "sourcePointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "pointOfSale": {
+                  "agentCode": "WebAnonymous",
+                  "domainCode": "WW2",
+                  "locationCode": "WWW",
+                  "organizationCode": "Y4"
+                },
+                "ssrs": [
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFCQjE1ITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "BB15",
+                    "feeCode": "BB15",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFGQVBBITEhVElKIVk0ITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghMTg4ISA-",
+                    "count": 1,
+                    "ssrCode": "FAPA",
+                    "feeCode": "FAPA",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjAhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV0",
+                    "feeCode": "XV0",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": true,
+                    "isConfirmingUnheld": false,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFYVjEhMSFUSUohWTQhNjM5MjA0Mzk5MDAwMDAwMDAwIU1FWCExODghIA--",
+                    "count": 1,
+                    "ssrCode": "XV1",
+                    "feeCode": "XV1",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "188",
+                        "carrierCode": "Y4",
+                        "opSuffix": null
+                      },
+                      "destination": "TIJ",
+                      "origin": "MEX",
+                      "departureDate": "2026-07-23T21:45:00"
+                    }
+                  }
+                ],
+                "tickets": [],
+                "bags": [],
+                "scores": [],
+                "boardingPassDetail": null,
+                "hasInfant": false,
+                "seatPreferences": {
+                  "seat": 0,
+                  "travelClass": 0,
+                  "advancedPreferences": []
+                },
+                "bundleCode": "BCBW",
+                "verifiedTravelDocuments": null,
+                "referenceNumber": 0,
+                "baggageGroupNumber": null,
+                "stayType": 0,
+                "infantStayType": 0
+              }
+            },
+            "channelType": 2,
+            "cabinOfService": "Y",
+            "externalIdentifier": null,
+            "priorityCode": null,
+            "changeReasonCode": 0,
+            "segmentType": 0,
+            "salesDate": "2026-07-22T06:22:01.243Z",
+            "international": false,
+            "flightReference": "20260723 Y4 188 MEXTIJ",
+            "legs": [
+              {
+                "legKey": "NjM5MjA0Mzk5MDAwMDAwMDAwIVk0ITE4OCEgIU1FWCFUSUohNTc1MzM0NA--",
+                "operationsInfo": null,
+                "designator": {
+                  "destination": "TIJ",
+                  "origin": "MEX",
+                  "arrival": "2026-07-24T00:18:00",
+                  "departure": "2026-07-23T21:45:00"
+                },
+                "legInfo": {
+                  "departureTimeUtc": "2026-07-24T03:45:00Z",
+                  "arrivalTimeUtc": "2026-07-24T07:18:00Z",
+                  "adjustedCapacity": 237,
+                  "arrivalTerminal": "1",
+                  "arrivalTimeVariant": -420,
+                  "backMoveDays": 0,
+                  "capacity": 239,
+                  "changeOfDirection": false,
+                  "codeShareIndicator": 0,
+                  "departureTerminal": "1",
+                  "departureTimeVariant": -360,
+                  "equipmentType": "B39",
+                  "equipmentTypeSuffix": null,
+                  "eTicket": false,
+                  "irop": false,
+                  "lid": 239,
+                  "marketingCode": null,
+                  "marketingOverride": false,
+                  "operatedByText": null,
+                  "operatingCarrier": null,
+                  "operatingFlightNumber": null,
+                  "operatingOpSuffix": null,
+                  "outMoveDays": 0,
+                  "arrivalTime": "2026-07-24T00:18:00",
+                  "departureTime": "2026-07-23T21:45:00",
+                  "prbcCode": "21X",
+                  "scheduleServiceType": null,
+                  "sold": 234,
+                  "status": 1,
+                  "subjectToGovtApproval": false
+                },
+                "nests": [],
+                "ssrs": [],
+                "seatmapReference": "WTQhIDE4OCEgITYzOTIwNDM5OTAwMDAwMDAwMCFNRVghVElK",
+                "flightReference": "20260723 Y4 188 MEXTIJ"
+              }
+            ],
+            "status": 6
+          }
+        ],
+        "journeyKey": "WTR_IDE4OH4gfn5NRVh_MDcvMjMvMjAyNiAyMTo0NX5USUp_MDcvMjQvMjAyNiAwMDoxOH5_",
+        "notForGeneralUser": false
+      }
+    ],
+    "comments": [
+      {
+        "type": 0,
+        "text": "Cliente acepta t\u00e9rminos y condiciones",
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NTYy"
+      },
+      {
+        "type": 0,
+        "text": "MCP is applied",
+        "createdDate": "2026-07-22T06:22:14.043Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI3"
+      },
+      {
+        "type": 0,
+        "text": "MCES Fee is applied",
+        "createdDate": "2026-07-22T06:22:14.047Z",
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM1NTk2NjI4"
+      },
+      {
+        "type": 0,
+        "text": "Customer not eligible for offer for delay time 3 for Y4188:2026-07-23:MEX:TIJ",
+        "createdDate": "2026-07-25T08:36:53.6Z",
+        "pointOfSale": {
+          "agentCode": "D1022",
+          "domainCode": "EXT",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "commentKey": "NjM3MjQwODIw"
+      }
+    ],
+    "queues": [],
+    "history": [],
+    "payments": [
+      {
+        "paymentKey": "MjYyMDgxNjU3ITEhTUQhMTg2OTM4NTk1",
+        "code": "MD",
+        "approvalDate": "2026-07-22T06:22:05.303Z",
+        "details": {
+          "accountNumberId": 0,
+          "parentPaymentId": null,
+          "accountName": "ariel ramirez alvarez",
+          "accountNumber": null,
+          "expirationDate": null,
+          "text": null,
+          "installments": 0,
+          "binRange": 0,
+          "fields": {
+            "ACCTNO": "552433XXXXXX5489",
+            "Avs::Address1": "1516 half pint loop",
+            "Avs::City": "Fort Mill",
+            "Avs::Country": "US",
+            "Avs::PostalCode": "29708",
+            "Avs::StateOrProvince": "SC",
+            "BillTo::Email": "alpha123@yahoo.com",
+            "BillTo::FirstName": "ariel",
+            "BillTo::IPAddress": "216.218.86.231",
+            "BillTo::LastName": "ramirez alvarez",
+            "BillTo::Phone": "+18648096173",
+            "card_id": "d85d4a20-cc41-4da8-8e9b-e8ee17af4774",
+            "CardHolderFirstName": "ariel",
+            "CardHolderLastName": "ramirez alvarez",
+            "CC::CarrierCode": "Y4",
+            "contact_email": "alpha123@yahoo.com",
+            "DD::Installments": "1",
+            "device_fingerprint": "eyJBQ0NFUlRJRlkiOiJhNDRlMjljMy04ODRjLTQ5NjMtYzVmMy00ZTM4ZjE2NGQ4OTciLCJSSVNLSUZJRUQiOiI5M2U4M2FiMC1kNTZmLTVlMDctYjYyZC1mZjE2ZmQ1ZGNiN2YifQ==",
+            "ExchgRt": "0.0573304307974335472043996334",
+            "FPS::Enabled": "false",
+            "IPAddress": "216.218.86.231",
+            "location": "WWW",
+            "NS::AgentName": "WebAnonymous",
+            "NS::AgentRole": "WAN",
+            "order_token": "69b06e7a-4f78-4c4e-9305-4ee23240ad7b",
+            "OriginalLocation": "WWW",
+            "RateID": "MCPVOLARIS",
+            "SP:PAYID": "120046823",
+            "split_payment_sequence": "0",
+            "TransactionTypeIndicator": "TKT",
+            "ubainformation": "eyJ1YmFJRCI6IjRlMzk2OWQwNmZlMGI2MTI2M2YxODcwYTM3NTE0OGY5ZDY4ZCIsInViYVNlc3Npb25JRCI6IjdjMWU3NjFmNDAyM2RiZjQwOGMzZTc5NWIzMmNmNjUzODlkMSIsInBhZ2VJRCI6MzkwMjM0NzQ0MTUwMjc5MiwiZXZlbnRTb3VyY2UiOiJ3ZWIifQ==",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+          }
+        },
+        "amounts": {
+          "amount": 4364.0,
+          "currencyCode": "MXN",
+          "collected": 250.19,
+          "collectedCurrencyCode": "USD",
+          "quoted": 4364.0,
+          "quotedCurrencyCode": "MXN"
+        },
+        "authorizationCode": "03595S",
+        "authorizationStatus": 4,
+        "fundedDate": "1800-01-01T00:00:00Z",
+        "transactionCode": null,
+        "dcc": {
+          "rateId": "00000000-0000-0000-0000-000000000000",
+          "currencyCode": null,
+          "rateValue": 0.0,
+          "amount": 0.0,
+          "putInState": null,
+          "status": 4,
+          "applicable": false
+        },
+        "threeDSecure": null,
+        "attachments": [],
+        "createdDate": "2026-07-22T06:22:01.243Z",
+        "modifiedDate": "2026-07-22T06:22:05.3Z",
+        "type": 0,
+        "status": 3,
+        "transferred": false,
+        "channelType": 2,
+        "pointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "sourcePointOfSale": {
+          "agentCode": "WebAnonymous",
+          "domainCode": "WW2",
+          "locationCode": "WWW",
+          "organizationCode": "Y4"
+        },
+        "deposit": false,
+        "accountId": 0,
+        "voucher": null,
+        "addedToState": true,
+        "createdAgentId": 21,
+        "modifiedAgentId": 18,
+        "reference": 262081657,
+        "passengerVoucher": null
+      }
+    ],
+    "addOns": {},
+    "orders": []
+  }
+]

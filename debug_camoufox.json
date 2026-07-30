@@ -1,0 +1,1798 @@
+[
+  {
+    "url": "https://api.vivaaerobus.com/web/v1/booking/full?pnr=HEYN2G&lastName=Valverde%20Ponce&IncludeVoucherDetails=true&pointsbreakdown=PerPassenger",
+    "data": {
+      "data": {
+        "pnr": "HEYN2G",
+        "bookingId": "150914272213",
+        "currencyCode": "MXN",
+        "irop": null,
+        "event": null,
+        "creationAgent": {
+          "agentCode": "booking_rewards@",
+          "domainCode": "WWW",
+          "locationCode": "WWW",
+          "organizationCode": "VB",
+          "agentName": null
+        },
+        "source": {
+          "systemCode": null
+        },
+        "user": {
+          "username": "HERMINIA-ORTEGA@HOTMAIL.COM",
+          "accountType": "Customer",
+          "customerNumber": "2250098652",
+          "channel": "web",
+          "locationCode": "WWWM"
+        },
+        "creationDate": "2026-07-25T22:31:47.857Z",
+        "expirationDate": "2026-07-26T22:31:47.857Z",
+        "minutesToExpire": 1178,
+        "paidStatus": "UnderPaid",
+        "status": "PendingPayment",
+        "journeys": [
+          {
+            "departureDate": {
+              "scheduled": "2026-07-30T06:10:00",
+              "scheduledUtc": "2026-07-30T11:10:00Z",
+              "estimated": null,
+              "actual": null,
+              "rawOffset": null,
+              "timeZoneId": null,
+              "timeZoneName": null
+            },
+            "arrivalDate": {
+              "scheduled": "2026-07-30T07:30:00",
+              "scheduledUtc": "2026-07-30T13:30:00Z",
+              "estimated": null,
+              "actual": null,
+              "rawOffset": null,
+              "timeZoneId": null,
+              "timeZoneName": null
+            },
+            "segments": [
+              {
+                "operatingStatus": "NotAvailable",
+                "delayTimeInMinutes": null,
+                "status": "Normal",
+                "departureDate": {
+                  "scheduled": "2026-07-30T06:10:00",
+                  "scheduledUtc": "2026-07-30T11:10:00Z",
+                  "estimated": null,
+                  "actual": null,
+                  "rawOffset": null,
+                  "timeZoneId": null,
+                  "timeZoneName": null
+                },
+                "arrivalDate": {
+                  "scheduled": "2026-07-30T07:30:00",
+                  "scheduledUtc": "2026-07-30T13:30:00Z",
+                  "estimated": null,
+                  "actual": null,
+                  "rawOffset": null,
+                  "timeZoneId": null,
+                  "timeZoneName": null
+                },
+                "notifications": [],
+                "legs": [
+                  {
+                    "key": "NjM5MjA5ODg2MDAwMDAwMDAwIVZCITEzNzkhICFDVU4hTUVYITM2NzgyNDU-",
+                    "origin": {
+                      "type": "Airport",
+                      "code": "CUN",
+                      "name": "Cancun T2",
+                      "countryCode": "MX"
+                    },
+                    "destination": {
+                      "type": "Airport",
+                      "code": "MEX",
+                      "name": "Mexico City",
+                      "countryCode": "MX"
+                    },
+                    "departureDate": {
+                      "scheduled": "2026-07-30T06:10:00",
+                      "scheduledUtc": "2026-07-30T11:10:00Z",
+                      "estimated": null,
+                      "actual": null,
+                      "rawOffset": null,
+                      "timeZoneId": null,
+                      "timeZoneName": null
+                    },
+                    "arrivalDate": {
+                      "scheduled": "2026-07-30T07:30:00",
+                      "scheduledUtc": "2026-07-30T13:30:00Z",
+                      "estimated": null,
+                      "actual": null,
+                      "rawOffset": null,
+                      "timeZoneId": null,
+                      "timeZoneName": null
+                    },
+                    "transportationType": "Air",
+                    "legDuration": "02:20:00",
+                    "layoverTime": "00:00:00",
+                    "subjectToGovernmentApproval": false,
+                    "departureTerminal": "2",
+                    "arrivalTerminal": "1",
+                    "equipmentType": "321VB",
+                    "availableSeats": 240,
+                    "status": "Normal",
+                    "closedTime": null,
+                    "operatingStatus": "NotAvailable",
+                    "delayTimeInMinutes": null,
+                    "notifications": []
+                  }
+                ],
+                "bundleRecommendationId": null,
+                "bundleExperimentGroup": null,
+                "key": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+                "origin": {
+                  "type": "Airport",
+                  "code": "CUN",
+                  "name": "Cancun T2",
+                  "countryCode": "MX"
+                },
+                "destination": {
+                  "type": "Airport",
+                  "code": "MEX",
+                  "name": "Mexico City",
+                  "countryCode": "MX"
+                },
+                "transportationType": "Air",
+                "operatingCarrier": "VB",
+                "operatingCode": "1379",
+                "marketingCarrier": "VB",
+                "marketingCode": "1379",
+                "segmentDuration": "02:20:00",
+                "layoverTime": "00:00:00",
+                "subjectToGovernmentApproval": false,
+                "segmentType": "NonStop",
+                "flightNumber": "VB1379",
+                "departureTerminal": "2",
+                "arrivalTerminal": "1",
+                "equipmentType": "321VB",
+                "availableSeats": 240,
+                "cabinAmenities": []
+              }
+            ],
+            "checkIn": {
+              "status": "Closed",
+              "checkInOpenTime": "2026-07-27T06:10:00",
+              "checkInOpenTimeUtc": "2026-07-27T11:10:00Z",
+              "onlineCheckInAllowed": true,
+              "statusDetails": [
+                {
+                  "code": "CheckinBlockedBookingIsNotPaid",
+                  "description": "Booking is not paid"
+                },
+                {
+                  "code": "CheckinClosedTooEarly",
+                  "description": "Too early for checkin"
+                }
+              ]
+            },
+            "tua": {
+              "status": "NotPaid",
+              "amountDue": {
+                "amount": 381.5,
+                "pointAmount": 13155
+              }
+            },
+            "fare": {
+              "key": "MH5MMX5YflZCfkwxSFNPMDBOflZCSFN_fjB_MH5_WA--",
+              "fareType": "VC",
+              "fareTypeName": "Viva Base",
+              "bundleType": "BW",
+              "bundleTypeName": "Bundle Switch",
+              "fareCode": "L1HSO00N",
+              "classOfService": "L1",
+              "labels": [
+                {
+                  "labelId": "RewardFare",
+                  "description": "Doters Label",
+                  "type": "PromoClassOfService"
+                }
+              ],
+              "upsellTo": [],
+              "bundleUpsellTo": [
+                "BB",
+                "BS"
+              ],
+              "includedServices": [
+                "VBEX"
+              ]
+            },
+            "rules": [
+              {
+                "type": "DisplayBooking",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "DisplayTotalAmount",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "DisplayPayments",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "DisplayPassengers",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ChangeJourneys",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ChangeJourneysAndRoute",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "DisabledForBookingStatusPendingPayment",
+                    "description": "Booking rule  disabled for booking status PendingPayment"
+                  }
+                ]
+              },
+              {
+                "type": "ChangeServices",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ChangeSeats",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ChangePassengerNames",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "PayTua",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "AddArpel",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ProcessPayment",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "DisplayCBX",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "DisplayBusTicket",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "DisplayPlayCodes",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ChangeBaggage",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "Checkin",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ChangeJourneysFlyAhead",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "DisabledForBookingStatusPendingPayment",
+                    "description": "Booking rule  disabled for booking status PendingPayment"
+                  },
+                  {
+                    "code": "DisabledForEarlyAccess",
+                    "description": "Booking rule  disabled. Too soon for feature to be enabled."
+                  },
+                  {
+                    "code": "DisabledForMinorTravellingAlone",
+                    "description": "Booking rule  disabled for minor travelling alone"
+                  }
+                ]
+              },
+              {
+                "type": "InsurancesStatus",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "NoValidInsuranceContract",
+                    "description": "Booking rule disabled because insurance contract was not added to the booking"
+                  }
+                ]
+              },
+              {
+                "type": "SplitPassengers",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "DisabledForBookingStatusPendingPayment",
+                    "description": "Booking rule  disabled for booking status PendingPayment"
+                  }
+                ]
+              },
+              {
+                "type": "FlyAheadCDMX",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "UndoCheckin",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "ProcessIropCompensation",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "DisabledForQueues",
+                    "description": "Booking rule ProcessIropCompensation disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+                  }
+                ]
+              },
+              {
+                "type": "DelayCheckedBag",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "DelayBagRule",
+                    "description": "Delayed booking has checked in bag"
+                  },
+                  {
+                    "code": "DisabledForBagStatus",
+                    "description": "Booking rule Delayed booking has checked in bag disabled for bag statuses: "
+                  },
+                  {
+                    "code": "DisabledForQueues",
+                    "description": "Booking rule Delayed booking has checked in bag disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+                  }
+                ]
+              },
+              {
+                "type": "ChangeSeatsIrop",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "AddDocumentsManage",
+                "isEnabled": true,
+                "details": []
+              },
+              {
+                "type": "CallCenterCompensation",
+                "isEnabled": false,
+                "details": [
+                  {
+                    "code": "DisabledForQueues",
+                    "description": "Booking rule CallCenterCompensation disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+                  }
+                ]
+              }
+            ],
+            "iropStatus": "Normal",
+            "bagManager": true,
+            "presale": false,
+            "key": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "origin": {
+              "type": "Airport",
+              "code": "CUN",
+              "name": "Cancun T2",
+              "countryCode": "MX"
+            },
+            "destination": {
+              "type": "Airport",
+              "code": "MEX",
+              "name": "Mexico City",
+              "countryCode": "MX"
+            },
+            "transportationType": "Air",
+            "journeyDuration": "02:20:00",
+            "travelType": "NonStop",
+            "stops": 0,
+            "isInternational": false,
+            "notifications": []
+          }
+        ],
+        "passengers": [
+          {
+            "type": "CHD",
+            "firstName": "Romina",
+            "lastName": "Valverde Ponce",
+            "title": "Child",
+            "gender": "Female",
+            "dateOfBirth": "2012-04-28T00:00:00",
+            "passengerKey": "MCFDSEQ-",
+            "associateWithPassengerKey": null,
+            "customerNumber": null,
+            "isVivaFan": false,
+            "affiliations": [],
+            "redressNumber": null,
+            "knownTravelerNumber": null,
+            "nationality": "MX",
+            "residentCountry": null,
+            "hasMexicanResidencePermit": false,
+            "passport": null,
+            "visa": null,
+            "greenCard": null,
+            "destination": null,
+            "phone": null,
+            "emailAddress": null,
+            "pointsEarned": {
+              "airfare": 0,
+              "ancillaries": 0,
+              "comboBonus": 0,
+              "totalPointsEarned": 0
+            },
+            "emptySeat": "None"
+          }
+        ],
+        "contacts": [
+          {
+            "contactType": "Primary",
+            "customerNumber": null,
+            "firstName": "Romina",
+            "lastName": "Valverde Ponce",
+            "title": "Child",
+            "email": "bbbb@gmail.com",
+            "companyName": null,
+            "phoneNumbers": {
+              "other": "+525552564312",
+              "home": "+525552564312",
+              "work": null,
+              "mobile": null,
+              "fax": null
+            },
+            "notificationPreference": "None"
+          }
+        ],
+        "services": {
+          "services": [
+            {
+              "code": "Unknown",
+              "name": "Undefined SSRs",
+              "category": null,
+              "includedWithHsbcCobrand": false,
+              "options": [
+                {
+                  "ssrCode": "VBDJ",
+                  "name": "Undefined SSR",
+                  "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+                  "segmentKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+                  "passengerKey": "MCFDSEQ-",
+                  "price": {
+                    "amount": 0.0,
+                    "pointAmount": 0
+                  },
+                  "status": "Committed",
+                  "includedInFare": false,
+                  "includedInVivaFan": false,
+                  "includedInLoyalty": false,
+                  "includedForPassenger": false,
+                  "includedInBundle": false,
+                  "labels": null,
+                  "includedInHsbcCobrand": false,
+                  "includedInHsbcCobrandPlus": false
+                }
+              ],
+              "reference": null,
+              "notifications": null
+            },
+            {
+              "code": "CheckedBaggage",
+              "name": "Checked Baggage",
+              "category": "Baggage",
+              "includedWithHsbcCobrand": false,
+              "options": [
+                {
+                  "ssrCode": "VBEX",
+                  "name": "15 Kg Checked Bag",
+                  "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+                  "segmentKey": null,
+                  "passengerKey": "MCFDSEQ-",
+                  "price": {
+                    "amount": 0.0,
+                    "pointAmount": 0
+                  },
+                  "status": "Committed",
+                  "includedInFare": false,
+                  "includedInVivaFan": false,
+                  "includedInLoyalty": false,
+                  "includedForPassenger": true,
+                  "includedInBundle": true,
+                  "labels": null,
+                  "includedInHsbcCobrand": false,
+                  "includedInHsbcCobrandPlus": false
+                }
+              ],
+              "reference": null,
+              "notifications": null
+            },
+            {
+              "code": "MexicoDepartureTax",
+              "name": "Mexico Departure Tax",
+              "category": "MexicoDepartureTax",
+              "includedWithHsbcCobrand": false,
+              "options": [
+                {
+                  "ssrCode": "VTUA",
+                  "name": "Mexico Departure Tax",
+                  "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+                  "segmentKey": null,
+                  "passengerKey": null,
+                  "price": {
+                    "amount": 381.5,
+                    "pointAmount": 13155
+                  },
+                  "status": "Committed",
+                  "includedInFare": false,
+                  "includedInVivaFan": false,
+                  "includedInLoyalty": false,
+                  "includedForPassenger": false,
+                  "includedInBundle": false,
+                  "labels": null,
+                  "includedInHsbcCobrand": false,
+                  "includedInHsbcCobrandPlus": false
+                }
+              ],
+              "reference": null,
+              "notifications": null
+            }
+          ],
+          "additionalServices": [
+            {
+              "code": "BundleService",
+              "name": "Bundle Services",
+              "category": "Bundle Service",
+              "includedWithHsbcCobrand": false,
+              "options": [
+                {
+                  "ssrCode": "VWTH",
+                  "name": "Bundle Switch",
+                  "journeyKey": null,
+                  "segmentKey": null,
+                  "passengerKey": null,
+                  "price": {
+                    "amount": 100.0,
+                    "pointAmount": 3448
+                  },
+                  "status": "Committed",
+                  "includedInFare": false,
+                  "includedInVivaFan": false,
+                  "includedInLoyalty": false,
+                  "includedForPassenger": true,
+                  "includedInBundle": true,
+                  "labels": null,
+                  "includedInHsbcCobrand": false,
+                  "includedInHsbcCobrandPlus": false
+                }
+              ],
+              "reference": null,
+              "notifications": null
+            }
+          ],
+          "specialAssistanceServices": [],
+          "transportServices": [],
+          "petServices": [],
+          "serviceFees": []
+        },
+        "seats": {
+          "seats": [],
+          "seatFees": []
+        },
+        "payments": [
+          {
+            "type": "Doters",
+            "code": "UO",
+            "paymentDate": "2026-07-25T22:31:48.99Z",
+            "amount": {
+              "value": 7199.0,
+              "currencyCode": "DOTERS"
+            },
+            "collectedAmount": {
+              "value": 208.77,
+              "currencyCode": "MXN"
+            },
+            "accountNumber": "2250098652",
+            "expirationDate": null,
+            "installments": null,
+            "reference": "164176716",
+            "transactionId": "MTY0MTc2NzE2ITEhVU8hMTIxMTc3MDc5",
+            "status": "Approved",
+            "isExternalPaymentReferenceNeeded": false,
+            "accrualPoints": false,
+            "cardInformation": null
+          }
+        ],
+        "vouchers": [],
+        "charges": [
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": "MCFDSEQ-",
+            "accrualType": "Airfare",
+            "groupCode": "FlightFare",
+            "groupName": "Vuelo",
+            "originalAmount": {
+              "amount": 424.29,
+              "pointAmount": 14631
+            },
+            "amount": {
+              "amount": 424.29,
+              "pointAmount": 14631
+            },
+            "code": "FlightBaseFare",
+            "name": "Tarifa base",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": "MCFDSEQ-",
+            "accrualType": "Airfare",
+            "groupCode": "FlightFare",
+            "groupName": "Vuelo",
+            "originalAmount": {
+              "amount": -215.52,
+              "pointAmount": -7432
+            },
+            "amount": {
+              "amount": -215.52,
+              "pointAmount": -7432
+            },
+            "code": "FlightDiscount",
+            "name": "Descuento por renuncia de equipaje",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": "MCFDSEQ-",
+            "accrualType": "Excluded",
+            "groupCode": "FlightFare",
+            "groupName": "Vuelo",
+            "originalAmount": {
+              "amount": 56.47,
+              "pointAmount": 1947
+            },
+            "amount": {
+              "amount": 56.47,
+              "pointAmount": 1947
+            },
+            "code": "FlightCharges",
+            "name": "Otros cargos aeroportuarios",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": null,
+            "accrualType": "Airfare",
+            "groupCode": "FlightFare",
+            "groupName": "Vuelo",
+            "originalAmount": {
+              "amount": 86.21,
+              "pointAmount": 2973
+            },
+            "amount": {
+              "amount": 86.21,
+              "pointAmount": 2973
+            },
+            "code": "FlightDiscount",
+            "name": "Other discounts applied to fare",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": "MCFDSEQ-",
+            "accrualType": "Ancillary",
+            "groupCode": "CheckedBaggage",
+            "groupName": "Equipaje Documentado",
+            "originalAmount": {
+              "amount": 0.0,
+              "pointAmount": 0
+            },
+            "amount": {
+              "amount": 0.0,
+              "pointAmount": 0
+            },
+            "code": "VBEX",
+            "name": "VB 15kg Checked Baggage",
+            "isIncluded": true,
+            "details": {}
+          },
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": null,
+            "accrualType": "Excluded",
+            "groupCode": "TUA",
+            "groupName": "Mexico Departure Tax",
+            "originalAmount": {
+              "amount": 381.5,
+              "pointAmount": 13155
+            },
+            "amount": {
+              "amount": 381.5,
+              "pointAmount": 13155
+            },
+            "code": "VTUA",
+            "name": "Mexico Departure Tax",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+            "segmentKey": null,
+            "passengerKey": "MCFDSEQ-",
+            "accrualType": "Excluded",
+            "groupCode": "FlightServices",
+            "groupName": "Servicios Adicionales",
+            "originalAmount": {
+              "amount": 47.19,
+              "pointAmount": 1627
+            },
+            "amount": {
+              "amount": 47.19,
+              "pointAmount": 1627
+            },
+            "code": "FlightVAT",
+            "name": "IVA Tarifa Aérea",
+            "isIncluded": false,
+            "details": {}
+          }
+        ],
+        "additionalCharges": [
+          {
+            "journeyKey": null,
+            "segmentKey": null,
+            "passengerKey": null,
+            "accrualType": "Excluded",
+            "groupCode": "IncludedFeesTaxes",
+            "groupName": "Included Fees and Taxes",
+            "originalAmount": {
+              "amount": 47.19,
+              "pointAmount": 1627
+            },
+            "amount": {
+              "amount": 47.19,
+              "pointAmount": 1627
+            },
+            "code": "IVA",
+            "name": "IVA Total",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": null,
+            "segmentKey": null,
+            "passengerKey": null,
+            "accrualType": "Excluded",
+            "groupCode": "BreakdownGovernment",
+            "groupName": "Breakdown Government",
+            "originalAmount": {
+              "amount": 47.19,
+              "pointAmount": 1627
+            },
+            "amount": {
+              "amount": 47.19,
+              "pointAmount": 1627
+            },
+            "code": "BreakdownGovernment",
+            "name": "BreakdownGovernment",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": null,
+            "segmentKey": null,
+            "passengerKey": null,
+            "accrualType": "Excluded",
+            "groupCode": "BreakdownAirport",
+            "groupName": "Breakdown Airport",
+            "originalAmount": {
+              "amount": 381.5,
+              "pointAmount": 13155
+            },
+            "amount": {
+              "amount": 381.5,
+              "pointAmount": 13155
+            },
+            "code": "BreakdownAirport",
+            "name": "Breakdown Airport",
+            "isIncluded": false,
+            "details": {}
+          },
+          {
+            "journeyKey": null,
+            "segmentKey": null,
+            "passengerKey": null,
+            "accrualType": "Excluded",
+            "groupCode": "BreakdownViva",
+            "groupName": "Breakdown Viva",
+            "originalAmount": {
+              "amount": 298.64,
+              "pointAmount": 10298
+            },
+            "amount": {
+              "amount": 298.64,
+              "pointAmount": 10298
+            },
+            "code": "BreakdownViva",
+            "name": "Breakdown Viva",
+            "isIncluded": false,
+            "details": {}
+          }
+        ],
+        "misconfiguredCharges": [],
+        "comments": [
+          {
+            "createdDate": "2026-07-25T22:31:47.857Z",
+            "text": "User:Username:HERMINIA-ORTEGA@HOTMAIL.COM|AgentTypeCode:Customer|CustomerNumber:2250098652|LocationCode:WWWM|OrganizationCode:VB|Channel:web",
+            "type": "Default"
+          },
+          {
+            "createdDate": "2026-07-25T22:31:47.857Z",
+            "text": "PointRate:34.48275862069",
+            "type": "Default"
+          }
+        ],
+        "notifications": [
+          {
+            "code": "XXXCheckIn24h",
+            "description": "Check In 24 hrs message"
+          }
+        ],
+        "rules": [
+          {
+            "type": "DisplayBooking",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "DisplayTotalAmount",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "DisplayPayments",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "DisplayPassengers",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ChangeJourneys",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ChangeJourneysAndRoute",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "ChangeServices",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ChangeSeats",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ChangePassengerNames",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "PayTua",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "AddArpel",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ProcessPayment",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "DisplayCBX",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "DisplayBusTicket",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "DisplayPlayCodes",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ChangeBaggage",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "Checkin",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ChangeHotel",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForClassOfService",
+                "description": "Booking rule  disabled for class of service L1"
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule  disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "ChangeJourneysFlyAhead",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForEarlyAccess",
+                "description": "Booking rule  disabled. Too soon for feature to be enabled."
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule  disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "ChangeJourneysReaccomm",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "ChangeInsurances",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "IropCompensation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForIropType",
+                "description": "Booking rule  disabled for no IROP type"
+              }
+            ]
+          },
+          {
+            "type": "InsurancesStatus",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "NoValidInsuranceContract",
+                "description": "Booking rule disabled because insurance contract was not added to the booking"
+              }
+            ]
+          },
+          {
+            "type": "DisplayCustomerCancellation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "BaggageCheckin",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForEarlyAccess",
+                "description": "Booking rule  disabled. Too soon for feature to be enabled."
+              }
+            ]
+          },
+          {
+            "type": "SeatChangeByEqChange",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForQueues",
+                "description": "Booking rule  disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+              }
+            ]
+          },
+          {
+            "type": "SplitPassengers",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "LessThanTwoAdults",
+                "description": "Booking rule disabled because booking has less than 2 adult passengers"
+              }
+            ]
+          },
+          {
+            "type": "TransferBooking",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "validateFlexibilityTransfer",
+                "description": "validateFlexibilityTransfer"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule Transfer disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForClassOfService",
+                "description": "Booking rule Transfer disabled for class of service L1"
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule Transfer disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "OneClickPurchase",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "MissingRequiredContactData",
+                "description": "Booking rule disabled because required One Click Purchase contact data is missing (first name, last name, email or default phone number)"
+              }
+            ]
+          },
+          {
+            "type": "TotalRefundCancellation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "PartialPaymentCancellation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "NoPendingPaymentPlan",
+                "description": "Booking rule disabled because booking doesn't have a pending payment plan"
+              }
+            ]
+          },
+          {
+            "type": "CompletedPartialPaymentCancellation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "NoCompletedPaymentPlan",
+                "description": "Booking rule disabled because booking doesn't have a completed payment plan"
+              }
+            ]
+          },
+          {
+            "type": "Baggage Rule",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "VHBaggage",
+                "description": "Allow to change Baggage for VH"
+              },
+              {
+                "code": "DisabledForCarrierVB",
+                "description": "Booking rule Baggage for VH disabled for carrier code VB"
+              }
+            ]
+          },
+          {
+            "type": "FlyAheadCDMX",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "UndoCheckin",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "NoIropRedirect",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "NoIropHelpCenterAccess",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "BuyBack",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisableBuyBack",
+                "description": "Disable Buy Back offer"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule BuyBack offer available disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForClassOfService",
+                "description": "Doters"
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule BuyBack offer available disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "Binding",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisableBinding",
+                "description": "Disable Binding offer"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule Binding offer available disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForClassOfService",
+                "description": "Doters"
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule Binding offer available disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "SoftBinding",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisableSoftBinding",
+                "description": "Disable Soft Binding offer"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule Soft Binding offer available disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForClassOfService",
+                "description": "Doters"
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule Soft Binding offer available disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "SellBack",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisableSellBack",
+                "description": "Disable Sell Back offer"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule SellBack offer available disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForClassOfService",
+                "description": "Doters"
+              },
+              {
+                "code": "DisabledForMinorTravellingAlone",
+                "description": "Booking rule SellBack offer available disabled for minor travelling alone"
+              }
+            ]
+          },
+          {
+            "type": "MarketplacePublished",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "IropCancellation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule Enable Irop Cancellation Option disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForIropType",
+                "description": "Booking rule Enable Irop Cancellation Option disabled for no IROP type"
+              }
+            ]
+          },
+          {
+            "type": "IropReimbursementPending",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForQueues",
+                "description": "Booking rule Irop reimbursement is pending processing disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+              }
+            ]
+          },
+          {
+            "type": "DotersRedemptionDisplay",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "HSBCCobrandBenefits",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "CheckinBaggage",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "CheckinBaggage",
+                "description": "Enable baggage checkin"
+              },
+              {
+                "code": "DisabledForEarlyAccess",
+                "description": "Booking rule Checkin Baggage Time Rule disabled. Too soon for feature to be enabled."
+              }
+            ]
+          },
+          {
+            "type": "UpsellZero",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForProductClass",
+                "description": "Booking rule Upsell Zero Rule disabled for product class VC and bundle type BW"
+              }
+            ]
+          },
+          {
+            "type": "UpsellLight",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "ProcessIropCompensation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForQueues",
+                "description": "Booking rule ProcessIropCompensation disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+              }
+            ]
+          },
+          {
+            "type": "ChangeSeatsIrop",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "KeepFlightSelected",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForQueues",
+                "description": "Booking rule  disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+              }
+            ]
+          },
+          {
+            "type": "PassengerCheckedIn",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "FlexibilidadTotal",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule Flexibilidad Total disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "DisplayInstallmentsBZ",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "AddDocumentsManage",
+            "isEnabled": true,
+            "details": []
+          },
+          {
+            "type": "CallCenterCompensation",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForQueues",
+                "description": "Booking rule CallCenterCompensation disabled for queues codes: VBCHDT,BALDUE,REFDOT"
+              }
+            ]
+          },
+          {
+            "type": "TotalRefundCancellationOffer24h",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule  disabled for booking status PendingPayment"
+              },
+              {
+                "code": "DisabledForCarrierVB",
+                "description": "Booking rule  disabled for carrier code VB"
+              }
+            ]
+          },
+          {
+            "type": "DisplayBuyerName",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "DisabledForMarket",
+                "description": "Booking rule Display Buyer Name disabled for market."
+              }
+            ]
+          },
+          {
+            "type": "AccrualPostBooking",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "AccrualPostBookingCustomDetailCode",
+                "description": "AccrualPostBookingCustomDetailDescription"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule AccrualPostBooking disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "shuttleWidget",
+            "isEnabled": false,
+            "details": [
+              {
+                "code": "shuttleWidget",
+                "description": "Rule to available shuttle Widget"
+              },
+              {
+                "code": "DisabledForBookingStatusPendingPayment",
+                "description": "Booking rule shuttleWidget disabled for booking status PendingPayment"
+              }
+            ]
+          },
+          {
+            "type": "CarriersDisplayPayments",
+            "isEnabled": true,
+            "details": []
+          }
+        ],
+        "bags": null,
+        "queues": [
+          {
+            "code": "VBCHDT",
+            "name": "VB Menor sin Acompañante"
+          },
+          {
+            "code": "BALDUE",
+            "name": "Balance Due"
+          },
+          {
+            "code": "REFDOT",
+            "name": "Refund Doters"
+          }
+        ],
+        "totalAmount": {
+          "amount": 780.14,
+          "pointAmount": 26901
+        },
+        "amountDue": {
+          "amount": 571.37,
+          "pointAmount": 19702
+        },
+        "amountPaid": {
+          "amount": 208.77,
+          "pointAmount": 7199
+        },
+        "accommodation": null,
+        "language": "es-MX",
+        "recordCodes": [
+          {
+            "bookingSystemCode": "VB",
+            "owningSystemCode": "VB",
+            "recordCode": "62385971"
+          }
+        ],
+        "eTickets": [],
+        "tripBookingType": "Points",
+        "transfer": null,
+        "ocpStatus": null,
+        "paymentPlan": null,
+        "totalRefund": {
+          "totalRefundDetails": []
+        },
+        "transport": [],
+        "vehicleRental": null
+      },
+      "type": "SUCCESS",
+      "action": "CONTINUE"
+    },
+    "status": 200
+  },
+  {
+    "url": "https://api.vivaaerobus.com/web/vb/v1/booking/marketplace/pnr-HEYN2G/actions",
+    "data": {
+      "type": "https://httpstatuses.com/404",
+      "title": "Not Found",
+      "status": 404,
+      "detail": "NFTicket HEYN2G not found.",
+      "instance": "/v1/nftickets/pnr-HEYN2G/actions"
+    },
+    "status": 200
+  },
+  {
+    "url": "https://api.vivaaerobus.com/web/v1/basket/loadbooking",
+    "data": {
+      "data": {},
+      "type": "SUCCESS",
+      "action": "CONTINUE"
+    },
+    "status": 200
+  },
+  {
+    "url": "https://api.vivaaerobus.com/web/v1/basket/loadbooking",
+    "data": {
+      "data": {},
+      "type": "SUCCESS",
+      "action": "CONTINUE"
+    },
+    "status": 200
+  },
+  {
+    "url": "https://api.vivaaerobus.com/web/v1/booking/passengerrules?BasketId=019f9c57-4541-496f-8d1a-ec007d130768",
+    "data": {
+      "data": {
+        "passengersRules": [
+          {
+            "passengerKey": "MCFDSEQ-",
+            "prefillSources": [
+              {
+                "name": "Anonymous",
+                "isDefault": true
+              }
+            ],
+            "notifications": [],
+            "fieldGroupRules": [],
+            "fieldRules": [
+              {
+                "name": "FirstName",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "LastName",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "CustomerNumber",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Title",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Gender",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Nationality",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "DateOfBirth",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Phone",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "EmailAddress",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          }
+        ],
+        "infantRules": null,
+        "contactsRules": [
+          {
+            "contactType": "Primary",
+            "inputValidationType": "IsRequired",
+            "notifications": [],
+            "fieldGroupRules": [
+              {
+                "name": "PhoneNumbers",
+                "inputValidationType": "IsRequired",
+                "criteria": [],
+                "fieldRules": [
+                  {
+                    "name": "Home",
+                    "inputValidationType": "IsRequired",
+                    "defaultValue": null,
+                    "criteria": []
+                  }
+                ]
+              },
+              {
+                "name": "OptIns",
+                "inputValidationType": "IsOptional",
+                "criteria": [],
+                "fieldRules": [
+                  {
+                    "name": "Marketing",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "Sms",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "WhatsApp",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  }
+                ]
+              }
+            ],
+            "fieldRules": [
+              {
+                "name": "CustomerNumber",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "FirstName",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "LastName",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Title",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Email",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          },
+          {
+            "contactType": "Emergency",
+            "inputValidationType": "IsOptional",
+            "notifications": [],
+            "fieldGroupRules": [
+              {
+                "name": "PhoneNumbers",
+                "inputValidationType": "IsOptional",
+                "criteria": [],
+                "fieldRules": [
+                  {
+                    "name": "Fax",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "Home",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "Mobile",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "Other",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "Work",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  }
+                ]
+              },
+              {
+                "name": "OptIns",
+                "inputValidationType": "IsOptional",
+                "criteria": [],
+                "fieldRules": [
+                  {
+                    "name": "Marketing",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "Sms",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "WhatsApp",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  },
+                  {
+                    "name": "WillingToChangeFlight",
+                    "inputValidationType": "IsOptional",
+                    "defaultValue": null,
+                    "criteria": []
+                  }
+                ]
+              }
+            ],
+            "fieldRules": [
+              {
+                "name": "CustomerNumber",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "FirstName",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "LastName",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Title",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Email",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          }
+        ],
+        "emptySeatRules": {
+          "single": 0,
+          "double": 0
+        }
+      },
+      "type": "SUCCESS",
+      "action": "CONTINUE"
+    },
+    "status": 200
+  }
+]

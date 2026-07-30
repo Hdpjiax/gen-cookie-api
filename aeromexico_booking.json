@@ -1,0 +1,557 @@
+{
+  "reservationCode": "FEMDZQ",
+  "otherAirlineReservationCode": "",
+  "creationDate": "2026-07-22T01:44:00",
+  "tripType": "One-Way",
+  "mcStayType": false,
+  "passengerNumbers": "1",
+  "typeReservation": "PAID",
+  "isAgencyReservation": false,
+  "isNewBF": true,
+  "isPaymentWithPoints": false,
+  "currency": {
+    "currencyCode": "USD",
+    "base": 551.0,
+    "totalTaxes": 63.18,
+    "taxes": {
+      "YR": 0.9,
+      "MX": 22.0,
+      "XV": 40.28
+    },
+    "total": 614.18,
+    "points": 0
+  },
+  "ticketDateTimeLimit": "",
+  "ticketTimeLimit": 0,
+  "transactionId": "5bbb4c00-e108-4641-96ae-ff293b2061c8",
+  "lastName": "TRUJILLO",
+  "isEmployee": false,
+  "isStandBy": false,
+  "isEmployeeDiscrepancy": false,
+  "isCorporateDiscrepancy": false,
+  "isPassengerDiscrepancy": false,
+  "isSegmentCodeDiscrepancy": false,
+  "isConfirmatedByARU": false,
+  "hasInfant": false,
+  "clid": "",
+  "allInfantAssociated": "",
+  "salesChannel": "",
+  "hertzReservation": "",
+  "paymentsMethods": [
+    {
+      "cardNumber": "7025",
+      "cardType": "CA"
+    }
+  ],
+  "bookedLegCollection": [
+    {
+      "legCode": "VER_CJS_2026-07-27",
+      "legEntity": "DOM",
+      "legRegion": "FRO",
+      "fareFamily": "MAIN_CLASSIC",
+      "remainingTimeToDeparture": 2340,
+      "remainingTimeToDocuments": 0,
+      "remainingTimeToCheckin": 0,
+      "totalFlightDuration": 324,
+      "windowLegStatus": "CKI",
+      "bahia": "",
+      "segments": [
+        {
+          "id": "5",
+          "remainingSegmentTimeToDeparture": 2340,
+          "remainingSegmentTimeToCheckin": 0,
+          "windowSegmentStatus": "CKI",
+          "fareFamily": "MAIN_CLASSIC",
+          "segmentCode": "VER_MEX_AM_0857_2026-07-27_1253",
+          "segmentCodeDiscrepancy": false,
+          "segmentEntity": "DOM",
+          "segmentRegion": "PLA",
+          "departureAirport": "VER",
+          "departureCountry": "MEX",
+          "departureAirportRegion": "PLA",
+          "departureTerminal": "",
+          "departureDateTime": "2026-07-27T12:53:00",
+          "arrivalAirport": "MEX",
+          "arrivalCountry": "MEX",
+          "arrivalAirportRegion": "LOC",
+          "arrivalTerminal": "2",
+          "arrivalDateTime": "2026-07-27T14:10:00",
+          "marketingCarrier": "AM",
+          "marketingFlightCode": "0857",
+          "operatingCarrier": "AM",
+          "operatingCarrierSubsidiary": "AEROMEXICO",
+          "operatingFlightCode": "0857",
+          "segmentStatusCode": "HK",
+          "cabinClass": "Y",
+          "bookingClass": "Y",
+          "farebasis": "YNNN0ACT",
+          "aircraftType": "7S8",
+          "flightDuration": 77,
+          "layoverDuration": 80,
+          "sequence": 1,
+          "onUpgradeList": false,
+          "departureAirportTimeZoneId": "America/Mexico_City",
+          "arrivalAirportTimeZoneId": "America/Mexico_City",
+          "hiddenStop": null,
+          "corporate": "",
+          "isTransshipNeeded": false,
+          "hasArnk": false,
+          "mealAvailabilityCheck": false,
+          "premierOneAvailable": false,
+          "isPremierOneAvailable": false
+        },
+        {
+          "id": "7",
+          "remainingSegmentTimeToDeparture": 2497,
+          "remainingSegmentTimeToCheckin": 0,
+          "windowSegmentStatus": "CKI",
+          "fareFamily": "MAIN_CLASSIC",
+          "segmentCode": "MEX_CJS_AM_0117_2026-07-27_1530",
+          "segmentCodeDiscrepancy": false,
+          "segmentEntity": "DOM",
+          "segmentRegion": "FRO",
+          "departureAirport": "MEX",
+          "departureCountry": "MEX",
+          "departureAirportRegion": "LOC",
+          "departureTerminal": "2",
+          "departureDateTime": "2026-07-27T15:30:00",
+          "arrivalAirport": "CJS",
+          "arrivalCountry": "MEX",
+          "arrivalAirportRegion": "FRO",
+          "arrivalTerminal": "",
+          "arrivalDateTime": "2026-07-27T18:17:00",
+          "marketingCarrier": "AM",
+          "marketingFlightCode": "0117",
+          "operatingCarrier": "AM",
+          "operatingCarrierSubsidiary": "AEROMEXICO",
+          "operatingFlightCode": "0117",
+          "segmentStatusCode": "HK",
+          "cabinClass": "Y",
+          "bookingClass": "Y",
+          "farebasis": "YNNN0ACT",
+          "aircraftType": "7M8",
+          "flightDuration": 167,
+          "layoverDuration": 0,
+          "sequence": 2,
+          "onUpgradeList": false,
+          "departureAirportTimeZoneId": "America/Mexico_City",
+          "arrivalAirportTimeZoneId": "America/Ciudad_Juarez",
+          "hiddenStop": null,
+          "corporate": "",
+          "isTransshipNeeded": false,
+          "hasArnk": false,
+          "mealAvailabilityCheck": true,
+          "premierOneAvailable": false,
+          "isPremierOneAvailable": false
+        }
+      ]
+    }
+  ],
+  "oldBookedLegCollection": [],
+  "confirmedBookedLegCollection": [
+    {
+      "legCode": "VER_CJS_2026-07-27",
+      "legEntity": "DOM",
+      "legRegion": "FRO",
+      "fareFamily": "MAIN_CLASSIC",
+      "remainingTimeToDeparture": 2340,
+      "remainingTimeToDocuments": 0,
+      "remainingTimeToCheckin": 0,
+      "totalFlightDuration": 324,
+      "windowLegStatus": "CKI",
+      "bahia": "",
+      "segments": [
+        {
+          "id": "5",
+          "remainingSegmentTimeToDeparture": 2340,
+          "remainingSegmentTimeToCheckin": 0,
+          "windowSegmentStatus": "CKI",
+          "fareFamily": "MAIN_CLASSIC",
+          "segmentCode": "VER_MEX_AM_0857_2026-07-27_1253",
+          "segmentCodeDiscrepancy": false,
+          "segmentEntity": "DOM",
+          "segmentRegion": "PLA",
+          "departureAirport": "VER",
+          "departureCountry": "MEX",
+          "departureAirportRegion": "PLA",
+          "departureTerminal": "",
+          "departureDateTime": "2026-07-27T12:53:00",
+          "arrivalAirport": "MEX",
+          "arrivalCountry": "MEX",
+          "arrivalAirportRegion": "LOC",
+          "arrivalTerminal": "2",
+          "arrivalDateTime": "2026-07-27T14:10:00",
+          "marketingCarrier": "AM",
+          "marketingFlightCode": "0857",
+          "operatingCarrier": "AM",
+          "operatingCarrierSubsidiary": "AEROMEXICO",
+          "operatingFlightCode": "0857",
+          "segmentStatusCode": "HK",
+          "cabinClass": "Y",
+          "bookingClass": "Y",
+          "farebasis": "YNNN0ACT",
+          "aircraftType": "7S8",
+          "flightDuration": 77,
+          "layoverDuration": 80,
+          "sequence": 1,
+          "onUpgradeList": false,
+          "departureAirportTimeZoneId": "America/Mexico_City",
+          "arrivalAirportTimeZoneId": "America/Mexico_City",
+          "hiddenStop": null,
+          "corporate": "",
+          "isTransshipNeeded": false,
+          "hasArnk": false,
+          "mealAvailabilityCheck": false,
+          "premierOneAvailable": false,
+          "isPremierOneAvailable": false
+        },
+        {
+          "id": "7",
+          "remainingSegmentTimeToDeparture": 2497,
+          "remainingSegmentTimeToCheckin": 0,
+          "windowSegmentStatus": "CKI",
+          "fareFamily": "MAIN_CLASSIC",
+          "segmentCode": "MEX_CJS_AM_0117_2026-07-27_1530",
+          "segmentCodeDiscrepancy": false,
+          "segmentEntity": "DOM",
+          "segmentRegion": "FRO",
+          "departureAirport": "MEX",
+          "departureCountry": "MEX",
+          "departureAirportRegion": "LOC",
+          "departureTerminal": "2",
+          "departureDateTime": "2026-07-27T15:30:00",
+          "arrivalAirport": "CJS",
+          "arrivalCountry": "MEX",
+          "arrivalAirportRegion": "FRO",
+          "arrivalTerminal": "",
+          "arrivalDateTime": "2026-07-27T18:17:00",
+          "marketingCarrier": "AM",
+          "marketingFlightCode": "0117",
+          "operatingCarrier": "AM",
+          "operatingCarrierSubsidiary": "AEROMEXICO",
+          "operatingFlightCode": "0117",
+          "segmentStatusCode": "HK",
+          "cabinClass": "Y",
+          "bookingClass": "Y",
+          "farebasis": "YNNN0ACT",
+          "aircraftType": "7M8",
+          "flightDuration": 167,
+          "layoverDuration": 0,
+          "sequence": 2,
+          "onUpgradeList": false,
+          "departureAirportTimeZoneId": "America/Mexico_City",
+          "arrivalAirportTimeZoneId": "America/Ciudad_Juarez",
+          "hiddenStop": null,
+          "corporate": "",
+          "isTransshipNeeded": false,
+          "hasArnk": false,
+          "mealAvailabilityCheck": true,
+          "premierOneAvailable": false,
+          "isPremierOneAvailable": false
+        }
+      ]
+    }
+  ],
+  "exchangeBookedLegCollection": [],
+  "genericSpecialRequests": [],
+  "divideSplitDetails": {
+    "dividedReservation": false,
+    "originalReservation": [],
+    "dividedReservationCodes": []
+  },
+  "newEmployeeReservationCode": "",
+  "checkedBagsList": [],
+  "isoCountryPos": "US",
+  "passengers": [
+    {
+      "id": "9",
+      "passengerNameNumber": "01.01",
+      "passengerInfant": "",
+      "priorityCode": "",
+      "upgradeCode": "",
+      "doubleComfort": "",
+      "isWheelChair": false,
+      "isMultipleTickets": false,
+      "isBagsDiscrepancy": false,
+      "infantAssociated": "",
+      "chubbInsuranceType": "",
+      "passengerDetails": {
+        "firstName": "CEYDI",
+        "lastName": "PINEDA TRUJILLO",
+        "displayFirstName": "CEYDI",
+        "displayLastName": "PINEDA TRUJILLO",
+        "nationality": ""
+      },
+      "passengerInfo": {
+        "dateOfBirth": "1990-06-11",
+        "gender": "FEMALE",
+        "originalType": "ADT",
+        "type": "ADT",
+        "countryResidence": "USA",
+        "redressNumber": null,
+        "travelerNumber": null,
+        "ffProgram": "",
+        "ffNumber": "",
+        "ffTierLevel": "",
+        "ffName": "",
+        "topTier": false,
+        "beneficiaryTier": "",
+        "taok": "",
+        "emailId": "66",
+        "emails": [
+          "ALPHA123@YAHOO.COM",
+          "ALPHA123@YAHOO.COM"
+        ],
+        "phones": [
+          {
+            "id": "11",
+            "type": "MOBILE",
+            "number": "9203448845",
+            "countryCode": "1"
+          },
+          {
+            "id": "67",
+            "type": "MOBILE",
+            "number": "9203448845",
+            "countryCode": "1"
+          }
+        ],
+        "passport": null,
+        "visa": null,
+        "permanentResidentCard": null,
+        "emergencyContact": null,
+        "destinationAddress": null
+      },
+      "ticketInfo": {
+        "eticket": "1392166807582",
+        "coupons": [
+          {
+            "couponNumber": 1,
+            "couponStatus": "CKIN",
+            "segmentCode": "VER_MEX_AM_0857_2026-07-27_1253"
+          },
+          {
+            "couponNumber": 2,
+            "couponStatus": "CKIN",
+            "segmentCode": "MEX_CJS_AM_0117_2026-07-27_1530"
+          }
+        ]
+      },
+      "multipleTicketInfo": null,
+      "ancillaries": [
+        {
+          "id": "28",
+          "status": "PAID",
+          "emd": "1394432420137",
+          "code": "08K",
+          "groupCode": "BG",
+          "nameDescription": "1ST BAG UP TO 55LB 25KG",
+          "passengerId": "9",
+          "rficCode": "C",
+          "owningCarrierCode": "AM",
+          "vendor": "ATP",
+          "emdType": "2",
+          "numberOfItems": "1",
+          "segmentIndicator": "P",
+          "type": "ITINERARY_PART",
+          "ssrCode": "",
+          "legCode": "VER_CJS_2026-07-27",
+          "segmentCode": "VER_MEX_AM_0857_2026-07-27_1253.MEX_CJS_AM_0117_2026-07-27_1530",
+          "isRedemptionCobrand": false,
+          "redemptionCobrandBy": "",
+          "isRedemptionTier": false,
+          "isRedemptionFF": false,
+          "currency": {
+            "currencyCode": "USD",
+            "base": 57.86,
+            "totalTaxes": 9.26,
+            "taxes": {
+              "MX": 9.26
+            },
+            "total": 67.12,
+            "points": 0
+          }
+        }
+      ],
+      "seats": [
+        {
+          "id": "20",
+          "status": "PAID",
+          "emd": "",
+          "code": "0B5",
+          "groupCode": "SA",
+          "nameDescription": "ASIENTO PAGADO PAIDSEAT",
+          "seatCode": "25F",
+          "passengerId": "9",
+          "rficCode": "A",
+          "owningCarrierCode": "AM",
+          "vendor": "ATP",
+          "emdType": "2",
+          "numberOfItems": "1",
+          "segmentIndicator": "S",
+          "type": "SEGMENT",
+          "ssrCode": "SEAT",
+          "legCode": "",
+          "segmentCode": "VER_MEX_AM_0857_2026-07-27_1253",
+          "emdCoupon": 0,
+          "isRedemptionCobrand": false,
+          "redemptionCobrandBy": "",
+          "isRedemptionTier": false,
+          "isRedemptionFF": false,
+          "currency": {
+            "currencyCode": "USD",
+            "base": 0.0,
+            "totalTaxes": 0.0,
+            "taxes": null,
+            "total": 0.0,
+            "points": 0
+          }
+        },
+        {
+          "id": "23",
+          "status": "PAID",
+          "emd": "",
+          "code": "0B5",
+          "groupCode": "SA",
+          "nameDescription": "ASIENTO PAGADO PAIDSEAT",
+          "seatCode": "25B",
+          "passengerId": "9",
+          "rficCode": "A",
+          "owningCarrierCode": "AM",
+          "vendor": "ATP",
+          "emdType": "2",
+          "numberOfItems": "1",
+          "segmentIndicator": "S",
+          "type": "SEGMENT",
+          "ssrCode": "SEAT",
+          "legCode": "",
+          "segmentCode": "MEX_CJS_AM_0117_2026-07-27_1530",
+          "emdCoupon": 0,
+          "isRedemptionCobrand": false,
+          "redemptionCobrandBy": "",
+          "isRedemptionTier": false,
+          "isRedemptionFF": false,
+          "currency": {
+            "currencyCode": "USD",
+            "base": 0.0,
+            "totalTaxes": 0.0,
+            "taxes": null,
+            "total": 0.0,
+            "points": 0
+          }
+        }
+      ],
+      "extraSeats": [],
+      "ssrs": [
+        {
+          "id": "15",
+          "code": "DOCA"
+        },
+        {
+          "id": "48",
+          "code": "TKNE"
+        },
+        {
+          "id": "49",
+          "code": "TKNE"
+        }
+      ],
+      "mealsDiscrepancy": false,
+      "meals": [],
+      "vouchers": [],
+      "isVoucherAvailable": false
+    }
+  ],
+  "remarks": [
+    {
+      "id": 17,
+      "type": "HS",
+      "text": "SSWREF/4B62E527-26A0-4E5A-A5CF-D3C0D69F11A0-TARGETGROUPA/-/-"
+    },
+    {
+      "id": 31,
+      "type": "HS",
+      "text": "POS-UX"
+    },
+    {
+      "id": 33,
+      "type": "HS",
+      "text": "AUTH-DUNA/CA7025/22JUL/01661784702652611481"
+    },
+    {
+      "id": 34,
+      "type": "HS",
+      "text": "AUTH-APV/32034P/0/USD681.30"
+    },
+    {
+      "id": 35,
+      "type": "HS",
+      "text": "AUTH-AVS NOT SUPPORTED/"
+    },
+    {
+      "id": 36,
+      "type": "HS",
+      "text": "AUTH-CSC SUPPLIED/"
+    },
+    {
+      "id": 37,
+      "type": "HS",
+      "text": "FARE/PUB/YNNN0ACT-YNNN0ACT"
+    },
+    {
+      "id": 38,
+      "type": "HS",
+      "text": "FARE/PUB/AMT/1ADT/551.00/63.18/614.18/USD"
+    },
+    {
+      "id": 39,
+      "type": "HS",
+      "text": "B\u00a5A/201 WEST BROWN ST\u00a5C/WAUPUN, US\u00a5Z/53963"
+    },
+    {
+      "id": 40,
+      "type": "HS",
+      "text": "BRND-VERMEX-AM0857-SL-180100-27JUL2026"
+    },
+    {
+      "id": 41,
+      "type": "HS",
+      "text": "BRND-MEXCJS-AM0117-SL-180100-27JUL2026"
+    },
+    {
+      "id": 42,
+      "type": "HS",
+      "text": "SSWMOD-DT/2026/07/22-06-44/IP/35.83.91.229"
+    },
+    {
+      "id": 43,
+      "type": "HS",
+      "text": "AUTH/CSCCA"
+    },
+    {
+      "id": 44,
+      "type": "FOP",
+      "text": "TBM*CA5XXXXXXXXXXX7025\u00a509/29"
+    },
+    {
+      "id": 45,
+      "type": "HS",
+      "text": "CARDHOLDERNAME-CEYDI PINEDA TRUJILLO"
+    },
+    {
+      "id": 47,
+      "type": "REG",
+      "text": "XXAUTH/32034P   *Z/CA7025"
+    },
+    {
+      "id": 60,
+      "type": "REG",
+      "text": "TRRSS-WEB-BKI-DIRECT---1657504/1656337-2069718/2068171-L00"
+    },
+    {
+      "id": 62,
+      "type": "HS",
+      "text": "SENT CONFIRMATION EMAIL"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "data": {
+    "passengersRules": [
+      {
+        "passengerKey": "MCFDSEQ-",
+        "prefillSources": [
+          {
+            "name": "Anonymous",
+            "isDefault": true
+          }
+        ],
+        "notifications": [],
+        "fieldGroupRules": [],
+        "fieldRules": [
+          {
+            "name": "FirstName",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "LastName",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "CustomerNumber",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Title",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Gender",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Nationality",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "DateOfBirth",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Phone",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "EmailAddress",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          }
+        ]
+      }
+    ],
+    "infantRules": null,
+    "contactsRules": [
+      {
+        "contactType": "Primary",
+        "inputValidationType": "IsRequired",
+        "notifications": [],
+        "fieldGroupRules": [
+          {
+            "name": "PhoneNumbers",
+            "inputValidationType": "IsRequired",
+            "criteria": [],
+            "fieldRules": [
+              {
+                "name": "Home",
+                "inputValidationType": "IsRequired",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          },
+          {
+            "name": "OptIns",
+            "inputValidationType": "IsOptional",
+            "criteria": [],
+            "fieldRules": [
+              {
+                "name": "Marketing",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Sms",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "WhatsApp",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          }
+        ],
+        "fieldRules": [
+          {
+            "name": "CustomerNumber",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "FirstName",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "LastName",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Title",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Email",
+            "inputValidationType": "IsRequired",
+            "defaultValue": null,
+            "criteria": []
+          }
+        ]
+      },
+      {
+        "contactType": "Emergency",
+        "inputValidationType": "IsOptional",
+        "notifications": [],
+        "fieldGroupRules": [
+          {
+            "name": "PhoneNumbers",
+            "inputValidationType": "IsOptional",
+            "criteria": [],
+            "fieldRules": [
+              {
+                "name": "Fax",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Home",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Mobile",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Other",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Work",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          },
+          {
+            "name": "OptIns",
+            "inputValidationType": "IsOptional",
+            "criteria": [],
+            "fieldRules": [
+              {
+                "name": "Marketing",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "Sms",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "WhatsApp",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              },
+              {
+                "name": "WillingToChangeFlight",
+                "inputValidationType": "IsOptional",
+                "defaultValue": null,
+                "criteria": []
+              }
+            ]
+          }
+        ],
+        "fieldRules": [
+          {
+            "name": "CustomerNumber",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "FirstName",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "LastName",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Title",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          },
+          {
+            "name": "Email",
+            "inputValidationType": "IsOptional",
+            "defaultValue": null,
+            "criteria": []
+          }
+        ]
+      }
+    ],
+    "emptySeatRules": {
+      "single": 0,
+      "double": 0
+    }
+  },
+  "type": "SUCCESS",
+  "action": "CONTINUE"
+}

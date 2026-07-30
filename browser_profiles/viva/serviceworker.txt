@@ -1,0 +1,14 @@
+10
+
+https://www.vivaaerobus.com/
+https://www.vivaaerobus.com/sw.js
+true
+{fecaeb27-b3b5-44ae-a98f-25eb1893434e}
+0
+1785034061775941
+1785034061791670
+1785034061328744
+0
+true
+0
+#

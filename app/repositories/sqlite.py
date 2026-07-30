@@ -34,6 +34,7 @@ class SQLiteStore:
         self.boarding_passes: dict[UUID, list[BoardingPass]] = {}
         self.user_languages: dict[int, str] = {}
         self.user_notifications: dict[int, bool] = {}
+        self.user_boarding_pass_formats: dict[int, str] = {}
         self._init_db()
         self.load()
 
@@ -109,10 +110,15 @@ class SQLiteStore:
                 CREATE TABLE IF NOT EXISTS user_preferences (
                     telegram_id INTEGER PRIMARY KEY,
                     language TEXT DEFAULT 'ES',
-                    notifications_enabled INTEGER DEFAULT 1
+                    notifications_enabled INTEGER DEFAULT 1,
+                    boarding_pass_format TEXT DEFAULT 'PDF'
                 )
                 """
             )
+            try:
+                cursor.execute("ALTER TABLE user_preferences ADD COLUMN boarding_pass_format TEXT DEFAULT 'PDF'")
+            except sqlite3.OperationalError:
+                pass
             conn.commit()
 
     def save(self) -> None:
@@ -205,9 +211,10 @@ class SQLiteStore:
 
             for telegram_id, lang in self.user_languages.items():
                 notif = 1 if self.user_notifications.get(telegram_id, True) else 0
+                fmt = self.user_boarding_pass_formats.get(telegram_id, "PDF")
                 cursor.execute(
-                    "INSERT OR REPLACE INTO user_preferences (telegram_id, language, notifications_enabled) VALUES (?, ?, ?)",
-                    (telegram_id, lang, notif),
+                    "INSERT OR REPLACE INTO user_preferences (telegram_id, language, notifications_enabled, boarding_pass_format) VALUES (?, ?, ?, ?)",
+                    (telegram_id, lang, notif, fmt),
                 )
             conn.commit()
 
@@ -282,6 +289,11 @@ class SQLiteStore:
             for row in cursor.fetchall():
                 self.user_languages[row["telegram_id"]] = row["language"]
                 self.user_notifications[row["telegram_id"]] = bool(row.get("notifications_enabled", 1))
+                try:
+                    fmt = row["boarding_pass_format"]
+                except (sqlite3.OperationalError, IndexError, KeyError, ValueError):
+                    fmt = "PDF"
+                self.user_boarding_pass_formats[row["telegram_id"]] = fmt or "PDF"
 
 
 def _encode(value: Any) -> Any:
@@ -317,6 +329,7 @@ def _decode_segment(item: dict[str, Any]) -> FlightSegment:
         terminal=item["terminal"],
         seat=item["seat"],
         boarding_group=item["boarding_group"],
+        is_checked_in=item.get("is_checked_in", False),
     )
 
 

@@ -1,0 +1,14 @@
+{
+  "type": "INVALID_PARAMETER",
+  "action": "CANCEL",
+  "code": "INVALID_REQUEST",
+  "message": "PNR not found for accrual",
+  "diagnosticInformation": null,
+  "exceptionId": null,
+  "parameters": [
+    {
+      "key": "pnr",
+      "message": "PNR not found for accrual"
+    }
+  ]
+}

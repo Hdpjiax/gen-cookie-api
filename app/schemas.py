@@ -73,6 +73,8 @@ class BookingRead(BaseModel):
     checkin_policy: CheckinPolicyRead | None = None
     created_at: datetime
     deleted_at: datetime | None = None
+    encrypted_locator: str | None = None
+    encrypted_last_name: str | None = None
 
     model_config = ConfigDict(from_attributes=True)
 

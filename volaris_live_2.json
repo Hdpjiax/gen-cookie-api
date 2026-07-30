@@ -1,0 +1,1888 @@
+{
+  "selfServiceMoveAvailable": false,
+  "bookingKey": "MTg3MTExOTA1IUhMUFQ0UiFmYWxzZQ--",
+  "recordLocator": "HLPT4R",
+  "currencyCode": "MXN",
+  "systemCode": null,
+  "groupName": null,
+  "locators": {
+    "numericRecordLocator": "152331042635",
+    "parentRecordLocator": null,
+    "parentId": 0,
+    "recordLocators": []
+  },
+  "info": {
+    "status": 2,
+    "paidStatus": 1,
+    "priceStatus": 2,
+    "profileStatus": 1,
+    "bookingType": null,
+    "channelType": 2,
+    "bookedDate": "2026-07-26T05:34:27.343Z",
+    "createdDate": "2026-07-26T05:34:27.343Z",
+    "expirationDate": "2026-08-01T16:46:00Z",
+    "modifiedDate": "2026-07-26T15:24:54.117Z",
+    "modifiedAgentId": 9950107,
+    "createdAgentId": 21,
+    "owningCarrierCode": "Y4",
+    "changeAllowed": true,
+    "createdUserKey": "MjE-",
+    "modifiedUserKey": "OTk1MDEwNw--"
+  },
+  "sales": {
+    "created": {
+      "agentCode": "WebAnonymous",
+      "domainCode": "WW2",
+      "locationCode": "WWW",
+      "organizationCode": "Y4"
+    },
+    "source": {
+      "isoCountryCode": null,
+      "sourceSystemCode": null,
+      "agentCode": "WebAnonymous",
+      "domainCode": "WW2",
+      "locationCode": "WWW",
+      "organizationCode": "Y4"
+    },
+    "modified": null
+  },
+  "typeOfSale": {
+    "residentCountry": "MX",
+    "promotionCode": null,
+    "fareTypes": []
+  },
+  "hold": null,
+  "breakdown": {
+    "balanceDue": 0.0,
+    "pointsBalanceDue": 0.0,
+    "authorizedBalanceDue": 0.0,
+    "totalAmount": 16152.0,
+    "totalPoints": 0.0,
+    "totalToCollect": 16152.0,
+    "totalPointsToCollect": 0.0,
+    "totalCharged": 16152.0,
+    "passengerTotals": {
+      "services": {
+        "total": 721.0,
+        "taxes": 115.0,
+        "adjustments": -704.0,
+        "charges": [
+          {
+            "amount": 17.0,
+            "code": "MCES",
+            "detail": "Multiple C",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 17.0,
+            "ticketCode": "MES"
+          },
+          {
+            "amount": -704.0,
+            "code": "MCES",
+            "detail": "Fee OR",
+            "type": 1,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": -704.0,
+            "ticketCode": null
+          },
+          {
+            "amount": 115.0,
+            "code": "MO",
+            "detail": "CUN-PBC",
+            "type": 5,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 115.0,
+            "ticketCode": "MO"
+          }
+        ]
+      },
+      "specialServices": {
+        "total": 832.0,
+        "taxes": 10.0,
+        "adjustments": null,
+        "charges": [
+          {
+            "amount": 0.0,
+            "code": "XV0",
+            "detail": "for free",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 0.0,
+            "ticketCode": "XV0"
+          },
+          {
+            "amount": 382.0,
+            "code": "XV1",
+            "detail": "TUA DOM",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 382.0,
+            "ticketCode": "XV1"
+          },
+          {
+            "amount": 34.0,
+            "code": "VTS3",
+            "detail": "TV volaris",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 34.0,
+            "ticketCode": "VT3"
+          },
+          {
+            "amount": 5.0,
+            "code": "MO",
+            "detail": "CUN-PBC",
+            "type": 5,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 5.0,
+            "ticketCode": "MO"
+          },
+          {
+            "amount": 0.0,
+            "code": "XV0",
+            "detail": "for free",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 0.0,
+            "ticketCode": "XV0"
+          },
+          {
+            "amount": 382.0,
+            "code": "XV1",
+            "detail": "TUA DOM",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 382.0,
+            "ticketCode": "XV1"
+          },
+          {
+            "amount": 34.0,
+            "code": "VTS3",
+            "detail": "TV volaris",
+            "type": 6,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 34.0,
+            "ticketCode": "VT3"
+          },
+          {
+            "amount": 5.0,
+            "code": "MO",
+            "detail": "CUN-PBC",
+            "type": 5,
+            "collectType": 0,
+            "currencyCode": "MXN",
+            "foreignCurrencyCode": "MXN",
+            "foreignAmount": 5.0,
+            "ticketCode": "MO"
+          }
+        ]
+      },
+      "seats": null,
+      "upgrades": null,
+      "spoilage": null,
+      "nameChanges": null,
+      "convenience": null,
+      "infant": null,
+      "totalCost": 16152.0
+    },
+    "passengers": {
+      "MCFBRFQ-": {
+        "passengerKey": "MCFBRFQ-",
+        "services": {
+          "total": 721.0,
+          "taxes": 115.0,
+          "adjustments": -704.0,
+          "charges": [
+            {
+              "amount": 17.0,
+              "code": "MCES",
+              "detail": "Multiple C",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 17.0,
+              "ticketCode": "MES"
+            },
+            {
+              "amount": -704.0,
+              "code": "MCES",
+              "detail": "Fee OR",
+              "type": 1,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": -704.0,
+              "ticketCode": null
+            },
+            {
+              "amount": 115.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 115.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "specialServices": {
+          "total": 416.0,
+          "taxes": 5.0,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            },
+            {
+              "amount": 382.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 382.0,
+              "ticketCode": "XV1"
+            },
+            {
+              "amount": 34.0,
+              "code": "VTS3",
+              "detail": "TV volaris",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 34.0,
+              "ticketCode": "VT3"
+            },
+            {
+              "amount": 5.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 5.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "seats": null,
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 8494.0
+      },
+      "MSFBRFQ-": {
+        "passengerKey": "MSFBRFQ-",
+        "services": null,
+        "specialServices": {
+          "total": 416.0,
+          "taxes": 5.0,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            },
+            {
+              "amount": 382.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 382.0,
+              "ticketCode": "XV1"
+            },
+            {
+              "amount": 34.0,
+              "code": "VTS3",
+              "detail": "TV volaris",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 34.0,
+              "ticketCode": "VT3"
+            },
+            {
+              "amount": 5.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 5.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        "seats": null,
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 7658.0
+      }
+    },
+    "journeyTotals": {
+      "totalAmount": 8220.0,
+      "totalPoints": 0.0,
+      "totalTax": 3856.0,
+      "totalDiscount": 2.0
+    },
+    "journeys": {
+      "WTR_MzU1Mn4gfn5DVU5_MDcvMjYvMjAyNiAxMTo0Nn5QQkN_MDcvMjYvMjAyNiAxMjo1M35_": {
+        "journeyKey": "WTR_MzU1Mn4gfn5DVU5_MDcvMjYvMjAyNiAxMTo0Nn5QQkN_MDcvMjYvMjAyNiAxMjo1M35_",
+        "totalAmount": 4110.0,
+        "totalPoints": 0.0,
+        "totalTax": 1928.0,
+        "totalDiscount": 1.0
+      }
+    },
+    "addOnTotals": {
+      "car": null,
+      "hotel": null,
+      "activities": null
+    }
+  },
+  "receivedBy": {
+    "receivedBy": null,
+    "latestReceivedBy": null,
+    "receivedReference": null,
+    "latestReceivedReference": null,
+    "referralCode": null
+  },
+  "contacts": {
+    "P": {
+      "contactTypeCode": "P",
+      "phoneNumbers": [
+        {
+          "type": 0,
+          "number": "12103056028"
+        },
+        {
+          "type": 1,
+          "number": "12103056028"
+        }
+      ],
+      "cultureCode": "en-US",
+      "address": {
+        "lineOne": null,
+        "lineTwo": "PAX;WA;WEB",
+        "lineThree": null,
+        "countryCode": "US",
+        "provinceState": null,
+        "city": null,
+        "postalCode": null
+      },
+      "emailAddress": "felepa.walleer@gmail.com",
+      "customerNumber": null,
+      "sourceOrganization": null,
+      "distributionOption": 2,
+      "notificationPreference": 0,
+      "companyName": null,
+      "name": {
+        "first": "brenda esther",
+        "middle": null,
+        "last": "cetina sanchez",
+        "title": "MISS",
+        "suffix": null
+      }
+    }
+  },
+  "passengers": {
+    "MCFBRFQ-": {
+      "passengerKey": "MCFBRFQ-",
+      "passengerAlternateKey": "MjczNzk0MzUz",
+      "customerNumber": null,
+      "fees": [
+        {
+          "type": 3,
+          "ssrCode": null,
+          "ssrNumber": 0,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "MCES",
+          "detail": null,
+          "passengerFeeKey": "MCE0ITM-",
+          "override": true,
+          "flightReference": null,
+          "note": null,
+          "createdDate": "2026-07-26T05:34:27.343Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 17.0,
+              "code": "MCES",
+              "detail": "Multiple C",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 17.0,
+              "ticketCode": "MES"
+            },
+            {
+              "amount": -704.0,
+              "code": "MCES",
+              "detail": "Fee OR",
+              "type": 1,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": -704.0,
+              "ticketCode": null
+            },
+            {
+              "amount": 115.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 115.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        {
+          "type": 6,
+          "ssrCode": "XV0",
+          "ssrNumber": 1,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "XV0",
+          "detail": null,
+          "passengerFeeKey": "MCE1ITY-",
+          "override": true,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            }
+          ]
+        },
+        {
+          "type": 6,
+          "ssrCode": "XV1",
+          "ssrNumber": 1,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "XV1",
+          "detail": null,
+          "passengerFeeKey": "MCE2ITY-",
+          "override": true,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 382.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 382.0,
+              "ticketCode": "XV1"
+            }
+          ]
+        },
+        {
+          "type": 6,
+          "ssrCode": "VTS3",
+          "ssrNumber": 1,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "VTS3",
+          "detail": null,
+          "passengerFeeKey": "MCE3ITY-",
+          "override": false,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 34.0,
+              "code": "VTS3",
+              "detail": "TV volaris",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 34.0,
+              "ticketCode": "VT3"
+            },
+            {
+              "amount": 5.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 5.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        {
+          "type": 17,
+          "ssrCode": null,
+          "ssrNumber": 0,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "BFPW",
+          "detail": null,
+          "passengerFeeKey": "MCE4ITE3",
+          "override": true,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 1034.0,
+              "code": "BFPW",
+              "detail": "Bundle Fee",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 1034.0,
+              "ticketCode": "BPW"
+            },
+            {
+              "amount": 165.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 165.0,
+              "ticketCode": "MO"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "first": "brenda esther",
+        "middle": null,
+        "last": "cetina sanchez",
+        "title": "MISS",
+        "suffix": null
+      },
+      "passengerTypeCode": "ADT",
+      "discountCode": null,
+      "bags": [
+        {
+          "identifier": "3552",
+          "baggageKey": "MDAzNjM0NjUwMw--",
+          "nonStandard": false,
+          "type": "STND",
+          "osTag": "0036346503",
+          "osTagDate": "2026-07-26T00:00:00Z",
+          "taggedToStation": "PBC",
+          "stationCode": "CUN",
+          "weight": 15,
+          "taggedToCarrierCode": "Y4",
+          "weightType": 2
+        }
+      ],
+      "program": null,
+      "infant": null,
+      "info": {
+        "nationality": "US",
+        "residentCountry": "US",
+        "gender": 2,
+        "dateOfBirth": "1972-08-14T00:00:00",
+        "familyNumber": null
+      },
+      "travelDocuments": [],
+      "addresses": [],
+      "weightCategory": 2,
+      "emdCoupons": []
+    },
+    "MSFBRFQ-": {
+      "passengerKey": "MSFBRFQ-",
+      "passengerAlternateKey": "MjczNzk0MzU0",
+      "customerNumber": null,
+      "fees": [
+        {
+          "type": 6,
+          "ssrCode": "XV0",
+          "ssrNumber": 1,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "XV0",
+          "detail": null,
+          "passengerFeeKey": "MSE0ITY-",
+          "override": true,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 0.0,
+              "code": "XV0",
+              "detail": "for free",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 0.0,
+              "ticketCode": "XV0"
+            }
+          ]
+        },
+        {
+          "type": 6,
+          "ssrCode": "XV1",
+          "ssrNumber": 1,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "XV1",
+          "detail": null,
+          "passengerFeeKey": "MSE1ITY-",
+          "override": true,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 382.0,
+              "code": "XV1",
+              "detail": "TUA DOM",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 382.0,
+              "ticketCode": "XV1"
+            }
+          ]
+        },
+        {
+          "type": 6,
+          "ssrCode": "VTS3",
+          "ssrNumber": 1,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "VTS3",
+          "detail": null,
+          "passengerFeeKey": "MSE2ITY-",
+          "override": false,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 34.0,
+              "code": "VTS3",
+              "detail": "TV volaris",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 34.0,
+              "ticketCode": "VT3"
+            },
+            {
+              "amount": 5.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 5.0,
+              "ticketCode": "MO"
+            }
+          ]
+        },
+        {
+          "type": 17,
+          "ssrCode": null,
+          "ssrNumber": 0,
+          "paymentNumber": 0,
+          "isConfirmed": true,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "code": "BFPW",
+          "detail": null,
+          "passengerFeeKey": "MSE3ITE3",
+          "override": true,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "note": null,
+          "createdDate": "2026-07-26T05:45:11.19Z",
+          "isProtected": false,
+          "serviceCharges": [
+            {
+              "amount": 1034.0,
+              "code": "BFPW",
+              "detail": "Bundle Fee",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 1034.0,
+              "ticketCode": "BPW"
+            },
+            {
+              "amount": 165.0,
+              "code": "MO",
+              "detail": "CUN-PBC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "MXN",
+              "foreignCurrencyCode": "MXN",
+              "foreignAmount": 165.0,
+              "ticketCode": "MO"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "first": "gabriel antonio",
+        "middle": null,
+        "last": "ku perez",
+        "title": "MR",
+        "suffix": null
+      },
+      "passengerTypeCode": "ADT",
+      "discountCode": null,
+      "bags": [
+        {
+          "identifier": "3552",
+          "baggageKey": "MDAzNjM0NjUyNQ--",
+          "nonStandard": false,
+          "type": "STND",
+          "osTag": "0036346525",
+          "osTagDate": "2026-07-26T00:00:00Z",
+          "taggedToStation": "PBC",
+          "stationCode": "CUN",
+          "weight": 11,
+          "taggedToCarrierCode": "Y4",
+          "weightType": 2
+        }
+      ],
+      "program": null,
+      "infant": null,
+      "info": {
+        "nationality": "US",
+        "residentCountry": "US",
+        "gender": 1,
+        "dateOfBirth": "1970-06-30T00:00:00",
+        "familyNumber": null
+      },
+      "travelDocuments": [],
+      "addresses": [],
+      "weightCategory": 1,
+      "emdCoupons": []
+    }
+  },
+  "journeys": [
+    {
+      "flightType": 1,
+      "stops": 0,
+      "designator": {
+        "destination": "PBC",
+        "origin": "CUN",
+        "arrival": "2026-07-26T12:53:00",
+        "departure": "2026-07-26T11:46:00"
+      },
+      "move": null,
+      "segments": [
+        {
+          "isStandby": false,
+          "isConfirming": false,
+          "isConfirmingExternal": false,
+          "isBlocked": false,
+          "isHosted": true,
+          "isChangeOfGauge": false,
+          "designator": {
+            "destination": "PBC",
+            "origin": "CUN",
+            "arrival": "2026-07-26T12:53:00",
+            "departure": "2026-07-26T11:46:00"
+          },
+          "isSeatmapViewable": true,
+          "fares": [
+            {
+              "isGoverning": true,
+              "carrierCode": "Y4",
+              "fareKey": "MH5Rfn5ZNH5RSFJQMX4wMDExfn4wfjB_flg-",
+              "classOfService": "Q",
+              "classType": null,
+              "fareApplicationType": 0,
+              "fareClassOfService": "Q",
+              "fareBasisCode": "QHRP1",
+              "fareSequence": 0,
+              "inboundOutBound": 0,
+              "fareStatus": 0,
+              "isAllotmentMarketFare": false,
+              "originalClassOfService": "Q",
+              "ruleNumber": "0011",
+              "productClass": null,
+              "ruleTariff": null,
+              "travelClassCode": "Y",
+              "pricingDate": "2026-07-26T05:42:54.773",
+              "crossReferenceClassOfService": null,
+              "fareDesignator": {
+                "fareTypeCodes": [
+                  "AG",
+                  "AT",
+                  "BD",
+                  "CC",
+                  "MO",
+                  "OT",
+                  "R",
+                  "WE"
+                ]
+              },
+              "passengerFares": [
+                {
+                  "serviceCharges": [
+                    {
+                      "amount": 4111.0,
+                      "code": null,
+                      "detail": null,
+                      "type": 0,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 4111.0,
+                      "ticketCode": null
+                    },
+                    {
+                      "amount": 1.0,
+                      "code": "PM5DUN",
+                      "detail": "Tarifa Bas",
+                      "type": 1,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 1.0,
+                      "ticketCode": null
+                    },
+                    {
+                      "amount": 862.0,
+                      "code": "BSCO",
+                      "detail": "CUN-PBC",
+                      "type": 4,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 862.0,
+                      "ticketCode": "BCO"
+                    },
+                    {
+                      "amount": 138.0,
+                      "code": "PSF1",
+                      "detail": "CUN-PBC",
+                      "type": 4,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 138.0,
+                      "ticketCode": "PF1"
+                    },
+                    {
+                      "amount": 43.0,
+                      "code": "PSF1",
+                      "detail": "CUN-PBC",
+                      "type": 4,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 43.0,
+                      "ticketCode": "PF1"
+                    },
+                    {
+                      "amount": 658.0,
+                      "code": "MX",
+                      "detail": "CUN-PBC",
+                      "type": 5,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 658.0,
+                      "ticketCode": "MX"
+                    },
+                    {
+                      "amount": 52.0,
+                      "code": "CVFM",
+                      "detail": "CUN-PBC",
+                      "type": 4,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 52.0,
+                      "ticketCode": "CVF"
+                    },
+                    {
+                      "amount": 175.0,
+                      "code": "MO",
+                      "detail": "CUN-PBC",
+                      "type": 5,
+                      "collectType": 0,
+                      "currencyCode": "MXN",
+                      "foreignCurrencyCode": "MXN",
+                      "foreignAmount": 175.0,
+                      "ticketCode": "MO"
+                    }
+                  ],
+                  "discountCode": null,
+                  "fareDiscountCode": "PM5DUN",
+                  "ticketFareBasis": null,
+                  "passengerType": "ADT"
+                }
+              ],
+              "fareLink": 0
+            }
+          ],
+          "segmentKey": "WTR_MzU1Mn4gfn5DVU5_MDcvMjYvMjAyNiAxMTo0Nn5QQkN_MDcvMjYvMjAyNiAxMjo1M35_",
+          "identifier": {
+            "identifier": "3552",
+            "carrierCode": "Y4",
+            "opSuffix": null
+          },
+          "passengerSegment": {
+            "MCFBRFQ-": {
+              "seats": [
+                {
+                  "compartmentDesignator": "Y",
+                  "penalty": 0,
+                  "unitDesignator": "12B",
+                  "seatInformation": {
+                    "deck": 1,
+                    "seatSet": 22,
+                    "propertyList": {
+                      "NCHILD": "TRUE",
+                      "LEGROOM": "TRUE",
+                      "EXITROW": "TRUE",
+                      "BRDZONE": "3",
+                      "TCC": "Y"
+                    }
+                  },
+                  "arrivalStation": "PBC",
+                  "departureStation": "CUN",
+                  "passengerKey": "MCFBRFQ-",
+                  "unitKey": "WTQhMzU1MiEgITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hUEJDITEyQiFZ",
+                  "crossReferenceSeatingPreference": null,
+                  "isPending": false,
+                  "seatmapReference": "WTQhMzU1MiEgITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hUEJD"
+                }
+              ],
+              "passengerKey": "MCFBRFQ-",
+              "activityDate": "2026-07-26T16:58:11.603Z",
+              "boardingSequence": "180",
+              "createdDate": "2026-07-26T05:45:11.19Z",
+              "liftStatus": 2,
+              "modifiedDate": "2026-07-26T15:24:54.117Z",
+              "overBookIndicator": 0,
+              "priorityDate": "2026-07-26T05:45:11.2Z",
+              "timeChanged": false,
+              "verifiedTravelDocs": null,
+              "sourcePointOfSale": {
+                "agentCode": "WebAnonymous",
+                "domainCode": "WW2",
+                "locationCode": "WWW",
+                "organizationCode": "Y4"
+              },
+              "pointOfSale": {
+                "agentCode": "A0042",
+                "domainCode": "WWW",
+                "locationCode": "WWW",
+                "organizationCode": "Y4"
+              },
+              "ssrs": [
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFCR0IxITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "BGB1",
+                  "feeCode": "BGB1",
+                  "inBundle": true,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFDUlJCITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "CRRB",
+                  "feeCode": "CRRB",
+                  "inBundle": true,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFGQVBBITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "FAPA",
+                  "feeCode": "FAPA",
+                  "inBundle": true,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFNT0ZMITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "MOFL",
+                  "feeCode": "MOFL",
+                  "inBundle": true,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFSRk5EITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "RFND",
+                  "feeCode": "RFND",
+                  "inBundle": true,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFWVFMzITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "VTS3",
+                  "feeCode": "VTS3",
+                  "inBundle": true,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFYVjAhMSFQQkMhWTQhNjM5MjA2NjMxNjAwMDAwMDAwIUNVTiEzNTUyISA-",
+                  "count": 1,
+                  "ssrCode": "XV0",
+                  "feeCode": "XV0",
+                  "inBundle": false,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNQ0ZCUkZRLSFYVjEhMSFQQkMhWTQhNjM5MjA2NjMxNjAwMDAwMDAwIUNVTiEzNTUyISA-",
+                  "count": 1,
+                  "ssrCode": "XV1",
+                  "feeCode": "XV1",
+                  "inBundle": false,
+                  "passengerKey": "MCFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                }
+              ],
+              "tickets": [],
+              "bags": [
+                {
+                  "baggageKey": "MDAzNjM0NjUwMw--",
+                  "passengerKey": "MCFBRFQ-",
+                  "arrivalStation": "PBC",
+                  "status": 1,
+                  "departureStation": "CUN",
+                  "osTag": "0036346503"
+                }
+              ],
+              "scores": [],
+              "boardingPassDetail": null,
+              "hasInfant": false,
+              "seatPreferences": {
+                "seat": 0,
+                "travelClass": 0,
+                "advancedPreferences": []
+              },
+              "bundleCode": "BCPW",
+              "verifiedTravelDocuments": null,
+              "referenceNumber": 0,
+              "baggageGroupNumber": 1,
+              "stayType": 0,
+              "infantStayType": 0
+            },
+            "MSFBRFQ-": {
+              "seats": [
+                {
+                  "compartmentDesignator": "Y",
+                  "penalty": 0,
+                  "unitDesignator": "12C",
+                  "seatInformation": {
+                    "deck": 1,
+                    "seatSet": 22,
+                    "propertyList": {
+                      "LEGROOM": "TRUE",
+                      "NCHILD": "TRUE",
+                      "AISLE": "TRUE",
+                      "EXITROW": "TRUE",
+                      "BRDZONE": "3",
+                      "TCC": "Y"
+                    }
+                  },
+                  "arrivalStation": "PBC",
+                  "departureStation": "CUN",
+                  "passengerKey": "MSFBRFQ-",
+                  "unitKey": "WTQhMzU1MiEgITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hUEJDITEyQyFZ",
+                  "crossReferenceSeatingPreference": null,
+                  "isPending": false,
+                  "seatmapReference": "WTQhMzU1MiEgITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hUEJD"
+                }
+              ],
+              "passengerKey": "MSFBRFQ-",
+              "activityDate": "2026-07-26T16:58:15.343Z",
+              "boardingSequence": "181",
+              "createdDate": "2026-07-26T05:45:11.19Z",
+              "liftStatus": 2,
+              "modifiedDate": "2026-07-26T15:24:54.117Z",
+              "overBookIndicator": 0,
+              "priorityDate": "2026-07-26T05:45:11.2Z",
+              "timeChanged": false,
+              "verifiedTravelDocs": null,
+              "sourcePointOfSale": {
+                "agentCode": "WebAnonymous",
+                "domainCode": "WW2",
+                "locationCode": "WWW",
+                "organizationCode": "Y4"
+              },
+              "pointOfSale": {
+                "agentCode": "A0042",
+                "domainCode": "WWW",
+                "locationCode": "WWW",
+                "organizationCode": "Y4"
+              },
+              "ssrs": [
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFCR0IxITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "BGB1",
+                  "feeCode": "BGB1",
+                  "inBundle": true,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFDUlJCITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "CRRB",
+                  "feeCode": "CRRB",
+                  "inBundle": true,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFGQVBBITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "FAPA",
+                  "feeCode": "FAPA",
+                  "inBundle": true,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFNT0ZMITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "MOFL",
+                  "feeCode": "MOFL",
+                  "inBundle": true,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFSRk5EITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "RFND",
+                  "feeCode": "RFND",
+                  "inBundle": true,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFWVFMzITEhUEJDIVk0ITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hMzU1MiEg",
+                  "count": 1,
+                  "ssrCode": "VTS3",
+                  "feeCode": "VTS3",
+                  "inBundle": true,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFYVjAhMSFQQkMhWTQhNjM5MjA2NjMxNjAwMDAwMDAwIUNVTiEzNTUyISA-",
+                  "count": 1,
+                  "ssrCode": "XV0",
+                  "feeCode": "XV0",
+                  "inBundle": false,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                },
+                {
+                  "isConfirmed": true,
+                  "isConfirmingUnheld": false,
+                  "note": null,
+                  "ssrDuration": 2,
+                  "ssrKey": "MCFNU0ZCUkZRLSFYVjEhMSFQQkMhWTQhNjM5MjA2NjMxNjAwMDAwMDAwIUNVTiEzNTUyISA-",
+                  "count": 1,
+                  "ssrCode": "XV1",
+                  "feeCode": "XV1",
+                  "inBundle": false,
+                  "passengerKey": "MSFBRFQ-",
+                  "ssrDetail": null,
+                  "ssrNumber": 1,
+                  "market": {
+                    "identifier": {
+                      "identifier": "3552",
+                      "carrierCode": "Y4",
+                      "opSuffix": null
+                    },
+                    "destination": "PBC",
+                    "origin": "CUN",
+                    "departureDate": "2026-07-26T11:46:00"
+                  }
+                }
+              ],
+              "tickets": [],
+              "bags": [
+                {
+                  "baggageKey": "MDAzNjM0NjUyNQ--",
+                  "passengerKey": "MSFBRFQ-",
+                  "arrivalStation": "PBC",
+                  "status": 1,
+                  "departureStation": "CUN",
+                  "osTag": "0036346525"
+                }
+              ],
+              "scores": [],
+              "boardingPassDetail": null,
+              "hasInfant": false,
+              "seatPreferences": {
+                "seat": 0,
+                "travelClass": 0,
+                "advancedPreferences": []
+              },
+              "bundleCode": "BCPW",
+              "verifiedTravelDocuments": null,
+              "referenceNumber": 0,
+              "baggageGroupNumber": 2,
+              "stayType": 0,
+              "infantStayType": 0
+            }
+          },
+          "channelType": 2,
+          "cabinOfService": "Y",
+          "externalIdentifier": null,
+          "priorityCode": null,
+          "changeReasonCode": 0,
+          "segmentType": 0,
+          "salesDate": "2026-07-26T05:45:11.19Z",
+          "international": false,
+          "flightReference": "20260726 Y43552 CUNPBC",
+          "legs": [
+            {
+              "legKey": "NjM5MjA2NjMxNjAwMDAwMDAwIVk0ITM1NTIhICFDVU4hUEJDITUxMTk0MDA-",
+              "operationsInfo": null,
+              "designator": {
+                "destination": "PBC",
+                "origin": "CUN",
+                "arrival": "2026-07-26T12:53:00",
+                "departure": "2026-07-26T11:46:00"
+              },
+              "legInfo": {
+                "departureTimeUtc": "2026-07-26T16:46:00Z",
+                "arrivalTimeUtc": "2026-07-26T18:53:00Z",
+                "adjustedCapacity": 191,
+                "arrivalTerminal": "1",
+                "arrivalTimeVariant": -360,
+                "backMoveDays": 0,
+                "capacity": 180,
+                "changeOfDirection": false,
+                "codeShareIndicator": 0,
+                "departureTerminal": "2",
+                "departureTimeVariant": -300,
+                "equipmentType": "B80",
+                "equipmentTypeSuffix": null,
+                "eTicket": false,
+                "irop": false,
+                "lid": 193,
+                "marketingCode": null,
+                "marketingOverride": false,
+                "operatedByText": null,
+                "operatingCarrier": null,
+                "operatingFlightNumber": null,
+                "operatingOpSuffix": null,
+                "outMoveDays": 0,
+                "arrivalTime": "2026-07-26T12:53:00",
+                "departureTime": "2026-07-26T11:46:00",
+                "prbcCode": "180",
+                "scheduleServiceType": null,
+                "sold": 187,
+                "status": 1,
+                "subjectToGovtApproval": false
+              },
+              "nests": [],
+              "ssrs": [],
+              "seatmapReference": "WTQhMzU1MiEgITYzOTIwNjYzMTYwMDAwMDAwMCFDVU4hUEJD",
+              "flightReference": "20260726 Y43552 CUNPBC"
+            }
+          ],
+          "status": 6
+        }
+      ],
+      "journeyKey": "WTR_MzU1Mn4gfn5DVU5_MDcvMjYvMjAyNiAxMTo0Nn5QQkN_MDcvMjYvMjAyNiAxMjo1M35_",
+      "notForGeneralUser": false
+    }
+  ],
+  "comments": [
+    {
+      "type": 0,
+      "text": "Cliente acepta t\u00e9rminos y condiciones",
+      "createdDate": "2026-07-26T05:34:27.343Z",
+      "pointOfSale": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "commentKey": "NjM3NDQwNTg5"
+    },
+    {
+      "type": 0,
+      "text": "MCP is applied",
+      "createdDate": "2026-07-26T05:34:39.117Z",
+      "pointOfSale": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "commentKey": "NjM3NDQwNjA0"
+    },
+    {
+      "type": 0,
+      "text": "MCES Fee is applied",
+      "createdDate": "2026-07-26T05:34:39.143Z",
+      "pointOfSale": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "commentKey": "NjM3NDQwNjA1"
+    },
+    {
+      "type": 0,
+      "text": "SEAT - DELETED FEE - Y43552 CUN-PBC 26Jul26 - cetina sanchez/brenda estherMISS",
+      "createdDate": "2026-07-26T15:24:54.117Z",
+      "pointOfSale": {
+        "agentCode": "V15078",
+        "domainCode": "DEF",
+        "locationCode": "CUN",
+        "organizationCode": "Y4"
+      },
+      "commentKey": "NjM3NDY2ODQ1"
+    },
+    {
+      "type": 0,
+      "text": "SEAT - DELETED FEE - Y43552 CUN-PBC 26Jul26 - ku perez/gabriel antonioMR",
+      "createdDate": "2026-07-26T15:24:54.117Z",
+      "pointOfSale": {
+        "agentCode": "V15078",
+        "domainCode": "DEF",
+        "locationCode": "CUN",
+        "organizationCode": "Y4"
+      },
+      "commentKey": "NjM3NDY2ODQ2"
+    }
+  ],
+  "queues": [],
+  "history": [],
+  "payments": [
+    {
+      "paymentKey": "MjYyMzc5MTgxITEhTUQhMTg3MTExOTA1",
+      "code": "MD",
+      "approvalDate": "2026-07-26T05:34:30.913Z",
+      "details": {
+        "accountNumberId": 0,
+        "parentPaymentId": null,
+        "accountName": "bendra esther cetina sanchez",
+        "accountNumber": null,
+        "expirationDate": null,
+        "text": null,
+        "installments": 0,
+        "binRange": 0,
+        "fields": {
+          "ACCTNO": "526929XXXXXX7550",
+          "Avs::Address1": "2031 private road 2331",
+          "Avs::City": "Hondo",
+          "Avs::Country": "US",
+          "Avs::PostalCode": "78861",
+          "Avs::StateOrProvince": "TX",
+          "BillTo::Email": "felepa.walleer@gmail.com",
+          "BillTo::FirstName": "brenda esther",
+          "BillTo::IPAddress": "70.126.133.189",
+          "BillTo::LastName": "cetina sanchez",
+          "BillTo::Phone": "+12103056028",
+          "card_id": "8a9a4051-0454-4c76-bbb1-448d05ab7be6",
+          "CardHolderFirstName": "bendra",
+          "CardHolderLastName": "esther cetina sanchez",
+          "CC::CarrierCode": "Y4",
+          "contact_email": "felepa.walleer@gmail.com",
+          "DD::Installments": "1",
+          "device_fingerprint": "eyJBQ0NFUlRJRlkiOiJmOTAyNTZiNS0yMDY4LTRjNmQtODc1Yi0zYjRlMjdjZTE5YmUiLCJSSVNLSUZJRUQiOiI4NTNiYjI3Yy1iZjQ3LTVmNjUtYjYyNS0yOGQzOGIyNzVjNDUifQ==",
+          "ExchgRt": "0.0571000524521374246000524521",
+          "FPS::Enabled": "false",
+          "IPAddress": "70.126.133.189",
+          "location": "WWW",
+          "NS::AgentName": "WebAnonymous",
+          "NS::AgentRole": "WAN",
+          "order_token": "01c44bfc-55e0-462f-a11b-ee41c475f636",
+          "OriginalLocation": "WWW",
+          "RateID": "MCPVOLARIS",
+          "SP:PAYID": "120336031",
+          "split_payment_sequence": "0",
+          "TransactionTypeIndicator": "TKT",
+          "ubainformation": "eyJ1YmFJRCI6IjAwYjgxNjQ1OGIxNTgxMmFhMzZkMGFlNWU5NTQ1ZTM1YmJhZSIsInViYVNlc3Npb25JRCI6IjA1ZGVhNmNjYjRlNTgwMTkyMmJkNWVmYWEwMGYyZGRiYTdhMiIsInBhZ2VJRCI6ODYzNjA2MTIwNzkzNDUwLCJldmVudFNvdXJjZSI6IndlYiJ9",
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+        }
+      },
+      "amounts": {
+        "amount": 15252.0,
+        "currencyCode": "MXN",
+        "collected": 870.89,
+        "collectedCurrencyCode": "USD",
+        "quoted": 15252.0,
+        "quotedCurrencyCode": "MXN"
+      },
+      "authorizationCode": "44230",
+      "authorizationStatus": 4,
+      "fundedDate": "1800-01-01T00:00:00Z",
+      "transactionCode": null,
+      "dcc": {
+        "rateId": "00000000-0000-0000-0000-000000000000",
+        "currencyCode": null,
+        "rateValue": 0.0,
+        "amount": 0.0,
+        "putInState": null,
+        "status": 4,
+        "applicable": false
+      },
+      "threeDSecure": null,
+      "attachments": [],
+      "createdDate": "2026-07-26T05:34:27.343Z",
+      "modifiedDate": "2026-07-26T05:34:30.91Z",
+      "type": 0,
+      "status": 3,
+      "transferred": false,
+      "channelType": 2,
+      "pointOfSale": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "sourcePointOfSale": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "deposit": false,
+      "accountId": 0,
+      "voucher": null,
+      "addedToState": true,
+      "createdAgentId": 21,
+      "modifiedAgentId": 18,
+      "reference": 262379181,
+      "passengerVoucher": null
+    },
+    {
+      "paymentKey": "MjYyMzc5NTU1ITIhTUQhMTg3MTExOTA1",
+      "code": "MD",
+      "approvalDate": "2026-07-26T05:45:16.473Z",
+      "details": {
+        "accountNumberId": 0,
+        "parentPaymentId": null,
+        "accountName": "Juan Antonio Garcia Nievez",
+        "accountNumber": null,
+        "expirationDate": null,
+        "text": null,
+        "installments": 0,
+        "binRange": 0,
+        "fields": {
+          "ACCTNO": "532410XXXXXX6449",
+          "Avs::Address1": "Benem\u00e9rito de Yucatan 66",
+          "Avs::City": "Morelia",
+          "Avs::Country": "MX",
+          "Avs::PostalCode": "58127",
+          "Avs::StateOrProvince": "MIC",
+          "BillTo::Email": "felepa.walleer@gmail.com",
+          "BillTo::FirstName": "Juan Antonio",
+          "BillTo::IPAddress": "200.68.167.20",
+          "BillTo::LastName": "Garcia Nievez",
+          "BillTo::Phone": "+524433185236",
+          "card_id": "4bff0ca0-be07-478e-8445-2a865cef9348",
+          "CardHolderFirstName": "Juan",
+          "CardHolderLastName": "Antonio Garcia Nievez",
+          "CC::CarrierCode": "Y4",
+          "contact_email": "felepa.walleer@gmail.com",
+          "DD::Installments": "1",
+          "device_fingerprint": "eyJBQ0NFUlRJRlkiOiJlOTcwYTkwYy03YmVmLTRmZDktYWNjMi1mZWQ5MTliYWMwZGYiLCJSSVNLSUZJRUQiOiJkY2FiYzA2YS02NzQ1LTUyZDEtYTFhOS1iYjRkMTUzNmE0ZjgifQ==",
+          "FPS::Enabled": "false",
+          "IPAddress": "200.68.167.20",
+          "location": "WWW",
+          "NS::AgentName": "A0042",
+          "NS::AgentRole": "CWEB",
+          "order_token": "8bbbb64e-785b-421f-848d-d7572e89cf0d",
+          "OriginalLocation": "WWW",
+          "SP:PAYID": "120336400",
+          "split_payment_sequence": "0",
+          "TransactionTypeIndicator": "MSC",
+          "ubainformation": "eyJ1YmFJRCI6IjcyOTc5NWI1ZGFmNTY2MzhmMDE1OTk0OTBmMjFiMzY2MWZmNCIsInViYVNlc3Npb25JRCI6ImM4ZDNmOTc3MzgxZmM5NzBlNTJkMTIyNDYzOGUxYTM2OTRiNiIsInBhZ2VJRCI6Njg1MTAyMDQwNjE4NzgzNCwiZXZlbnRTb3VyY2UiOiJ3ZWIifQ==",
+          "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+        }
+      },
+      "amounts": {
+        "amount": 900.0,
+        "currencyCode": "MXN",
+        "collected": 900.0,
+        "collectedCurrencyCode": "MXN",
+        "quoted": 900.0,
+        "quotedCurrencyCode": "MXN"
+      },
+      "authorizationCode": "696042",
+      "authorizationStatus": 4,
+      "fundedDate": "1800-01-01T00:00:00Z",
+      "transactionCode": null,
+      "dcc": null,
+      "threeDSecure": null,
+      "attachments": [],
+      "createdDate": "2026-07-26T05:45:11.19Z",
+      "modifiedDate": "2026-07-26T05:45:16.47Z",
+      "type": 0,
+      "status": 3,
+      "transferred": false,
+      "channelType": 2,
+      "pointOfSale": {
+        "agentCode": "A0042",
+        "domainCode": "WWW",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "sourcePointOfSale": {
+        "agentCode": "WebAnonymous",
+        "domainCode": "WW2",
+        "locationCode": "WWW",
+        "organizationCode": "Y4"
+      },
+      "deposit": false,
+      "accountId": 0,
+      "voucher": null,
+      "addedToState": true,
+      "createdAgentId": 3645304,
+      "modifiedAgentId": 18,
+      "reference": 262379555,
+      "passengerVoucher": null
+    }
+  ],
+  "addOns": {},
+  "orders": []
+}

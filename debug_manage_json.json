@@ -1,0 +1,5322 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "fields": {
+        "groupType": "items",
+        "title": "ManageMyBookingPage",
+        "items": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6ecaDGtLACrd7Jm8lLRUES"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2sdp7zehfsAloYnFvY8jX7"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7t9aIwuANDCefX92MWR5Bn"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1A8dy9tGYvovR5cy9jM7sk"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6b6AcTdXzk5fshwib3wdT5"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2IIHHCanq0CBWPLaTZDjvF"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2WDS9Z4evtePNpaUCWEO7L"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "95RrvNhYuIfFlYLuGJL8m"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6kjV36BgBZThylU6EkD2T9"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2FmnZplJw6sQYmr60xhhq1"
+            }
+          }
+        ],
+        "code": "ManageMyBookingPage",
+        "layout": "Column",
+        "marginTop": "0",
+        "marginBottom": "0",
+        "marginLeft": "0",
+        "marginRight": "0",
+        "alignment": "Center"
+      },
+      "sys": {
+        "id": "5gzQuKeuJhFjIz8kzhVbhz",
+        "type": "Entry"
+      }
+    }
+  ],
+  "includes": {
+    "Entry": [
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "1A8dy9tGYvovR5cy9jM7sk",
+          "type": "Entry",
+          "createdAt": "2020-12-18T14:48:38.857Z",
+          "updatedAt": "2023-05-26T17:40:17.137Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 33,
+          "revision": 9,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "groupType": "items",
+          "itemsType": "cardGroup",
+          "title": "Read before your flight - sm",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3wwpV7km4riPzOzO7hVGr8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3fIwnQRoYVce7KXCqq5Jlq"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7mg5h0y7HxM87k1xY4lh6X"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4NdoyIngoUCEtNi7iXVh8s"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_READ-BEFORE-SM",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Left"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "1VmzgzAKCfLmqApze6kXsa",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:23:56.070Z",
+          "updatedAt": "2025-05-10T02:23:56.070Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_QUIOSCOS-MTY",
+          "url": "https://www.vivaaerobus.com/es-mx/nuestros-destinos/aeropuertos/quioscos-autodocumentacion",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "1X6vAJ5yl0UyaDqGttLQdn",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:10:40.691Z",
+          "updatedAt": "2025-05-10T02:10:40.691Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_APP-GENERIC-CTA",
+          "url": "https://www.vivaaerobus.com/es-mx/info/viva-app",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "1bNCYZrGIAKtBZlGpEDM8T",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:17:52.519Z",
+          "updatedAt": "2025-09-23T15:37:10.581Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 12,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_TREN-MAYA-TQO",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "ONaUJiY6F1iD5LqeKiONW"
+            }
+          },
+          "closeActionText": "Tren Maya",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4tfNxgLgyg3E2Hm2MHJ8xo"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 1,
+            "datePeriod": {
+              "endDate": "2026-10-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [
+                  "TQO"
+                ],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": [
+                  "VAKN"
+                ]
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "22nxVgqjHsFV9wmGIWWDk9",
+          "type": "Entry",
+          "createdAt": "2021-01-20T22:14:43.625Z",
+          "updatedAt": "2022-07-08T23:35:57.981Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 32,
+          "revision": 8,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_ACTION_MY-FLIGHT",
+          "text": "Agregar",
+          "url": "https://www.vivaaerobus.com/es-mx/manage/find-booking",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2FA2ywTk9d7FTJwtYC02Ny",
+          "type": "Entry",
+          "createdAt": "2021-04-28T21:44:51.395Z",
+          "updatedAt": "2021-05-14T20:00:12.938Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 13,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "slug"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "slug": "preparate-para-volar",
+          "title": "Prepárate para volar",
+          "parentSlug": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "klhhHJf5G1zS16iKsELnc"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2FmnZplJw6sQYmr60xhhq1",
+          "type": "Entry",
+          "createdAt": "2022-09-26T23:36:42.795Z",
+          "updatedAt": "2025-01-29T18:51:42.279Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 9,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "FlexPass",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4FJieATmq6JeJJo3MF6CH6"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5WP1Ea1MuBsZdBV83gTk4v"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_FLEX-PASS",
+          "layout": "Column",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2IIHHCanq0CBWPLaTZDjvF",
+          "type": "Entry",
+          "createdAt": "2020-12-21T20:42:41.801Z",
+          "updatedAt": "2021-11-04T23:09:27.184Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 16,
+          "revision": 5,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "groupType": "card",
+          "itemsType": "cardGroup",
+          "title": "Read before your flight - lg",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "49p28jf5MQ3121UQLKQXM1"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_READ-BEFORE-LG",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2WDS9Z4evtePNpaUCWEO7L",
+          "type": "Entry",
+          "createdAt": "2021-01-26T23:55:23.862Z",
+          "updatedAt": "2021-11-04T23:09:49.646Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 13,
+          "revision": 3,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "Hoja de pago imprimible - Pagos netpay",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5Fx9TSWhtNficP7GDU6bRC"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_NETPAY",
+          "layout": "Column",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2aP1IyUKQ2CeG6G0VjYkMb",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:26:16.803Z",
+          "updatedAt": "2025-05-10T02:26:16.803Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_ROUTES-NLU-CTA",
+          "url": "https://www.vivaaerobus.com/es-mx/nuestros-destinos/aeropuertos/aifa",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2an8l8SCpqnbuhsry1RPp5",
+          "type": "Entry",
+          "createdAt": "2020-12-21T20:52:54.131Z",
+          "updatedAt": "2022-10-04T01:22:58.170Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 40,
+          "revision": 11,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_ACTION_GET-READY",
+          "text": "Saber más",
+          "slug": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2FA2ywTk9d7FTJwtYC02Ny"
+            }
+          },
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2rbmfHj8Aka3lLr9Eos63V",
+          "type": "Entry",
+          "createdAt": "2020-12-17T02:00:38.245Z",
+          "updatedAt": "2026-02-26T00:05:12.131Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 40,
+          "revision": 12,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "textBlock"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_CHECKIN_PAGE_BANNER-2",
+          "type": "CustomBlock",
+          "html": "<a href=\"https://www.vivaaerobus.com/es-mx/info/viva-app\" target=\"_blank\"><img src=\"https://images.ctfassets.net/1sv59kqumaqp/5WzBWzeRnlocWRz0ImhTL0/4714553082aa119f797d359fe8625851/banner-manage-large-vivaapp-es.png\" style=\"width:100%; display:block;\">",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Left"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2sGiZ9KiYDazJAVjBSUUuX",
+          "type": "Entry",
+          "createdAt": "2021-11-04T21:59:01.102Z",
+          "updatedAt": "2024-12-17T01:52:39.269Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 27,
+          "revision": 10,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "MMB-SHORTCUT_CHANGE-EXTRAS",
+          "description": "Agregar adicionales",
+          "iconClass": "far fa-puzzle-piece",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6OCzDW33VH2nvztiBzV92H"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2sdp7zehfsAloYnFvY8jX7",
+          "type": "Entry",
+          "createdAt": "2020-12-16T20:52:40.086Z",
+          "updatedAt": "2026-02-26T00:05:24.493Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 32,
+          "revision": 8,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "Confirmation Page Sidebar iFrames",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7fvrxRIlWUGf0TXiEFRLPw"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2rbmfHj8Aka3lLr9Eos63V"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_SIDEBAR",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2yZfwU7bqWsKxBQB0ezUtX",
+          "type": "Entry",
+          "createdAt": "2021-06-10T18:21:38.318Z",
+          "updatedAt": "2023-01-31T00:45:17.832Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 21,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "BOOKER_CONFIRMATION_ACTION_ADD-ONS",
+          "text": "Agregar servicios adicionales",
+          "url": "/es-mx/manage/extras?pnr=%%pnr%%&lastName=%%lastName%%",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "3QVvQ4i7uAC0LLzzhWrSSi",
+          "type": "Entry",
+          "createdAt": "2026-01-30T04:11:28.196Z",
+          "updatedAt": "2026-04-29T17:06:59.543Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 25,
+          "revision": 6,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_HOTELS-PROMO",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6Qx8l8pEV0sfzy1V7icJQt"
+            }
+          },
+          "closeActionText": "Hoteles",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "35sMZJH2bsiZ4smUVB5EeF"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 1,
+            "datePeriod": {
+              "endDate": "2027-03-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [
+                  "VB"
+                ],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              },
+              "actionRules": {
+                "enabled": [
+                  "ChangeHotelManage"
+                ],
+                "disabled": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [
+                "es-MX"
+              ],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "3UfrQ64wQoHmjrbsMufsl2",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:23:04.690Z",
+          "updatedAt": "2026-05-29T23:13:09.854Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 13,
+          "revision": 5,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_TREN-MAYA-CUN",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "ONaUJiY6F1iD5LqeKiONW"
+            }
+          },
+          "closeActionText": "Tren Maya",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2fMYzIhSGtrRRqfcTlvaFr"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 2,
+            "datePeriod": {
+              "endDate": "2026-10-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [
+                  "CUN"
+                ],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": [
+                  "VAKN"
+                ]
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "3fIwnQRoYVce7KXCqq5Jlq",
+          "type": "Entry",
+          "createdAt": "2020-12-23T19:33:45.250Z",
+          "updatedAt": "2022-07-14T00:27:53.225Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 28,
+          "revision": 9,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "2. El día de tu vuelo",
+          "description": "Te recomendamos llegar con anticipación al aeropuerto, 2 horas antes para vuelos nacionales y 3 horas para vuelos internacionales, especialmente si viajas con mascotas o animales de apoyo emocional.",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6KxD4GwgclUzTpdTiIggdm"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "3rMj5U3szxGIfnHQRCsERv",
+          "type": "Entry",
+          "createdAt": "2020-12-21T20:50:23.500Z",
+          "updatedAt": "2022-09-29T23:18:22.954Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 41,
+          "revision": 7,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "heading"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "Prepárate para volar - Card for Confirmation Page Care",
+          "id": "get-ready-to-fly",
+          "type": "Simple",
+          "title": "Prepárate para volar ",
+          "description": "Revisa nuestra guía de viaje para conocer todo lo que necesitas al volar con nosotros",
+          "subheader": "Guía de viaje",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Left"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "3wwpV7km4riPzOzO7hVGr8",
+          "type": "Entry",
+          "createdAt": "2020-12-20T03:58:47.356Z",
+          "updatedAt": "2026-01-20T22:56:32.659Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 52,
+          "revision": 16,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "1. Alista tus documentos",
+          "description": "Realiza tu check-in en línea antes de tu vuelo, presenta una identificación oficial para abordar y, dependiendo de tu destino y si viajas con mascotas o niños, los documentos que apliquen.",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4bO5k6Oyl5w2asJLOKsZcL"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "3zGNy9buk7KwGBDblW8jyQ",
+          "type": "Entry",
+          "createdAt": "2021-01-20T21:29:37.353Z",
+          "updatedAt": "2026-01-08T21:25:09.367Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 22,
+          "revision": 8,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "confirmation",
+          "title": "Paquete bebé",
+          "description": "Viaja sin complicaciones y lleva todo lo que tu bebé necesita dentro de una pañalera o mochila adicional sin preocuparte por el peso, sólo debe cumplir con las especificaciones establecidas para la equipaje de mano.",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "22nxVgqjHsFV9wmGIWWDk9"
+            }
+          },
+          "paxType": "INFT"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "41kNB6U0yCzJHSAKvOorvA",
+          "type": "Entry",
+          "createdAt": "2022-07-14T00:25:29.218Z",
+          "updatedAt": "2022-07-14T00:26:38.548Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 15,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "confirmation",
+          "title": "Viajes de/a Colombia",
+          "description": "Por disposición oficial, si viajas de/a Colombia, debes descargar y registrarte en la plataforma Check-Mig. ",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6zXj2BSAS5hp4AOX6ZXHG3"
+            }
+          },
+          "originCity": "BOG, CLO, CTG",
+          "destinationCity": "BOG, CLO, CTG",
+          "destination": "BOG, CLO, CTG"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "49p28jf5MQ3121UQLKQXM1",
+          "type": "Entry",
+          "createdAt": "2020-12-21T20:53:50.598Z",
+          "updatedAt": "2021-01-20T18:46:04.886Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 14,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "imageWithText"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "Prepárate para volar",
+          "type": "InlineBanner",
+          "title": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3rMj5U3szxGIfnHQRCsERv"
+            }
+          },
+          "media": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7Ih5vf3YNSPNSKGwR8FH91"
+            }
+          },
+          "link": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2an8l8SCpqnbuhsry1RPp5"
+            }
+          },
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4FJieATmq6JeJJo3MF6CH6",
+          "type": "Entry",
+          "createdAt": "2022-09-26T23:33:26.076Z",
+          "updatedAt": "2025-08-13T16:48:55.625Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 33,
+          "revision": 6,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "carousel"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "promoType": "promo_badge",
+          "mediaTitle": "FlexPass_Card_MEX",
+          "headerTag": "Sin costo",
+          "title": "Adelanta tu vuelo en cualquiera de los aeropuertos en CDMX",
+          "text": "Tienes opciones disponibles para adelantar tu vuelo hasta una hora antes de tu vuelo original a cualquier otro aeropuerto de la zona metropolitana.",
+          "source": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "48HDuyWeDXSExGdiP1ISez"
+            }
+          },
+          "disclaimer": "Ver vuelos disponibles",
+          "sponsorImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7smWF19wzHMH2j1xpoVypr"
+            }
+          },
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "kqg8O284jXJXj8a0jJo3s"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4Hw2IDL3leB5uPhD86T9zD",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:40:03.926Z",
+          "updatedAt": "2025-05-10T02:40:03.926Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 6,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_MSI-GENERIC",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "56Nw46dYuBCqKSMZKjzRH8"
+            }
+          },
+          "closeActionText": "Meses sin intereses",
+          "backgroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5KzL819ZpTf13ELhRurMkc"
+            }
+          },
+          "settings": {
+            "version": 2,
+            "priority": 2,
+            "datePeriod": {
+              "endDate": "2026-05-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [
+                "Anonymous"
+              ],
+              "languages": [
+                "es-MX"
+              ],
+              "currencies": [
+                "MXN"
+              ],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4Mx0vvp34bSkBMBvqT8BJC",
+          "type": "Entry",
+          "createdAt": "2025-05-30T20:45:32.040Z",
+          "updatedAt": "2026-06-22T16:15:31.213Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 15,
+          "revision": 5,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_GENERAL-S-EN",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5gXVbn0i1fwLQbjwAn95Dg"
+            }
+          },
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6Z0xM9QUZgWn1QXBkXrvnH"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 3,
+            "datePeriod": {
+              "endDate": "2027-05-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [
+                  "US"
+                ],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [
+                "en-US"
+              ],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4NdoyIngoUCEtNi7iXVh8s",
+          "type": "Entry",
+          "createdAt": "2023-03-30T18:35:37.860Z",
+          "updatedAt": "2024-08-02T18:30:41.869Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 31,
+          "revision": 6,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "1. Sonríe y despega",
+          "description": "Con Smile & Fly, nuestra tecnología de reconocimiento facial, podrás documentar y abordar más fácil y rápido, sin necesidad de mostrar tu identificación. Disponible en CDMX (AICM) y MTY.",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4t2Txk3VwV3Rov0O8a0Lzp"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4Ns9lOw68Z5LCq9C2T3PSJ",
+          "type": "Entry",
+          "createdAt": "2021-01-08T16:09:41.356Z",
+          "updatedAt": "2026-04-07T17:30:40.896Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 50,
+          "revision": 11,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "confirmation",
+          "title": "Transportación terrestre",
+          "description": "Aprovecha nuestras alianzas y servicios de transportación terrestre, para complementar tu viaje ",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5Y3DMChFTJ6M9alSHlIScN"
+            }
+          },
+          "paxType": "ADT",
+          "modality": "VZ, VB, VL, VS"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4Wv4OOPAaPkvPEZK5dxmak",
+          "type": "Entry",
+          "createdAt": "2025-07-02T18:35:00.896Z",
+          "updatedAt": "2026-04-29T17:14:19.141Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 28,
+          "revision": 9,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_GENERAL-S-ES-SM",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2CxhUq1yeyYjiQgGPepKm5"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 2,
+            "datePeriod": {
+              "endDate": "2026-12-31T23:00:00.000Z",
+              "startDate": "2026-01-16T00:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4cweuDwqH4DlFvxRsUD9qX",
+          "type": "Entry",
+          "createdAt": "2025-02-13T20:53:35.164Z",
+          "updatedAt": "2025-03-21T20:47:37.798Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 19,
+          "revision": 6,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "confirmation",
+          "title": "Vuelos operados por Aerus",
+          "description": "Debido a que las aeronaves de Aerus no cuentan con sanitarios, te recomendamos utilizar las instalaciones del aeropuerto en vuelos operados por dicha aerolínea.",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6IVJGW84Sv4jB1R3XrVuyB"
+            }
+          },
+          "modality": "VZ, VB, VL, VS",
+          "carrier": "ZV"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4h53UltSrpfU3HwepUwEN3",
+          "type": "Entry",
+          "createdAt": "2026-04-29T17:25:39.709Z",
+          "updatedAt": "2026-06-05T19:44:18.388Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 15,
+          "revision": 3,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_VB-FAN-FEST",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "23s8F12z9imFwWZv7huRao"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 1,
+            "datePeriod": {
+              "endDate": "2026-07-05T05:59:59.000Z",
+              "startDate": "2026-06-10T06:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": [
+                  "VACI",
+                  "VACJ",
+                  "VACK"
+                ]
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [
+                "es-MX"
+              ],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4sjL1NZMqII1iev4GkegrK",
+          "type": "Entry",
+          "createdAt": "2024-11-15T22:49:24.000Z",
+          "updatedAt": "2025-09-08T16:42:25.560Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 9,
+          "revision": 3,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "MMB-SHORTCUT_CHANGE-INSURANCE",
+          "description": "Agregar seguros",
+          "iconClass": "far fa-shield-check",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1qwCwvKxJ8ldDD2KZPaQSr"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "56Nw46dYuBCqKSMZKjzRH8",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:38:39.549Z",
+          "updatedAt": "2025-05-10T02:38:39.549Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_MSI-GENERIC-CTA",
+          "url": "https://www.vivaaerobus.com/es-mx/formas-de-pago/msi",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5Fx9TSWhtNficP7GDU6bRC",
+          "type": "Entry",
+          "createdAt": "2021-01-26T23:54:54.813Z",
+          "updatedAt": "2023-10-12T22:44:25.777Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 48,
+          "revision": 8,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "textBlock"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "Sucursales NetPay hoja de pago",
+          "type": "MediumH3",
+          "bodyText": {
+            "nodeType": "document",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Hasta $5,000 (MXN)\n",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Waldo’s.\n\n",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Hasta $10,000 (MXN)\n",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Circle K (CDMX, Estado de México, Nuevo León, Puebla y Querétaro), Extra, K (Querétaro).\n\n",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Hasta $15,000 (MXN)\n",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Farmacias Benavides, 7-Eleven.\n\n",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Hasta $20,000 (MXN)\n",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Farmacias del Ahorro.\n\n",
+                    "marks": [],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Hasta $29,999 (MXN)\n",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {}
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Walmart, Sam’s, Walmart Express, Bodega Aurrera, Kiosko (Colima, Jalisco, Nayarit y Sinaloa), Farmacias Guadalajara, GestoPago, A Tiendas (Nuevo León, San Luis Potosí y Tamaulipas), Multi Recargas, Pago Rápido.",
+                    "marks": [],
+                    "data": {}
+                  }
+                ]
+              }
+            ]
+          },
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Left"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5WP1Ea1MuBsZdBV83gTk4v",
+          "type": "Entry",
+          "createdAt": "2022-09-26T23:36:28.067Z",
+          "updatedAt": "2024-03-13T01:40:53.809Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 28,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "carousel"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "promoType": "promo_badge",
+          "title": "Adelanta tu vuelo a %%station%%",
+          "text": "Tienes opciones disponibles para adelantar tu vuelo hasta una hora antes de tu vuelo original.",
+          "mediaTitle": "FlexPass_Card_Generic",
+          "source": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "01gVfvp5VanKY6E7ywmZlV"
+            }
+          },
+          "disclaimer": "Ver vuelos disponibles",
+          "headerTag": "Sin costo",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "kqg8O284jXJXj8a0jJo3s"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5Y3DMChFTJ6M9alSHlIScN",
+          "type": "Entry",
+          "createdAt": "2026-04-07T17:23:22.721Z",
+          "updatedAt": "2026-04-07T17:23:22.721Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_ACTION_EXTRAS",
+          "text": "Agregar",
+          "url": "https://www.vivaaerobus.com/es-mx/manage/extras?pnr=%%pnr%%&lastName=%%lastName%%",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5YJNdRhiPFpcTwzHmmoLF9",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:19:35.925Z",
+          "updatedAt": "2025-09-23T15:30:23.137Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 10,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_TREN-MAYA-MID",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "ONaUJiY6F1iD5LqeKiONW"
+            }
+          },
+          "closeActionText": "Tren Maya",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "652lAs3sEsRVX5VCRBXAMS"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 1,
+            "datePeriod": {
+              "endDate": "2026-10-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [
+                  "MID"
+                ],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": [
+                  "VAKN"
+                ]
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5deh86NrPlbushPKAFxidd",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:27:21.723Z",
+          "updatedAt": "2025-06-11T00:49:47.853Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 11,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_ROUTES-NLU",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2aP1IyUKQ2CeG6G0VjYkMb"
+            }
+          },
+          "closeActionText": "Rutas AIFA",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2hgd3iBNVDXvLDe9DGjru4"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 3,
+            "datePeriod": {
+              "endDate": "2026-05-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [
+                  "NLU"
+                ],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5gMIC3o1ZVEnXOu7s0Z3K5",
+          "type": "Entry",
+          "createdAt": "2025-05-30T21:59:03.601Z",
+          "updatedAt": "2026-06-22T16:16:35.837Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 18,
+          "revision": 5,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_GENERAL-S-ES",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5gXVbn0i1fwLQbjwAn95Dg"
+            }
+          },
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "yPDhhWHqTC4e3yv3GdWIJ"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 2,
+            "datePeriod": {
+              "endDate": "2027-05-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [
+                "es-MX"
+              ],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5gXVbn0i1fwLQbjwAn95Dg",
+          "type": "Entry",
+          "createdAt": "2025-05-30T20:47:03.732Z",
+          "updatedAt": "2025-05-30T21:59:32.071Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 6,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_GENERAL-S-PROMOLP-CTA",
+          "text": "https://www.vivaaerobus.com/es-mx/promociones",
+          "target": "_self",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5iAitTMGMu24EXNJtFDeUp",
+          "type": "Entry",
+          "createdAt": "2021-01-20T17:45:07.844Z",
+          "updatedAt": "2023-09-25T21:11:02.306Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 18,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "confirmation",
+          "title": "Cross Border Xpress (CBX)",
+          "description": "La forma más fácil, rápida y segura de cruzar la frontera México-Estados Unidos, utilizando el puente peatonal que conecta el Aeropuerto de Tijuana con San Diego. ",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2yZfwU7bqWsKxBQB0ezUtX"
+            }
+          },
+          "destination": "TIJ"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5jiCyivkIHULQgQ2nwZJbx",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:37:31.301Z",
+          "updatedAt": "2025-07-14T17:55:17.396Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 11,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "groupType": "items",
+          "title": "BannersMMBLarge",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6tXTTicBALDs05Dtr9c3m4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4Hw2IDL3leB5uPhD86T9zD"
+              }
+            }
+          ],
+          "code": "BannersMMBLarge",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5pnhAAWtw4K3Nnj7YpkMR1",
+          "type": "Entry",
+          "createdAt": "2026-02-11T15:08:52.454Z",
+          "updatedAt": "2026-02-26T17:21:46.554Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 10,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_GENERAL-SWITCH-ES",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6IJCCRnh3Eg6cN1gDemHXw"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 2,
+            "datePeriod": {
+              "endDate": "2026-12-31T23:00:00.000Z",
+              "startDate": "2026-01-16T00:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": true,
+                "affectations": [
+                  "Cancellation",
+                  "ScheduleChange",
+                  "TimeChange",
+                  "MajorTimeChange",
+                  "Delay",
+                  "MajorDelay",
+                  "Overbooking"
+                ]
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6A4qrgcK8u41K5oGz3Umq5",
+          "type": "Entry",
+          "createdAt": "2021-11-04T20:01:34.027Z",
+          "updatedAt": "2025-09-08T16:41:09.910Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 35,
+          "revision": 11,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "MMB-SHORTCUT_CHANGE-BAGGAGE",
+          "description": "Agregar equipaje",
+          "iconClass": "far fa-suitcase-rolling",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5XxJMyLpECI8BD78Pmt1KJ"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6IVJGW84Sv4jB1R3XrVuyB",
+          "type": "Entry",
+          "createdAt": "2025-02-13T20:59:15.613Z",
+          "updatedAt": "2025-04-25T16:29:17.480Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 14,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_ACTION_AIRLINE-PARTNERS",
+          "text": "Saber más",
+          "url": "https://www.vivaaerobus.com/es-mx/nuestros-destinos/alianzas-aereas/aerus",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6Qx8l8pEV0sfzy1V7icJQt",
+          "type": "Entry",
+          "createdAt": "2026-01-30T04:07:06.813Z",
+          "updatedAt": "2026-06-12T17:50:14.592Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 20,
+          "revision": 6,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_HOTELS-PROMO-CTA",
+          "text": "Buscar hoteles",
+          "url": "https://www.vivaaerobus.com/es-mx/bidflyer#bidflyer/hotels/",
+          "target": "_self",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6b6AcTdXzk5fshwib3wdT5",
+          "type": "Entry",
+          "createdAt": "2020-12-21T20:25:09.632Z",
+          "updatedAt": "2026-01-15T22:31:38.209Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 47,
+          "revision": 18,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "groupType": "card",
+          "itemsType": "cardGroup",
+          "title": "Read before your flight - md",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "41kNB6U0yCzJHSAKvOorvA"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4Ns9lOw68Z5LCq9C2T3PSJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5iAitTMGMu24EXNJtFDeUp"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4cweuDwqH4DlFvxRsUD9qX"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3zGNy9buk7KwGBDblW8jyQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "bMBBdjRRRhp9AIBFCe1eH"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_READ-BEFORE-MD",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6dYjKrwOQ7sJgpq7GsU4UI",
+          "type": "Entry",
+          "createdAt": "2024-05-29T17:21:52.649Z",
+          "updatedAt": "2024-06-12T21:55:41.072Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 7,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "MMB-SHORTCUT_BINDING-OFFER",
+          "description": "Vender mi vuelo",
+          "iconClass": "fas fa-ticket"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6ecaDGtLACrd7Jm8lLRUES",
+          "type": "Entry",
+          "createdAt": "2021-11-04T00:51:47.327Z",
+          "updatedAt": "2024-12-17T01:53:10.338Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 30,
+          "revision": 12,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MANAGE-MY-BOOKING_SHORTCUTS",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6z3Jl2wwcsCgFmWcVWgZOt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6A4qrgcK8u41K5oGz3Umq5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2sGiZ9KiYDazJAVjBSUUuX"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4sjL1NZMqII1iev4GkegrK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6dYjKrwOQ7sJgpq7GsU4UI"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7LX2Eu7J556OQX2jYgqY72"
+              }
+            }
+          ],
+          "code": "MANAGE-MY-BOOKING_SHORTCUTS",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Left"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6kjV36BgBZThylU6EkD2T9",
+          "type": "Entry",
+          "createdAt": "2021-05-07T21:54:24.745Z",
+          "updatedAt": "2021-12-30T21:20:25.513Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 8,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "Lear More - TUA",
+          "text": "Saber más",
+          "url": "https://www.vivaaerobus.com/es-mx/info/tarifa-uso-aeropuerto",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6tXTTicBALDs05Dtr9c3m4",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:12:44.554Z",
+          "updatedAt": "2026-07-15T22:26:19.266Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 13,
+          "revision": 3,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_APP-GENERIC",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1X6vAJ5yl0UyaDqGttLQdn"
+            }
+          },
+          "closeActionText": "Descargar App",
+          "backgroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5WzBWzeRnlocWRz0ImhTL0"
+            }
+          },
+          "settings": {
+            "version": 2,
+            "priority": 3,
+            "datePeriod": {
+              "endDate": "2027-12-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6z3Jl2wwcsCgFmWcVWgZOt",
+          "type": "Entry",
+          "createdAt": "2021-11-04T21:49:18.502Z",
+          "updatedAt": "2024-12-17T01:52:50.046Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 8,
+          "revision": 3,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "MMB-SHORTCUT_CHANGE-SEATS",
+          "description": "Seleccionar asientos",
+          "iconClass": "far fa-chair-office",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "55uK7JwYJnMRp8LhOlX7h0"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6zXj2BSAS5hp4AOX6ZXHG3",
+          "type": "Entry",
+          "createdAt": "2022-07-14T00:25:00.476Z",
+          "updatedAt": "2024-06-28T20:39:38.100Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 11,
+          "revision": 3,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_ACTION_CHECKMIG",
+          "text": "Registrarme",
+          "url": "https://apps.migracioncolombia.gov.co/pre-registro/",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7FWdCNOzRNxJak1DIego39",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:25:23.769Z",
+          "updatedAt": "2026-04-28T00:09:15.223Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 17,
+          "revision": 5,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_QUIOSCOS-MTY",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1VmzgzAKCfLmqApze6kXsa"
+            }
+          },
+          "closeActionText": "Quioscos MTY",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6d4mAAWdGvLuFon7aH0ZEn"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 1,
+            "datePeriod": {
+              "endDate": "2026-05-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [
+                  "MEX"
+                ],
+                "originCountries": [],
+                "destinationCodes": [],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": []
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [
+                "es-MX"
+              ],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7Ih5vf3YNSPNSKGwR8FH91",
+          "type": "Entry",
+          "createdAt": "2020-12-21T19:24:16.801Z",
+          "updatedAt": "2021-05-20T18:07:05.531Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 17,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "mediaWithTitle"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_IMAGE_GET-READY",
+          "type": "Image",
+          "media": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "tYIMUye756OxaGjou6B2r"
+            }
+          },
+          "title": "Module GalleryImageSlider",
+          "alignment": "Center",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7LX2Eu7J556OQX2jYgqY72",
+          "type": "Entry",
+          "createdAt": "2021-11-04T21:53:33.740Z",
+          "updatedAt": "2024-11-15T20:34:14.026Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 28,
+          "revision": 8,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "MMB-SHORTCUT_CHECK-IN",
+          "description": "Check-in",
+          "iconClass": "fas fa-user-check"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7MshsdOUkSpyJuaMz2JkTO",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:36:20.833Z",
+          "updatedAt": "2026-06-20T01:49:55.626Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 21,
+          "revision": 8,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "groupType": "items",
+          "title": "BannersMMBShort",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1bNCYZrGIAKtBZlGpEDM8T"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5YJNdRhiPFpcTwzHmmoLF9"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7dgG5j5sUXTwB9ANZkNQHg"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3UfrQ64wQoHmjrbsMufsl2"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7FWdCNOzRNxJak1DIego39"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5deh86NrPlbushPKAFxidd"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4Mx0vvp34bSkBMBvqT8BJC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5gMIC3o1ZVEnXOu7s0Z3K5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4Wv4OOPAaPkvPEZK5dxmak"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3QVvQ4i7uAC0LLzzhWrSSi"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5pnhAAWtw4K3Nnj7YpkMR1"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4h53UltSrpfU3HwepUwEN3"
+              }
+            }
+          ],
+          "code": "BannersMMBShort",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7dgG5j5sUXTwB9ANZkNQHg",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:21:46.910Z",
+          "updatedAt": "2025-09-23T15:29:07.073Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 10,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "customPromoCards"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "id": "MMB_BANNER_TREN-MAYA-CTM",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "ONaUJiY6F1iD5LqeKiONW"
+            }
+          },
+          "closeActionText": "Tren Maya",
+          "foregroundImage": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "34kn6fE7ivKYQfDtu94I25"
+            }
+          },
+          "settings": {
+            "version": 1,
+            "priority": 1,
+            "datePeriod": {
+              "endDate": "2026-10-30T18:00:00.000Z",
+              "startDate": "2025-04-15T18:00:00.000Z"
+            },
+            "bookingDisplayRules": {
+              "iropRules": {
+                "enable": false,
+                "affectations": []
+              },
+              "journeyRules": {
+                "routes": [],
+                "originCodes": [],
+                "originCountries": [],
+                "destinationCodes": [
+                  "CTM"
+                ],
+                "operatingCarriers": [],
+                "destinationCountries": []
+              },
+              "serviceRules": {
+                "added": [],
+                "notAdded": [
+                  "VAKN"
+                ]
+              }
+            },
+            "generalDisplayRules": {
+              "channels": [],
+              "languages": [],
+              "currencies": [],
+              "customerPrograms": []
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7fvrxRIlWUGf0TXiEFRLPw",
+          "type": "Entry",
+          "createdAt": "2021-09-10T00:56:02.205Z",
+          "updatedAt": "2026-02-25T23:22:11.882Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 40,
+          "revision": 11,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "textBlock"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "CONFIRMATION_CHECKIN_PAGE_BANNER-1",
+          "type": "CustomBlock",
+          "html": "<a href=\"https://www.vivaaerobus.com/es-mx/info/quioscos-aeropuerto\" target=\"_blank\"><img src=\"https://images.ctfassets.net/1sv59kqumaqp/6VQqUObkjiiM32DlvktJr5/8f434a805785fd48fbf06bf3c19658db/MMBviva-quiosco_ES.png\" style=\"width:100%; display:block;\">",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7mg5h0y7HxM87k1xY4lh6X",
+          "type": "Entry",
+          "createdAt": "2020-12-23T19:39:15.343Z",
+          "updatedAt": "2022-07-14T00:28:18.149Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 14,
+          "revision": 5,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "type": "simple",
+          "title": "3. Después de tu vuelo",
+          "description": "Si contrataste algún servicio de transportación, recuerda tener a la mano tu confirmación e identificación oficial para llegar de forma rápida y sencilla a tu destino.",
+          "image": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "96toFUyaCtVoUwIFbzlWW"
+            }
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7t9aIwuANDCefX92MWR5Bn",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:35:47.408Z",
+          "updatedAt": "2025-05-10T02:40:23.344Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 8,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "itemsGroup"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "groupType": "items",
+          "title": "BannersMMB",
+          "items": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7MshsdOUkSpyJuaMz2JkTO"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5jiCyivkIHULQgQ2nwZJbx"
+              }
+            }
+          ],
+          "code": "BannersMMB",
+          "layout": "Row",
+          "marginTop": "0",
+          "marginBottom": "0",
+          "marginLeft": "0",
+          "marginRight": "0",
+          "alignment": "Center"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "95RrvNhYuIfFlYLuGJL8m",
+          "type": "Entry",
+          "createdAt": "2021-05-07T21:07:02.004Z",
+          "updatedAt": "2021-05-07T21:54:31.031Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 17,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "Learn More - What is included with your purchase?",
+          "text": "Conoce más",
+          "url": "https://www.google.com",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "ONaUJiY6F1iD5LqeKiONW",
+          "type": "Entry",
+          "createdAt": "2025-05-10T02:16:44.098Z",
+          "updatedAt": "2026-06-15T20:40:01.628Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 6,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MMB_BANNER_TREN-MAYA-CTA",
+          "url": "/manage/extras?pnr={{pnr}}&lastName={{lastName}}",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "bMBBdjRRRhp9AIBFCe1eH",
+          "type": "Entry",
+          "createdAt": "2021-01-20T22:31:01.077Z",
+          "updatedAt": "2026-04-07T17:23:57.222Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 14,
+          "revision": 4,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "card"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "Viva Express",
+          "description": "¡Evita las filas largas! Adquiere Viva Express y utiliza la fila rápida en mostradores para documentar ágilmente.",
+          "callToAction": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5Y3DMChFTJ6M9alSHlIScN"
+            }
+          },
+          "modality": "VL, VB"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "klhhHJf5G1zS16iKsELnc",
+          "type": "Entry",
+          "createdAt": "2021-05-14T19:59:07.830Z",
+          "updatedAt": "2021-05-14T19:59:07.830Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "slug"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "slug": "info",
+          "title": "Información"
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "kqg8O284jXJXj8a0jJo3s",
+          "type": "Entry",
+          "createdAt": "2022-09-26T23:32:28.604Z",
+          "updatedAt": "2025-10-31T16:29:57.473Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 9,
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "cta"
+            }
+          },
+          "locale": "es-MX"
+        },
+        "fields": {
+          "entryName": "MANAGE_ACTION_FLEX-PASS-LP",
+          "text": "Más información",
+          "url": "https://www.vivaaerobus.com/es-mx/adicionales/adelanto-de-vuelo",
+          "target": "_blank",
+          "linkType": "link"
+        }
+      }
+    ],
+    "Asset": [
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "01gVfvp5VanKY6E7ywmZlV",
+          "type": "Asset",
+          "createdAt": "2022-08-04T20:53:27.235Z",
+          "updatedAt": "2022-08-04T20:53:27.235Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "flex-pass-generic",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/01gVfvp5VanKY6E7ywmZlV/e8890d6c5e3e924fa71dce65e749e0b0/flex-pass-generic.jpg",
+            "details": {
+              "size": 49414,
+              "image": {
+                "width": 725,
+                "height": 381
+              }
+            },
+            "fileName": "flex-pass-generic.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "1qwCwvKxJ8ldDD2KZPaQSr",
+          "type": "Asset",
+          "createdAt": "2024-11-29T14:14:52.595Z",
+          "updatedAt": "2024-11-29T14:14:52.595Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MMB-CARD-INSURANCE",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/1qwCwvKxJ8ldDD2KZPaQSr/d74e4e6ba3bc88462ce98c30792fe69e/shutterstock_2490100099.jpg",
+            "details": {
+              "size": 11329109,
+              "image": {
+                "width": 7008,
+                "height": 4672
+              }
+            },
+            "fileName": "shutterstock_2490100099.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "23s8F12z9imFwWZv7huRao",
+          "type": "Asset",
+          "createdAt": "2026-04-29T17:22:39.191Z",
+          "updatedAt": "2026-06-01T22:45:47.122Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 17,
+          "revision": 4,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "confirmation-img-fan-fest",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/23s8F12z9imFwWZv7huRao/dbfe0814b0de143590b202080e976b0e/Banner_mmb_web.svg",
+            "details": {
+              "size": 67931,
+              "image": {
+                "width": 403,
+                "height": 391
+              }
+            },
+            "fileName": "Banner mmb_web.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2CxhUq1yeyYjiQgGPepKm5",
+          "type": "Asset",
+          "createdAt": "2024-04-15T21:59:01.854Z",
+          "updatedAt": "2026-01-16T06:00:10.919Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 18,
+          "revision": 5,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "SELECCION-MEXICANA-CONFIRMATION-BANNER",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/2CxhUq1yeyYjiQgGPepKm5/35b3efc01bb9e171fb8249fbe5c4a608/SELECCION-MEXICANA-CONFIRMATION-BANNER.png",
+            "details": {
+              "size": 124081,
+              "image": {
+                "width": 380,
+                "height": 300
+              }
+            },
+            "fileName": "SELECCION-MEXICANA-CONFIRMATION-BANNER.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2fMYzIhSGtrRRqfcTlvaFr",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:22:55.712Z",
+          "updatedAt": "2025-05-10T02:22:55.712Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-s-tm-cun-es",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/2fMYzIhSGtrRRqfcTlvaFr/3101c73f4a6ceec94e68dde6df7100d8/banner-s-tm-cun-es.png",
+            "details": {
+              "size": 157014,
+              "image": {
+                "width": 380,
+                "height": 300
+              }
+            },
+            "fileName": "banner-s-tm-cun-es.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "2hgd3iBNVDXvLDe9DGjru4",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:27:14.015Z",
+          "updatedAt": "2025-05-10T02:27:14.015Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-manage-small-aifa-es",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/2hgd3iBNVDXvLDe9DGjru4/ae45b644fe14925591df1340a7b22fa1/banner-manage-small-aifa-es.png",
+            "details": {
+              "size": 25380,
+              "image": {
+                "width": 380,
+                "height": 320
+              }
+            },
+            "fileName": "banner-manage-small-aifa-es.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "34kn6fE7ivKYQfDtu94I25",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:21:31.033Z",
+          "updatedAt": "2025-05-10T02:21:31.033Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-s-tm-ctm-es",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/34kn6fE7ivKYQfDtu94I25/057ce5e1096b9eeb5fadd773bc9a3cbe/banner-s-tm-ctm-es.png",
+            "details": {
+              "size": 159251,
+              "image": {
+                "width": 380,
+                "height": 301
+              }
+            },
+            "fileName": "banner-s-tm-ctm-es.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "35sMZJH2bsiZ4smUVB5EeF",
+          "type": "Asset",
+          "createdAt": "2026-01-30T04:09:06.710Z",
+          "updatedAt": "2026-02-12T19:21:23.638Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 11,
+          "revision": 3,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "mmb-banner-s-hoteles-promo",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/35sMZJH2bsiZ4smUVB5EeF/4a6f8b455e89a63d3a923fa4f8542fca/Hoteles_post_booking.png",
+            "details": {
+              "size": 193416,
+              "image": {
+                "width": 380,
+                "height": 300
+              }
+            },
+            "fileName": "Hoteles post booking.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "48HDuyWeDXSExGdiP1ISez",
+          "type": "Asset",
+          "createdAt": "2021-05-14T16:25:28.569Z",
+          "updatedAt": "2021-05-14T16:25:28.569Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MEX-2",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/48HDuyWeDXSExGdiP1ISez/ccfd08f27ba0f1561bf11139e182deb3/MEX2.jpg",
+            "details": {
+              "size": 197174,
+              "image": {
+                "width": 1200,
+                "height": 630
+              }
+            },
+            "fileName": "MEX2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4bO5k6Oyl5w2asJLOKsZcL",
+          "type": "Asset",
+          "createdAt": "2021-05-14T22:56:24.608Z",
+          "updatedAt": "2023-02-22T01:03:46.145Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 9,
+          "revision": 2,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "antesdetuvuelo_image_confirmation",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/4bO5k6Oyl5w2asJLOKsZcL/bd3b558d5b69ff208328cbb499489b26/shutterstock_2040265523.jpg",
+            "details": {
+              "size": 12494539,
+              "image": {
+                "width": 6240,
+                "height": 4160
+              }
+            },
+            "fileName": "shutterstock_2040265523.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4t2Txk3VwV3Rov0O8a0Lzp",
+          "type": "Asset",
+          "createdAt": "2023-04-24T22:33:13.345Z",
+          "updatedAt": "2023-05-25T17:27:20.578Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 11,
+          "revision": 2,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "smile-banner-mmb",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/4t2Txk3VwV3Rov0O8a0Lzp/965d09b617ae3abf36336ae12a3a579e/MicrosoftTeams-image.png",
+            "details": {
+              "size": 13811,
+              "image": {
+                "width": 760,
+                "height": 270
+              }
+            },
+            "fileName": "MicrosoftTeams-image.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "4tfNxgLgyg3E2Hm2MHJ8xo",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:17:40.816Z",
+          "updatedAt": "2025-05-13T20:03:37.002Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 12,
+          "revision": 2,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-s-tm-tqo-es",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/4tfNxgLgyg3E2Hm2MHJ8xo/3b3c8c2baae8e2e9634ecbb4a57bcfde/banner-s-tm-tqo-en.png",
+            "details": {
+              "size": 158504,
+              "image": {
+                "width": 380,
+                "height": 301
+              }
+            },
+            "fileName": "banner-s-tm-tqo-en.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "55uK7JwYJnMRp8LhOlX7h0",
+          "type": "Asset",
+          "createdAt": "2024-11-29T14:10:24.880Z",
+          "updatedAt": "2024-11-29T14:10:24.880Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MMB-CARD-CHOOSE-SEATS",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/55uK7JwYJnMRp8LhOlX7h0/ff3d75c97fa20c075d9ff42ed9d1d269/CABINA_03.png",
+            "details": {
+              "size": 5175334,
+              "image": {
+                "width": 3120,
+                "height": 2080
+              }
+            },
+            "fileName": "CABINA 03.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5KzL819ZpTf13ELhRurMkc",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:39:26.687Z",
+          "updatedAt": "2025-05-10T02:39:26.687Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "manage-flexibilidad-pagos-long",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/5KzL819ZpTf13ELhRurMkc/2c86d04ddcf695265d2adb9f3a38af18/manage-flexibilidad-pagos-long.png",
+            "details": {
+              "size": 28140,
+              "image": {
+                "width": 380,
+                "height": 540
+              }
+            },
+            "fileName": "manage-flexibilidad-pagos-long.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5WzBWzeRnlocWRz0ImhTL0",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:12:33.014Z",
+          "updatedAt": "2025-11-21T21:48:41.321Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 12,
+          "revision": 2,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-manage-large-vivaapp-es",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/5WzBWzeRnlocWRz0ImhTL0/4714553082aa119f797d359fe8625851/banner-manage-large-vivaapp-es.png",
+            "details": {
+              "size": 85186,
+              "image": {
+                "width": 380,
+                "height": 540
+              }
+            },
+            "fileName": "banner-manage-large-vivaapp-es.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "5XxJMyLpECI8BD78Pmt1KJ",
+          "type": "Asset",
+          "createdAt": "2024-11-29T14:12:11.253Z",
+          "updatedAt": "2024-11-29T14:12:11.253Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MMB-CARD-ADD-BAGGAGE",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/5XxJMyLpECI8BD78Pmt1KJ/f6e75de4c837d3b0c5c472851083fafb/shutterstock_2146761393__1_.jpg",
+            "details": {
+              "size": 13459004,
+              "image": {
+                "width": 6528,
+                "height": 4352
+              }
+            },
+            "fileName": "shutterstock_2146761393 (1).jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "652lAs3sEsRVX5VCRBXAMS",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:19:16.717Z",
+          "updatedAt": "2025-05-10T02:19:16.717Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-s-tm-mid-es",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/652lAs3sEsRVX5VCRBXAMS/0b146df3d1cbea2a4a669633b391eabc/banner-s-tm-mid-es.png",
+            "details": {
+              "size": 158542,
+              "image": {
+                "width": 380,
+                "height": 301
+              }
+            },
+            "fileName": "banner-s-tm-mid-es.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6IJCCRnh3Eg6cN1gDemHXw",
+          "type": "Asset",
+          "createdAt": "2026-02-11T15:08:15.883Z",
+          "updatedAt": "2026-02-11T15:08:15.883Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MMB-BANNER-SWITCH",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/6IJCCRnh3Eg6cN1gDemHXw/3a0b48ca651de9f5ff762641d33d65c9/MMB-BANNER-SWITCH.png",
+            "details": {
+              "size": 117203,
+              "image": {
+                "width": 300,
+                "height": 237
+              }
+            },
+            "fileName": "MMB-BANNER-SWITCH.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6KxD4GwgclUzTpdTiIggdm",
+          "type": "Asset",
+          "createdAt": "2021-05-14T22:56:53.556Z",
+          "updatedAt": "2021-05-14T22:56:53.556Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "diadetuvuelo_image_confirmation",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/6KxD4GwgclUzTpdTiIggdm/b025945fe5d7d66debd33beab3d659d9/diadetuvuelo_conf.png",
+            "details": {
+              "size": 100973,
+              "image": {
+                "width": 380,
+                "height": 135
+              }
+            },
+            "fileName": "diadetuvuelo_conf.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6OCzDW33VH2nvztiBzV92H",
+          "type": "Asset",
+          "createdAt": "2024-11-29T14:13:36.058Z",
+          "updatedAt": "2024-11-29T14:13:36.058Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 4,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MMB-CARD-CHANGE-EXTRAS",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/6OCzDW33VH2nvztiBzV92H/8eca83e1b9432d1dd16cdd48d20c76e3/shutterstock_1260136591.jpg",
+            "details": {
+              "size": 13982487,
+              "image": {
+                "width": 5711,
+                "height": 3370
+              }
+            },
+            "fileName": "shutterstock_1260136591.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6Z0xM9QUZgWn1QXBkXrvnH",
+          "type": "Asset",
+          "createdAt": "2025-05-30T20:46:00.777Z",
+          "updatedAt": "2025-05-30T20:46:00.777Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "BANNER-MMB-PROMO-GENERAL-EN",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/6Z0xM9QUZgWn1QXBkXrvnH/513de98f7c9af8a3e8e8d7155d4cf412/BANNER-MMB-PROMO-GENERAL-EN.png",
+            "details": {
+              "size": 255214,
+              "image": {
+                "width": 380,
+                "height": 320
+              }
+            },
+            "fileName": "BANNER-MMB-PROMO-GENERAL-EN.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "6d4mAAWdGvLuFon7aH0ZEn",
+          "type": "Asset",
+          "createdAt": "2025-05-10T02:25:07.326Z",
+          "updatedAt": "2026-01-19T21:21:51.886Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 12,
+          "revision": 2,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner-quioscos-mty",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/6d4mAAWdGvLuFon7aH0ZEn/5f83adbdcd5ff0be3c7f313e2c2cd554/MMBviva-quiosco_ES.png",
+            "details": {
+              "size": 208785,
+              "image": {
+                "width": 380,
+                "height": 300
+              }
+            },
+            "fileName": "MMBviva-quiosco_ES.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "7smWF19wzHMH2j1xpoVypr",
+          "type": "Asset",
+          "createdAt": "2025-08-13T16:47:16.602Z",
+          "updatedAt": "2025-08-13T16:47:16.602Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "MMB-FLEXPASS-CARD-MOB",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/7smWF19wzHMH2j1xpoVypr/4675cf50dd9f29a9bfc50139eb5e733a/MMB-FLEXPASS-CARD-MOB.png",
+            "details": {
+              "size": 48655,
+              "image": {
+                "width": 336,
+                "height": 56
+              }
+            },
+            "fileName": "MMB-FLEXPASS-CARD-MOB.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "96toFUyaCtVoUwIFbzlWW",
+          "type": "Asset",
+          "createdAt": "2021-05-14T22:57:20.280Z",
+          "updatedAt": "2021-05-14T22:57:20.280Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "despuesdetuvuelo_image_confirmation",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/96toFUyaCtVoUwIFbzlWW/c1db34644a3dbea117a9fedef05eb576/despuesdetuvuelo.png",
+            "details": {
+              "size": 115158,
+              "image": {
+                "width": 380,
+                "height": 135
+              }
+            },
+            "fileName": "despuesdetuvuelo.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "tYIMUye756OxaGjou6B2r",
+          "type": "Asset",
+          "createdAt": "2021-05-14T23:02:26.907Z",
+          "updatedAt": "2022-09-29T22:58:17.178Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 22,
+          "revision": 3,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "banner_manage_get-ready",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/tYIMUye756OxaGjou6B2r/5b6e3a774b36e03d021cb555e9b48e7f/preparateparavolar_conf.png",
+            "details": {
+              "size": 386066,
+              "image": {
+                "width": 785,
+                "height": 385
+              }
+            },
+            "fileName": "preparateparavolar_conf.png",
+            "contentType": "image/png"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "1sv59kqumaqp"
+            }
+          },
+          "id": "yPDhhWHqTC4e3yv3GdWIJ",
+          "type": "Asset",
+          "createdAt": "2025-05-30T21:59:00.029Z",
+          "updatedAt": "2025-05-30T21:59:00.029Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "es-MX"
+        },
+        "fields": {
+          "title": "BANNER-MMB-PROMO-GENERAL-ES-1",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/1sv59kqumaqp/yPDhhWHqTC4e3yv3GdWIJ/58eb4ba16500d9433c2d57895bc381dd/BANNER-MMB-PROMO-GENERAL-ES-1.png",
+            "details": {
+              "size": 182652,
+              "image": {
+                "width": 380,
+                "height": 320
+              }
+            },
+            "fileName": "BANNER-MMB-PROMO-GENERAL-ES-1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    ]
+  }
+}

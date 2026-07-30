@@ -1,0 +1,46 @@
+{
+  "data": {
+    "pnr": "HEYN2G",
+    "journeys": [
+      {
+        "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+        "status": "Closed",
+        "statusDetails": [
+          {
+            "code": "CheckinClosedTooEarly",
+            "description": "Too early for checkin"
+          }
+        ],
+        "passengers": [
+          {
+            "passengerKey": "MCFDSEQ-",
+            "status": "Blocked",
+            "statusDetails": [
+              {
+                "code": "CheckinBlockedInReservationSystem",
+                "description": "Checkin is not available. Passenger has invalid ssrs: VBDJ. Reservation system restrictions: ContainsRestrictedSsrs",
+                "details": []
+              }
+            ],
+            "boardingPassStatus": "Blocked",
+            "boardingPassStatusDetails": [
+              {
+                "code": "BoardingPassBlockedPassengerNotCheckedin",
+                "description": "Passenger needs to checkin before printing boarding pass"
+              },
+              {
+                "code": "BoardingPassBlockedChildNotAllowed",
+                "description": "Printing boarding pass for child is not allowed"
+              }
+            ],
+            "notifications": null
+          }
+        ],
+        "notifications": []
+      }
+    ],
+    "notifications": null
+  },
+  "type": "SUCCESS",
+  "action": "CONTINUE"
+}

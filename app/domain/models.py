@@ -58,6 +58,7 @@ class FlightSegment:
     terminal: str | None = None
     seat: str | None = None
     boarding_group: str | None = None
+    is_checked_in: bool = False
     id: UUID = field(default_factory=uuid4)
 
 

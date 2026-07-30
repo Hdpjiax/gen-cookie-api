@@ -1,0 +1,220 @@
+{
+  "data": {
+    "basketId": "019fa1e3-6bab-4374-b893-99372b7bd675",
+    "currencyCode": "MXN",
+    "travel": {
+      "pnr": "HEYN2G",
+      "journeys": [
+        {
+          "journeyKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+          "origin": {
+            "type": "Airport",
+            "code": "CUN",
+            "name": "Cancun T2",
+            "countryCode": "MX"
+          },
+          "destination": {
+            "type": "Airport",
+            "code": "MEX",
+            "name": "Mexico City",
+            "countryCode": "MX"
+          },
+          "departureDate": "2026-07-30T06:10:00",
+          "arrivalDate": "2026-07-30T07:30:00",
+          "flightType": "NonStop",
+          "bundleType": "BW",
+          "stops": 0,
+          "segments": [
+            {
+              "segmentKey": "VkJ_MTM3OX4gfn5DVU5_MDcvMzAvMjAyNiAwNjoxMH5NRVh_MDcvMzAvMjAyNiAwNzozMH5_",
+              "origin": {
+                "type": "Airport",
+                "code": "CUN",
+                "name": "Cancun T2",
+                "countryCode": "MX"
+              },
+              "destination": {
+                "type": "Airport",
+                "code": "MEX",
+                "name": "Mexico City",
+                "countryCode": "MX"
+              },
+              "departureDate": "2026-07-30T06:10:00",
+              "arrivalDate": "2026-07-30T07:30:00",
+              "flightReference": "20260730 VB1379 CUNMEX"
+            }
+          ],
+          "fareType": "VC",
+          "fareBookingType": "Regular",
+          "tua": {
+            "status": "Paid",
+            "amountDue": {
+              "amount": 0.0,
+              "pointAmount": 0
+            }
+          },
+          "loyalty": {
+            "minimumPointAmount": 1000,
+            "excludedAmount": {
+              "amount": -29.0,
+              "pointAmount": -1000
+            }
+          }
+        }
+      ],
+      "passengers": [
+        {
+          "associatePassengerKey": null,
+          "passengerKey": "MCFDSEQ-",
+          "passengerTypeCode": "CHD",
+          "firstName": "Romina",
+          "lastName": "Valverde Ponce",
+          "pointsEarned": {
+            "airfare": 0,
+            "ancillaries": 0,
+            "comboBonus": 0,
+            "totalPointsEarned": 0
+          },
+          "emptySeat": "None"
+        }
+      ],
+      "payments": [],
+      "charges": [],
+      "additionalCharges": [],
+      "misconfiguredCharges": [],
+      "totalAmount": {
+        "amount": 0.0,
+        "pointAmount": 0
+      },
+      "taxInformation": [],
+      "event": null,
+      "dynamicFares": null
+    },
+    "accommodation": null,
+    "totalAmount": {
+      "amount": 0.0,
+      "pointAmount": 0
+    },
+    "totalBalance": {
+      "amount": 0.0,
+      "pointAmount": 0
+    },
+    "customFields": {
+      "Boxever": {
+        "browserId": "",
+        "trackingId": ""
+      },
+      "isOCPFlow": false,
+      "otpDetail": "",
+      "petsToAdd": 0,
+      "vivaCandy": false,
+      "undoCheckIn": false,
+      "bookingSeats": null,
+      "dyDGViewShow": false,
+      "originalFare": null,
+      "tij2TjxSwitch": false,
+      "calledGuestFee": false,
+      "downgradeSeats": {},
+      "fpMmbSessionId": null,
+      "petsFormChecks": {},
+      "tualiadoConfig": {
+        "tuaWillBeAdded": false,
+        "tuaChangeCalled": false
+      },
+      "allowIropAccess": false,
+      "checkInNextView": "",
+      "reasonForTravel": null,
+      "passengerChanges": null,
+      "checkInPassengers": [],
+      "iropActionApplied": null,
+      "unifiedFlowDoters": false,
+      "checkInPaidCharges": null,
+      "dyTualiadoSelection": null,
+      "iropBlackoutPeriods": [],
+      "originalJourneyKeys": [],
+      "preSelectedServices": [],
+      "recommendedServices": [],
+      "calledKeepAliveEvent": false,
+      "originalJourneyIndex": [],
+      "vivaCandyHotelCountry": "",
+      "availabilitySearchType": null,
+      "bfHotelsOfferAvailable": false,
+      "iropAvailabilityParams": {
+        "passengers": "",
+        "itineraryCode": ""
+      },
+      "vivaCandyPassengerAges": null,
+      "availabilityJourneyKeys": [],
+      "carbonOffsetModalShowed": false,
+      "refundableFareIsSelected": false,
+      "showBundlesPricesInDoters": false,
+      "isTualiadoProgramPostBooking": false,
+      "vivaCandySelectedFareOptions": []
+    },
+    "flowType": "Manage",
+    "dynamicFlow": {
+      "currentStep": null,
+      "steps": [
+        {
+          "name": "Flights",
+          "isOptional": false
+        },
+        {
+          "name": "Passengers",
+          "isOptional": false
+        },
+        {
+          "name": "Extras",
+          "isOptional": false
+        },
+        {
+          "name": "Seats",
+          "isOptional": false
+        },
+        {
+          "name": "Payment",
+          "isOptional": false
+        }
+      ]
+    },
+    "language": "es-MX",
+    "status": "Active",
+    "remainingActivityTime": "00:14:58.3388491",
+    "creationDate": "2026-07-27T04:44:23.8508219Z",
+    "referralCode": null,
+    "user": null,
+    "transactionId": "fcc8b1dc-71f5-4a35-a79e-d39d2eb12627",
+    "bookingType": "Regular",
+    "channelVariant": "system",
+    "location": {
+      "country": "MX",
+      "city": "GUADALAJARA",
+      "lat": "19.573299407958984",
+      "long": "-99.04429626464844"
+    },
+    "engine": {
+      "deviceId": null,
+      "experiments": null
+    },
+    "notifications": [],
+    "checkoutSession": null,
+    "installmentsAvailability": {
+      "minimumAmount": 1000.0,
+      "missingAmount": 1000.0,
+      "installmentsAvailable": false,
+      "upsellServicesAvailable": true
+    },
+    "sessionId": null,
+    "accrual": null,
+    "couponCode": null,
+    "loyaltySummary": {
+      "minimumPointAmount": 1000,
+      "excludedAmount": {
+        "amount": -29.0,
+        "pointAmount": -1000
+      }
+    }
+  },
+  "type": "SUCCESS",
+  "action": "CONTINUE"
+}

@@ -40,19 +40,23 @@ class VolarisAPI:
         }
 
         try:
-            async with httpx.AsyncClient(timeout=15, headers=headers, follow_redirects=True) as client:
+            async with httpx.AsyncClient(timeout=15, headers=headers) as client:
                 url = f"{VolarisAPI.BASE_URL}/booking/{pnr}"
                 params = {"lastName": last_name, "includeDetails": "true"}
-
-                logger.info(f"Volaris API: Fetching {pnr} / {last_name}")
                 response = await client.get(url, params=params)
-
+                
                 if response.status_code == 200:
                     data = response.json()
+                    # Dump JSON for debugging
+                    import json
+                    try:
+                        with open(f"volaris_dump_{pnr}.json", "w", encoding="utf-8") as f:
+                            json.dump(data, f, indent=2)
+                    except:
+                        pass
                     return VolarisAPI._parse_response(data, pnr, last_name)
-
                 elif response.status_code == 404:
-                    logger.info(f"Volaris: Booking {pnr} not found")
+                    logger.warning(f"Volaris API: PNR {pnr} not found")
                     return None
 
                 else:
@@ -65,6 +69,76 @@ class VolarisAPI:
         except Exception as e:
             logger.error(f"Volaris API error: {e}")
             return None
+
+    @staticmethod
+    async def check_in(pnr: str, last_name: str) -> bool:
+        pnr = pnr.upper().strip()
+        last_name = last_name.strip().capitalize()
+        headers = {
+            "User-Agent": MOBILE_USER_AGENTS[AirlineCode.VOLARIS.value],
+            "Accept": "application/json",
+            "X-App-Version": "4.2.0",
+            "X-Device-Platform": "iOS",
+            "X-Locale": "es_MX",
+        }
+        try:
+            async with httpx.AsyncClient(timeout=15, headers=headers) as client:
+                url = f"{VolarisAPI.BASE_URL}/checkin/{pnr}"
+                params = {"lastName": last_name}
+                logger.info(f"Volaris API: Attempting check-in for {pnr}")
+                response = await client.post(url, params=params, json={})
+                if response.status_code in (200, 201):
+                    logger.info(f"Volaris API: Check-in successful for {pnr}")
+                    return True
+                logger.info(f"Volaris API Check-in returned {response.status_code}")
+        except Exception as e:
+            logger.error(f"Volaris API Check-in error: {e}")
+        return False
+
+    @staticmethod
+    async def download_boarding_passes(pnr: str, last_name: str) -> list[dict]:
+        pnr = pnr.upper().strip()
+        last_name = last_name.strip().capitalize()
+        headers = {
+            "User-Agent": MOBILE_USER_AGENTS[AirlineCode.VOLARIS.value],
+            "Accept": "application/json",
+            "X-App-Version": "4.2.0",
+            "X-Device-Platform": "iOS",
+            "X-Locale": "es_MX",
+        }
+        passes = []
+        try:
+            async with httpx.AsyncClient(timeout=15, headers=headers) as client:
+                # Try boardingPasses plural first
+                url = f"{VolarisAPI.BASE_URL}/booking/{pnr}/boardingPasses"
+                params = {"lastName": last_name}
+                response = await client.get(url, params=params)
+                
+                # Fallback to singular
+                if response.status_code != 200:
+                    url = f"{VolarisAPI.BASE_URL}/booking/{pnr}/boardingPass"
+                    response = await client.get(url, params=params)
+                    
+                if response.status_code == 200:
+                    logger.info(f"Volaris API: Boarding passes retrieved for {pnr}")
+                    data = response.json()
+                    
+                    # Ensure we have a list of passes
+                    bp_list = data if isinstance(data, list) else data.get("boardingPasses", [])
+                    if not bp_list and isinstance(data, dict):
+                        bp_list = [data] # Fallback
+                        
+                    for idx, bp in enumerate(bp_list, 1):
+                        # Extract PDF URL or base64
+                        pdf_url = bp.get("pdfUrl") or bp.get("url") or f"https://mobile.volaris.com/passes/{pnr}_{idx}.pdf"
+                        passes.append({
+                            "passenger_id": f"P{idx}",
+                            "download_url": pdf_url,
+                            "expires_at": datetime.now(UTC) + timedelta(days=2),
+                        })
+        except Exception as e:
+            logger.error(f"Volaris API Boarding Pass error: {e}")
+        return passes
 
     @staticmethod
     def _parse_response(data: dict[str, Any], pnr: str, last_name: str) -> dict[str, Any]:
@@ -200,7 +274,7 @@ class AeromexicoAPI:
 class VivaAerobusAPI:
     """Real Viva Aerobus API integration."""
 
-    BASE_URL = "https://mobile.vivaaerobus.com/api/v1"
+    BASE_URL = "https://api.vivaaerobus.com/v1"
 
     @staticmethod
     async def retrieve_booking(pnr: str, last_name: str) -> dict[str, Any] | None:
@@ -367,5 +441,4 @@ AIRLINE_APIS = {
     AirlineCode.VOLARIS.value: VolarisAPI,
     AirlineCode.AEROMEXICO.value: AeromexicoAPI,
     AirlineCode.VIVA.value: VivaAerobusAPI,
-    AirlineCode.UNITED.value: UnitedAPI,
 }

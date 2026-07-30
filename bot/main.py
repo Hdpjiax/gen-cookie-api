@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 if sys.platform == "win32":
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 import aiohttp
 import httpx
@@ -30,7 +30,7 @@ from aiogram.types import (
 from app.config import settings
 from app.repositories.sqlite import store_sqlite
 from app.services.extractor import extract_booking_details_from_text
-from app.services.pdf import generate_boarding_pass_pdf
+from app.services.pdf import generate_boarding_pass_pdf, generate_boarding_pass_file
 
 logging.basicConfig(level=logging.INFO)
 dp = Dispatcher()
@@ -217,25 +217,43 @@ def _booking_added_text(booking: dict[str, Any]) -> str:
 
 def _flight_inline_keyboard(booking_id: str, checkin_status: str, lang: str = "ES") -> InlineKeyboardMarkup:
     if lang == "EN":
-        buttons = [
-            [
-                InlineKeyboardButton(text="🔄 Recheck Status", callback_data=f"recheck:{booking_id}"),
-                InlineKeyboardButton(text="📄 Boarding Pass", callback_data=f"pass:{booking_id}"),
+        if checkin_status in ("CHECKED_IN", "BOARDING_PASS_READY"):
+            buttons = [
+                [
+                    InlineKeyboardButton(text="🔄 Recheck Status", callback_data=f"recheck:{booking_id}"),
+                ],
+                [
+                    InlineKeyboardButton(text="📄 View PDF Pass", callback_data=f"pass_pdf:{booking_id}"),
+                    InlineKeyboardButton(text="🖼️ View Image Pass", callback_data=f"pass_img:{booking_id}"),
+                ],
+                [InlineKeyboardButton(text="🗑️ Delete Flight", callback_data=f"delete_select:{booking_id}")]
             ]
-        ]
-        if checkin_status not in ("CHECKED_IN", "BOARDING_PASS_READY"):
-            buttons.append([InlineKeyboardButton(text="🤖 Enable Auto Check-in", callback_data=f"consent:{booking_id}")])
-        buttons.append([InlineKeyboardButton(text="🗑️ Delete Flight", callback_data=f"delete_select:{booking_id}")])
+        else:
+            buttons = [
+                [InlineKeyboardButton(text="🔄 Recheck Status", callback_data=f"recheck:{booking_id}")],
+                [InlineKeyboardButton(text="🤖 Enable Auto Check-in", callback_data=f"consent:{booking_id}")],
+                [InlineKeyboardButton(text="📲 Check-in Now", callback_data=f"checkin:{booking_id}")],
+                [InlineKeyboardButton(text="🗑️ Delete Flight", callback_data=f"delete_select:{booking_id}")]
+            ]
     else:
-        buttons = [
-            [
-                InlineKeyboardButton(text="🔄 Rechecar Estado", callback_data=f"recheck:{booking_id}"),
-                InlineKeyboardButton(text="📄 Pase PDF", callback_data=f"pass:{booking_id}"),
+        if checkin_status in ("CHECKED_IN", "BOARDING_PASS_READY"):
+            buttons = [
+                [
+                    InlineKeyboardButton(text="🔄 Rechecar Estado", callback_data=f"recheck:{booking_id}"),
+                ],
+                [
+                    InlineKeyboardButton(text="📄 Ver Pase PDF", callback_data=f"pass_pdf:{booking_id}"),
+                    InlineKeyboardButton(text="🖼️ Ver Pase Imagen", callback_data=f"pass_img:{booking_id}"),
+                ],
+                [InlineKeyboardButton(text="🗑️ Eliminar Vuelo", callback_data=f"delete_select:{booking_id}")]
             ]
-        ]
-        if checkin_status not in ("CHECKED_IN", "BOARDING_PASS_READY"):
-            buttons.append([InlineKeyboardButton(text="🤖 Autorizar Auto Check-in", callback_data=f"consent:{booking_id}")])
-        buttons.append([InlineKeyboardButton(text="🗑️ Eliminar Vuelo", callback_data=f"delete_select:{booking_id}")])
+        else:
+            buttons = [
+                [InlineKeyboardButton(text="🔄 Rechecar Estado", callback_data=f"recheck:{booking_id}")],
+                [InlineKeyboardButton(text="🤖 Autorizar Auto Check-in", callback_data=f"consent:{booking_id}")],
+                [InlineKeyboardButton(text="📲 Check-in Ahora", callback_data=f"checkin:{booking_id}")],
+                [InlineKeyboardButton(text="🗑️ Eliminar Vuelo", callback_data=f"delete_select:{booking_id}")]
+            ]
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 
 
@@ -292,6 +310,8 @@ def _settings_keyboard(lang: str = "ES") -> InlineKeyboardMarkup:
             inline_keyboard=[
                 [InlineKeyboardButton(text="🔔 Enable Notifications", callback_data="settings:notifications_on")],
                 [InlineKeyboardButton(text="🔕 Disable Notifications", callback_data="settings:notifications_off")],
+                [InlineKeyboardButton(text="📄 Format: PDF", callback_data="settings:format_pdf")],
+                [InlineKeyboardButton(text="🖼️ Format: Image", callback_data="settings:format_image")],
                 [InlineKeyboardButton(text="🌐 Language: English", callback_data="settings:lang_en")],
                 [InlineKeyboardButton(text="⬅️ Back", callback_data="settings:back")],
             ]
@@ -300,6 +320,8 @@ def _settings_keyboard(lang: str = "ES") -> InlineKeyboardMarkup:
         inline_keyboard=[
             [InlineKeyboardButton(text="🔔 Activar Notificaciones", callback_data="settings:notifications_on")],
             [InlineKeyboardButton(text="🔕 Desactivar Notificaciones", callback_data="settings:notifications_off")],
+            [InlineKeyboardButton(text="📄 Formato: PDF", callback_data="settings:format_pdf")],
+            [InlineKeyboardButton(text="🖼️ Formato: Imagen", callback_data="settings:format_image")],
             [InlineKeyboardButton(text="🌐 Idioma: Español", callback_data="settings:lang_es")],
             [InlineKeyboardButton(text="⬅️ Volver", callback_data="settings:back")],
         ]
@@ -346,14 +368,36 @@ async def start(message: Message) -> None:
         await message.answer(text, reply_markup=_keyboard(message.from_user.id))
 
 
+def _settings_text(lang: str, notif_status: str, bp_format: str) -> str:
+    if lang == "EN":
+        return (
+            "⚙️ *User Settings*\n\n"
+            "Here you can customize your bot preferences. Tap any of the buttons below to enable/disable notifications, change the language, or select the format for your boarding passes (PDF or Image).\n\n"
+            "📊 *Current Status:*\n"
+            f"  • 🔔 Notifications: `{notif_status}`\n"
+            "  • 🌐 Language: `English` 🇺🇸\n"
+            f"  • 📄 Boarding Pass Format: `{bp_format}`\n\n"
+            "👇 *Tap the buttons below to change the settings:*"
+        )
+    else:
+        return (
+            "⚙️ *Configuración de Usuario*\n\n"
+            "Aquí puedes personalizar tus preferencias del bot. Toca cualquiera de los botones de abajo para activar/desactivar notificaciones, cambiar el idioma o elegir el formato en el que deseas recibir tus pases de abordar (PDF o Imagen).\n\n"
+            "📊 *Estado Actual:*\n"
+            f"  • 🔔 Notificaciones: `{notif_status}`\n"
+            "  • 🌐 Idioma: `Español` 🇲🇽\n"
+            f"  • 📄 Formato de Pase: `{bp_format}`\n\n"
+            "👇 *Toca los botones de abajo para cambiar la configuración:*"
+        )
+
+
 @dp.message(Command("settings"))
+@dp.message(F.text.casefold().in_({"⚙️ configuración", "⚙️ settings", "configuración", "settings"}))
 async def settings_cmd(message: Message) -> None:
     lang = _user_lang(message.from_user.id)
     notif_status = "ON" if store_sqlite.user_notifications.get(message.from_user.id, True) else "OFF"
-    if lang == "EN":
-        text = f"⚙️ *Settings*\n\n🔔 Notifications: {notif_status}\n🌐 Language: English"
-    else:
-        text = f"⚙️ *Configuración*\n\n🔔 Notificaciones: {notif_status}\n🌐 Idioma: Español"
+    bp_format = store_sqlite.user_boarding_pass_formats.get(message.from_user.id, "PDF")
+    text = _settings_text(lang, notif_status, bp_format)
     await message.answer(text, reply_markup=_settings_keyboard(lang), parse_mode="Markdown")
 
 
@@ -361,6 +405,7 @@ async def settings_cmd(message: Message) -> None:
 async def cb_settings(query: CallbackQuery) -> None:
     action = query.data.split(":")[1]
     lang = _user_lang(query.from_user.id)
+    notif_status = "ON" if store_sqlite.user_notifications.get(query.from_user.id, True) else "OFF"
     if action == "notifications_on":
         store_sqlite.user_notifications[query.from_user.id] = True
         store_sqlite.save()
@@ -369,73 +414,155 @@ async def cb_settings(query: CallbackQuery) -> None:
         store_sqlite.user_notifications[query.from_user.id] = False
         store_sqlite.save()
         await query.answer("🔕 Notifications disabled" if lang == "EN" else "🔕 Notificaciones desactivadas")
+    elif action == "format_pdf":
+        store_sqlite.user_boarding_pass_formats[query.from_user.id] = "PDF"
+        store_sqlite.save()
+        await query.answer("📄 Boarding pass format: PDF" if lang == "EN" else "📄 Formato de pase de abordar: PDF")
+    elif action == "format_image":
+        store_sqlite.user_boarding_pass_formats[query.from_user.id] = "IMAGE"
+        store_sqlite.save()
+        await query.answer("🖼️ Boarding pass format: IMAGE" if lang == "EN" else "🖼️ Formato de pase de abordar: Imagen")
     elif action == "lang_en":
         store_sqlite.user_languages[query.from_user.id] = "EN"
         store_sqlite.save()
-        await query.message.edit_text("🌐 Language switched to **English** 🇺🇸", reply_markup=_settings_keyboard("EN"), parse_mode="Markdown")
+        notif_status = "ON" if store_sqlite.user_notifications.get(query.from_user.id, True) else "OFF"
+        bp_format = store_sqlite.user_boarding_pass_formats.get(query.from_user.id, "PDF")
+        await query.message.edit_text(_settings_text("EN", notif_status, bp_format), reply_markup=_settings_keyboard("EN"), parse_mode="Markdown")
         return
     elif action == "lang_es":
         store_sqlite.user_languages[query.from_user.id] = "ES"
         store_sqlite.save()
-        await query.message.edit_text("🌐 Idioma cambiado a **Español** 🇲🇽", reply_markup=_settings_keyboard("ES"), parse_mode="Markdown")
+        notif_status = "ON" if store_sqlite.user_notifications.get(query.from_user.id, True) else "OFF"
+        bp_format = store_sqlite.user_boarding_pass_formats.get(query.from_user.id, "PDF")
+        await query.message.edit_text(_settings_text("ES", notif_status, bp_format), reply_markup=_settings_keyboard("ES"), parse_mode="Markdown")
         return
     elif action == "back":
-        await query.message.edit_text("⚙️ Settings" if lang == "EN" else "⚙️ Configuración", reply_markup=_settings_keyboard(lang))
+        notif_status = "ON" if store_sqlite.user_notifications.get(query.from_user.id, True) else "OFF"
+        bp_format = store_sqlite.user_boarding_pass_formats.get(query.from_user.id, "PDF")
+        await query.message.edit_text(_settings_text(lang, notif_status, bp_format), reply_markup=_settings_keyboard(lang), parse_mode="Markdown")
         return
-    await query.message.edit_reply_markup(reply_markup=_settings_keyboard(lang))
+
+    notif_status = "ON" if store_sqlite.user_notifications.get(query.from_user.id, True) else "OFF"
+    bp_format = store_sqlite.user_boarding_pass_formats.get(query.from_user.id, "PDF")
+    new_text = _settings_text(lang, notif_status, bp_format)
+    try:
+        await query.message.edit_text(new_text, reply_markup=_settings_keyboard(lang), parse_mode="Markdown")
+    except Exception:
+        await query.message.edit_reply_markup(reply_markup=_settings_keyboard(lang))
 
 
-@dp.message(F.text.casefold().in_({"ayuda", "help"}))
+@dp.message(F.text.casefold().in_({"ayuda", "help", "❓ ayuda", "❓ help"}))
 async def help_button(message: Message) -> None:
-    await start(message)
+    lang = _user_lang(message.from_user.id)
+    if lang == "EN":
+        text = (
+            "❓ *Help & Usage Guide*\n\n"
+            "This bot monitors your flights and performs automatic check-in. Here is how to use it:\n\n"
+            "1️⃣ *Add a Flight:*\n"
+            "   Tap any of the `➕ Add <Airline>` buttons below, and send the booking code (PNR) and passenger's last name in the shown format.\n\n"
+            "2️⃣ *Manage Flights:*\n"
+            "   Tap `📋 My Flights` to view your active flights. Each flight card has interactive buttons to:\n"
+            "     • 🔄 Recheck live status (gate, delays, terminal changes).\n"
+            "     • 🤖 Authorize / Run automatic check-in.\n"
+            "     • 📄 Get your boarding pass.\n\n"
+            "3️⃣ *Settings:*\n"
+            "   Tap `⚙️ Settings` to choose whether you receive your boarding pass as a PDF document or a Photo image, and toggle notifications."
+        )
+    else:
+        text = (
+            "❓ *Guía de Ayuda y Uso*\n\n"
+            "Este bot monitorea tus vuelos y realiza el check-in automático. Aquí tienes una guía de cómo usarlo:\n\n"
+            "1️⃣ *Agregar un Vuelo:*\n"
+            "   Toca cualquiera de los botones de `➕ Agregar <Aerolínea>` abajo y envía la clave de reservación (PNR) y el apellido del pasajero en el formato indicado.\n\n"
+            "2️⃣ *Gestionar Vuelos:*\n"
+            "   Toca `📋 Mis Vuelos` para ver tus vuelos activos. Cada tarjeta de vuelo cuenta con botones interactivos para:\n"
+            "     • 🔄 Rechecar el estado en tiempo real (puertas, retrasos, terminales).\n"
+            "     • 🤖 Autorizar / Ejecutar el check-in automático.\n"
+            "     • 📄 Obtener tu pase de abordar.\n\n"
+            "3️⃣ *Configuración:*\n"
+            "   Toca `⚙️ Configuración` para elegir si deseas recibir tu pase de abordar en formato PDF o Imagen (foto), y activar/desactivar alertas."
+        )
+    await message.answer(text, reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
 
 
-@dp.message(F.text.casefold().in_({"agregar volaris", "add volaris"}))
+@dp.message(F.text.casefold().in_({"agregar volaris", "add volaris", "➕ agregar volaris", "➕ add volaris"}))
 async def add_volaris_button(message: Message) -> None:
-    await message.answer(
-        "💜 *Agregar vuelo de Volaris*\n\n"
-        "Envíame tu código de reserva y tu apellido así:\n\n"
-        "👉 `/volaris LCYD6C Valencia`\n\n"
-        "Formato: `/volaris CODIGO APELLIDO`",
-        reply_markup=_keyboard(message.from_user.id),
-        parse_mode="Markdown",
-    )
+    lang = _user_lang(message.from_user.id)
+    if lang == "EN":
+        text = (
+            "💜 *Add Volaris Booking*\n\n"
+            "Please send the 6-character booking code (PNR) and the passenger's last name exactly as registered:\n\n"
+            "👉 `/volaris LCYD6C Valencia`\n\n"
+            "💡 *Tip:* The booking code consists of numbers and letters (e.g. LCYD6C). Make sure there are no spaces in the code."
+        )
+    else:
+        text = (
+            "💜 *Agregar reserva de Volaris*\n\n"
+            "Por favor, envíame el código de reservación de 6 caracteres (PNR) y el apellido del pasajero exactamente como está en tu boleto:\n\n"
+            "👉 `/volaris LCYD6C Valencia`\n\n"
+            "💡 *Sugerencia:* El código consta de letras y números (ej: LCYD6C). Asegúrate de escribirlo sin espacios en medio."
+        )
+    await message.answer(text, reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
 
 
-@dp.message(F.text.casefold().in_({"agregar viva", "add viva"}))
+@dp.message(F.text.casefold().in_({"agregar viva", "add viva", "➕ agregar viva", "➕ add viva"}))
 async def add_viva_button(message: Message) -> None:
-    await message.answer(
-        "💚 *Agregar vuelo de Viva Aerobus*\n\n"
-        "Envíame tu código de reserva y tu apellido así:\n\n"
-        "👉 `/viva VIV123 Garcia`\n\n"
-        "Formato: `/viva CODIGO APELLIDO`",
-        reply_markup=_keyboard(message.from_user.id),
-        parse_mode="Markdown",
-    )
+    lang = _user_lang(message.from_user.id)
+    if lang == "EN":
+        text = (
+            "💚 *Add Viva Aerobus Booking*\n\n"
+            "Please send the booking code (PNR) and the passenger's last name exactly as registered:\n\n"
+            "👉 `/viva VIV123 Garcia`\n\n"
+            "💡 *Tip:* You can find the booking code in your confirmation email. Ensure the last name matches the booking."
+        )
+    else:
+        text = (
+            "💚 *Agregar reserva de Viva Aerobus*\n\n"
+            "Por favor, envíame la clave de reservación (PNR) y el apellido del pasajero exactamente como están registrados:\n\n"
+            "👉 `/viva VIV123 Garcia`\n\n"
+            "💡 *Sugerencia:* Puedes encontrar tu clave en el correo de confirmación de tu compra. Verifica que el apellido sea idéntico al del boleto."
+        )
+    await message.answer(text, reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
 
 
-@dp.message(F.text.casefold().in_({"agregar aeromexico", "add aeromexico"}))
+@dp.message(F.text.casefold().in_({"agregar aeromexico", "add aeromexico", "➕ agregar aeromexico", "➕ add aeromexico", "agregar aeroméxico", "➕ agregar aeroméxico"}))
 async def add_aeromexico_button(message: Message) -> None:
-    await message.answer(
-        "🇲🇽 *Agregar vuelo de Aeroméxico*\n\n"
-        "Envíame tu PNR/eTicket y tu apellido así:\n\n"
-        "👉 `/aeromexico HUIITL Garcia`\n\n"
-        "Formato: `/aeromexico PNR_O_ETICKET APELLIDO`",
-        reply_markup=_keyboard(message.from_user.id),
-        parse_mode="Markdown",
-    )
+    lang = _user_lang(message.from_user.id)
+    if lang == "EN":
+        text = (
+            "🇲🇽 *Add Aeroméxico Booking*\n\n"
+            "Please send the 6-character PNR code or e-ticket number, followed by the passenger's last name:\n\n"
+            "👉 `/aeromexico HUIITL Garcia`\n\n"
+            "💡 *Tip:* You can use either the reservation code (PNR) or the ticket number (13-digit code starting with 139)."
+        )
+    else:
+        text = (
+            "🇲🇽 *Agregar reserva de Aeroméxico*\n\n"
+            "Por favor, envíame el código PNR de 6 caracteres o el número de boleto electrónico, seguido del apellido del pasajero:\n\n"
+            "👉 `/aeromexico HUIITL Garcia`\n\n"
+            "💡 *Sugerencia:* Puedes usar el código de reservación (PNR) o el número de boleto (código de 13 dígitos que inicia con 139)."
+        )
+    await message.answer(text, reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
 
 
-@dp.message(F.text.casefold().in_({"agregar united", "add united"}))
+@dp.message(F.text.casefold().in_({"agregar united", "add united", "➕ agregar united", "➕ add united"}))
 async def add_united_button(message: Message) -> None:
-    await message.answer(
-        "🇺🇸 *Agregar vuelo de United Airlines*\n\n"
-        "Envíame tu confirmación/eTicket y tu apellido así:\n\n"
-        "👉 `/united UA1234 Garcia`\n\n"
-        "Formato: `/united CONFIRMACION_O_ETICKET APELLIDO`",
-        reply_markup=_keyboard(message.from_user.id),
-        parse_mode="Markdown",
-    )
+    lang = _user_lang(message.from_user.id)
+    if lang == "EN":
+        text = (
+            "🇺🇸 *Add United Airlines Booking*\n\n"
+            "Please send the confirmation code (PNR) and the passenger's last name:\n\n"
+            "👉 `/united UA1234 Garcia`\n\n"
+            "💡 *Tip:* The confirmation code is usually 6 characters long and can be found in your itinerary details."
+        )
+    else:
+        text = (
+            "🇺🇸 *Agregar reserva de United Airlines*\n\n"
+            "Por favor, envíame la clave de confirmación (PNR) y el apellido del pasajero:\n\n"
+            "👉 `/united UA1234 Garcia`\n\n"
+            "💡 *Sugerencia:* La clave de confirmación suele ser de 6 caracteres y se encuentra en los detalles de tu itinerario."
+        )
+    await message.answer(text, reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
 
 
 @dp.message(Command("add"))
@@ -493,33 +620,13 @@ async def _create_booking(message: Message, airline: str, pnr: str, last_name: s
     }
     lang = _user_lang(message.from_user.id)
     try:
-        from app.schemas import BookingCreate
-        from app.services.bookings import booking_service
-        booking_obj = await booking_service.create_booking(BookingCreate(**payload))
-        booking_dict = {
-            "id": str(booking_obj.id),
-            "airline": booking_obj.airline.value,
-            "passenger_names": booking_obj.passenger_names,
-            "segments": [
-                {
-                    "flight_number": seg.flight_number,
-                    "departure_airport": seg.departure_airport,
-                    "arrival_airport": seg.arrival_airport,
-                    "scheduled_departure": seg.scheduled_departure.isoformat(),
-                    "operational_status": seg.operational_status,
-                    "terminal": seg.terminal,
-                    "gate": seg.gate,
-                    "seat": seg.seat,
-                }
-                for seg in booking_obj.segments
-            ],
-            "checkin_status": booking_obj.checkin_status.value,
-            "payment_summary": {
-                "amount": booking_obj.payment_summary.amount,
-                "currency": booking_obj.payment_summary.currency,
-                "method": booking_obj.payment_summary.method,
-            } if booking_obj.payment_summary else None,
-        }
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=90) as client:
+            response = await client.post("/v1/bookings", json=payload)
+            
+        if response.status_code >= 400:
+            raise ValueError(response.text)
+            
+        booking_dict = response.json()
         await message.answer(
             _booking_added_text(booking_dict),
             reply_markup=_flight_inline_keyboard(booking_dict["id"], booking_dict["checkin_status"], lang),
@@ -546,7 +653,7 @@ async def _create_booking(message: Message, airline: str, pnr: str, last_name: s
 
 
 @dp.message(Command("flights"))
-@dp.message(F.text.casefold().in_({"mis vuelos", "my flights"}))
+@dp.message(F.text.casefold().in_({"mis vuelos", "my flights", "📋 mis vuelos", "📋 my flights"}))
 async def flights(message: Message) -> None:
     lang = _user_lang(message.from_user.id)
     try:
@@ -667,26 +774,47 @@ async def cb_recheck_segment(query: CallbackQuery) -> None:
         await query.answer("🔄 Revisado.", show_alert=False)
 
 
-@dp.callback_query(F.data.startswith("pass:"))
-async def cb_pass(query: CallbackQuery) -> None:
+@dp.callback_query(F.data.startswith("pass_pdf:"))
+async def cb_pass_pdf(query: CallbackQuery) -> None:
+    await cb_pass_format(query, "PDF")
+
+
+@dp.callback_query(F.data.startswith("pass_img:"))
+async def cb_pass_img(query: CallbackQuery) -> None:
+    await cb_pass_format(query, "IMAGE")
+
+
+async def cb_pass_format(query: CallbackQuery, fmt: str) -> None:
     booking_id = query.data.split(":")[1]
+    await query.answer(f"📄 Generando pase en {fmt}...")
     try:
-        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=90) as client:
             res = await client.get(f"/v1/bookings/{booking_id}", params={"telegram_id": query.from_user.id})
         if res.status_code == 200:
             booking = res.json()
-            pdf_path = generate_boarding_pass_pdf(booking, {})
-            await query.message.answer_document(
-                FSInputFile(pdf_path),
-                caption=f"🎟️ *Pase de Abordar PDF*\n\n✈️ {booking['segments'][0]['flight_number']}\n👤 Pasajero: {', '.join(booking.get('passenger_names', []))}",
-                parse_mode="Markdown",
-            )
-            await query.answer("📄 Pase de abordar enviado.")
+            file_path = await generate_boarding_pass_file(booking, fmt)
+            caption = f"🎟️ *Pase de Abordar {fmt}*\n\n✈️ {booking['segments'][0]['flight_number']}\n👤 Pasajero: {', '.join(booking.get('passenger_names', []))}"
+            try:
+                if fmt == "IMAGE":
+                    await query.message.answer_photo(
+                        FSInputFile(file_path),
+                        caption=caption,
+                        parse_mode="Markdown",
+                    )
+                else:
+                    await query.message.answer_document(
+                        FSInputFile(file_path),
+                        caption=caption,
+                        parse_mode="Markdown",
+                    )
+            finally:
+                if file_path.exists():
+                    file_path.unlink()
         else:
-            await query.answer("❌ No se encontró el pase de abordar.", show_alert=True)
+            await query.message.answer("❌ No se encontró el pase de abordar.")
     except Exception as e:
         logging.error(f"Error pass callback: {e}")
-        await query.answer("❌ Error al obtener el pase.", show_alert=True)
+        await query.message.answer("❌ Error al obtener el pase.")
 
 
 @dp.callback_query(F.data.startswith("consent:"))
@@ -713,6 +841,53 @@ async def cb_consent(query: CallbackQuery) -> None:
     except Exception as e:
         logging.error(f"Error consent callback: {e}")
         await query.answer("✅ Consentimiento registrado.")
+
+
+@dp.callback_query(F.data.startswith("checkin:"))
+async def cb_checkin(query: CallbackQuery) -> None:
+    booking_id = query.data.split(":")[1]
+    lang = _user_lang(query.from_user.id)
+    await query.answer("🤖 Procesando check-in...")
+    try:
+        async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=90) as client:
+            response = await client.post(f"/v1/bookings/{booking_id}/checkin", params={"telegram_id": query.from_user.id})
+        if response.status_code >= 400:
+            await query.message.answer(f"❌ Error: {response.text}")
+            return
+        booking = response.json()
+        if booking.get("checkin_status") in ("CHECKED_IN", "BOARDING_PASS_READY"):
+            fmt = store_sqlite.user_boarding_pass_formats.get(query.from_user.id, "PDF")
+            file_path = await generate_boarding_pass_file(booking, fmt)
+            caption = (
+                "🎟️ *¡Check-in completado con éxito!*\n\n"
+                f"{_booking_text(booking)}\n\n"
+                f"📄 *Se adjunta tu Pase de Abordar oficial en {fmt}.*"
+            )
+            try:
+                if fmt == "IMAGE":
+                    await query.message.answer_photo(
+                        FSInputFile(file_path),
+                        caption=caption,
+                        parse_mode="Markdown",
+                    )
+                else:
+                    await query.message.answer_document(
+                        FSInputFile(file_path),
+                        caption=caption,
+                        parse_mode="Markdown",
+                    )
+            finally:
+                if file_path.exists():
+                    file_path.unlink()
+        else:
+            await query.message.edit_text(
+                _booking_text(booking) + f"\n\n📲 *Estado de Check-in:* {_checkin_label(booking['checkin_status'])}",
+                reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
+                parse_mode="Markdown",
+            )
+    except Exception as e:
+        logging.error(f"Error checkin callback: {e}")
+        await query.message.answer("❌ Error al procesar check-in.")
 
 
 @dp.callback_query(F.data.startswith("delete_select:"))
@@ -921,17 +1096,31 @@ async def checkin_command(message: Message) -> None:
             return
         booking = response.json()
         if booking.get("checkin_status") in ("CHECKED_IN", "BOARDING_PASS_READY"):
-            pdf_file = generate_boarding_pass_pdf(booking, {})
-            await message.answer_document(
-                FSInputFile(pdf_file),
-                caption=(
-                    "🎟️ *¡Check-in completado con éxito!*\n\n"
-                    f"{_booking_text(booking)}\n\n"
-                    "📄 *Se adjunta tu Pase de Abordar oficial en PDF.*"
-                ),
-                reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
-                parse_mode="Markdown",
+            fmt = store_sqlite.user_boarding_pass_formats.get(message.from_user.id, "PDF")
+            file_path = await generate_boarding_pass_file(booking, fmt)
+            caption = (
+                "🎟️ *¡Check-in completado con éxito!*\n\n"
+                f"{_booking_text(booking)}\n\n"
+                f"📄 *Se adjunta tu Pase de Abordar oficial en {fmt}.*"
             )
+            try:
+                if fmt == "IMAGE":
+                    await message.answer_photo(
+                        FSInputFile(file_path),
+                        caption=caption,
+                        reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
+                        parse_mode="Markdown",
+                    )
+                else:
+                    await message.answer_document(
+                        FSInputFile(file_path),
+                        caption=caption,
+                        reply_markup=_flight_inline_keyboard(booking["id"], booking["checkin_status"], lang),
+                        parse_mode="Markdown",
+                    )
+            finally:
+                if file_path.exists():
+                    file_path.unlink()
         else:
             await message.answer(
                 f"📲 *Estado de Check-in:* {_checkin_label(booking['checkin_status'])}\n\n"
@@ -948,7 +1137,7 @@ async def checkin_command(message: Message) -> None:
 async def pass_command(message: Message) -> None:
     booking_id = _single_arg(message)
     if not booking_id:
-        await message.answer("💡 Uso: `/pass <codigo_interno>` o toca el botón 📄 Pase PDF.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
+        await message.answer("💡 Uso: `/pass <codigo_interno>` o toca el botón 📄 Pase de Abordar.", reply_markup=_keyboard(message.from_user.id), parse_mode="Markdown")
         return
     try:
         async with httpx.AsyncClient(base_url=settings.api_base_url, timeout=15) as client:
@@ -957,21 +1146,35 @@ async def pass_command(message: Message) -> None:
             await message.answer(f"❌ No se encontró la reserva: {response.text}", reply_markup=_keyboard(message.from_user.id))
             return
         booking = response.json()
-        pdf_file = generate_boarding_pass_pdf(booking, {})
-        await message.answer_document(
-            FSInputFile(pdf_file),
-            caption=(
-                "🎟️ *Pase de Abordar Oficial (PDF)*\n\n"
-                f"✈️ {_airline_label(booking['airline'])} — {booking['segments'][0]['flight_number']}\n"
-                f"👤 Pasajero: {', '.join(booking.get('passenger_names', []))}\n\n"
-                "📄 Documento adjunto para uso sin conexión."
-            ),
-            reply_markup=_keyboard(message.from_user.id),
-            parse_mode="Markdown",
+        fmt = store_sqlite.user_boarding_pass_formats.get(message.from_user.id, "PDF")
+        file_path = await generate_boarding_pass_file(booking, fmt)
+        caption = (
+            f"🎟️ *Pase de Abordar Oficial ({fmt})*\n\n"
+            f"✈️ {_airline_label(booking['airline'])} — {booking['segments'][0]['flight_number']}\n"
+            f"👤 Pasajero: {', '.join(booking.get('passenger_names', []))}\n\n"
+            "📄 Documento adjunto para uso sin conexión."
         )
+        try:
+            if fmt == "IMAGE":
+                await message.answer_photo(
+                    FSInputFile(file_path),
+                    caption=caption,
+                    reply_markup=_keyboard(message.from_user.id),
+                    parse_mode="Markdown",
+                )
+            else:
+                await message.answer_document(
+                    FSInputFile(file_path),
+                    caption=caption,
+                    reply_markup=_keyboard(message.from_user.id),
+                    parse_mode="Markdown",
+                )
+        finally:
+            if file_path.exists():
+                file_path.unlink()
     except Exception as e:
         logging.error(f"Error pass cmd: {e}")
-        await message.answer("📄 No se pudo obtener el pase en PDF.", reply_markup=_keyboard(message.from_user.id))
+        await message.answer("📄 No se pudo obtener el pase.", reply_markup=_keyboard(message.from_user.id))
 
 
 @dp.message(Command("delete"))
@@ -1043,17 +1246,31 @@ async def _background_monitor_loop(bot: Bot) -> None:
                         if res.status_code == 200:
                             updated_b = res.json()
                             if updated_b.get("checkin_status") in ("CHECKED_IN", "BOARDING_PASS_READY"):
-                                pdf_path = generate_boarding_pass_pdf(updated_b, {})
-                                await bot.send_document(
-                                    chat_id=booking.telegram_id,
-                                    document=FSInputFile(pdf_path),
-                                    caption=(
-                                        "🎟️ *¡Check-in completado de forma automática e invisible!*\n\n"
-                                        f"{_booking_text(updated_b)}\n\n"
-                                        "📄 *Se adjunta tu Pase de Abordar oficial en PDF.*"
-                                    ),
-                                    parse_mode="Markdown",
+                                fmt = store_sqlite.user_boarding_pass_formats.get(booking.telegram_id, "PDF")
+                                file_path = await generate_boarding_pass_file(updated_b, fmt)
+                                caption = (
+                                    "🎟️ *¡Check-in completado de forma automática e invisible!*\n\n"
+                                    f"{_booking_text(updated_b)}\n\n"
+                                    f"📄 *Se adjunta tu Pase de Abordar oficial en {fmt}.*"
                                 )
+                                try:
+                                    if fmt == "IMAGE":
+                                        await bot.send_photo(
+                                            chat_id=booking.telegram_id,
+                                            photo=FSInputFile(file_path),
+                                            caption=caption,
+                                            parse_mode="Markdown",
+                                        )
+                                    else:
+                                        await bot.send_document(
+                                            chat_id=booking.telegram_id,
+                                            document=FSInputFile(file_path),
+                                            caption=caption,
+                                            parse_mode="Markdown",
+                                        )
+                                finally:
+                                    if file_path.exists():
+                                        file_path.unlink()
 
                 # 2. Recheck for changes and send notifications
                 if booking.telegram_id in store_sqlite.user_notifications and store_sqlite.user_notifications[booking.telegram_id]:

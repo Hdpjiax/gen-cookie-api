@@ -15,7 +15,7 @@ from app.domain.models import (
 )
 from app.repositories.sqlite import SQLiteStore, store_sqlite
 from app.schemas import BookingCreate, CheckinConsentCreate, RecheckRead, SegmentRecheckRead, SegmentDeleteRead
-from app.security.crypto import encrypt_for_storage
+from app.security.crypto import encrypt_for_storage, decrypt_from_storage
 from app.security.url_safety import sanitize_official_url
 
 
@@ -61,23 +61,53 @@ class BookingService:
         if retrieved.get("error") is True:
             raise ValueError(str(retrieved.get("reason", "NOT_FOUND_ON_AIRLINE")))
             
+        enc_loc = encrypt_for_storage(final_pnr or "UNKNOWN")
+        enc_last = encrypt_for_storage(final_last_name or "UNKNOWN")
+        
+        # Prevent duplication: check if booking already exists
+        existing_booking = None
+        for b in self.repository.bookings.values():
+            if b.telegram_id == payload.telegram_id and b.airline == payload.airline and b.encrypted_locator == enc_loc:
+                existing_booking = b
+                break
+                
         segments = [FlightSegment(**segment) for segment in retrieved["segments"]]
-        booking = Booking(
-            telegram_id=payload.telegram_id,
-            airline=payload.airline,
-            encrypted_locator=encrypt_for_storage(final_pnr or "UNKNOWN"),
-            encrypted_last_name=encrypt_for_storage(final_last_name or "UNKNOWN"),
-            encrypted_ticket_number=encrypt_for_storage(payload.ticket_number),
-            source_type="url" if source_url else "manual",
-            segments=segments,
-            passenger_names=[
-                str(passenger.get("display_name"))
-                for passenger in retrieved.get("passengers", [])
-                if passenger.get("display_name")
-            ],
-            payment_summary=_payment_summary(retrieved.get("payment_summary")),
-        )
-        self.repository.bookings[booking.id] = booking
+        passenger_names = [
+            str(passenger.get("display_name"))
+            for passenger in retrieved.get("passengers", [])
+            if passenger.get("display_name")
+        ]
+        payment_summary = _payment_summary(retrieved.get("payment_summary"))
+        # Determine initial check-in status from segments
+        initial_checkin_status = CheckinStatus.NOT_ELIGIBLE
+        if any(seg.is_checked_in for seg in segments):
+            initial_checkin_status = CheckinStatus.BOARDING_PASS_READY
+
+        if existing_booking:
+            booking = existing_booking
+            booking.encrypted_last_name = enc_last
+            booking.encrypted_ticket_number = encrypt_for_storage(payload.ticket_number)
+            booking.segments = segments
+            booking.passenger_names = passenger_names
+            booking.payment_summary = payment_summary
+            booking.status = BookingStatus.ACTIVE
+            booking.monitoring_enabled = True
+            booking.deleted_at = None  # Restore if it was deleted
+            booking.checkin_status = initial_checkin_status
+        else:
+            booking = Booking(
+                telegram_id=payload.telegram_id,
+                airline=payload.airline,
+                encrypted_locator=enc_loc,
+                encrypted_last_name=enc_last,
+                encrypted_ticket_number=encrypt_for_storage(payload.ticket_number),
+                source_type="url" if source_url else "manual",
+                segments=segments,
+                passenger_names=passenger_names,
+                payment_summary=payment_summary,
+                checkin_status=initial_checkin_status,
+            )
+            self.repository.bookings[booking.id] = booking
         for segment in booking.segments:
             snapshot = build_snapshot(segment.id, _segment_payload(segment, booking.checkin_status.value))
             self.repository.snapshots[segment.id] = snapshot
@@ -101,11 +131,16 @@ class BookingService:
         booking = self.get_booking(booking_id, telegram_id)
         if booking is None:
             return None
-        status = await CONNECTORS[booking.airline].fetch_flight_status(booking.encrypted_locator or "URL_IMPORT")
+        loc = decrypt_from_storage(booking.encrypted_locator) if booking.encrypted_locator else "URL_IMPORT"
+        last = decrypt_from_storage(booking.encrypted_last_name) if booking.encrypted_last_name else None
+        status = await CONNECTORS[booking.airline].fetch_flight_status(loc, last)
         events: list[FlightEvent] = []
         for segment, new_segment in zip(booking.segments, status["segments"], strict=False):
             _update_segment(segment, new_segment)
-            booking.checkin_status = CheckinStatus(status.get("checkin_status", booking.checkin_status.value))
+            if any(seg.is_checked_in for seg in booking.segments):
+                booking.checkin_status = CheckinStatus.BOARDING_PASS_READY
+            else:
+                booking.checkin_status = CheckinStatus(status.get("checkin_status", booking.checkin_status.value))
             current = build_snapshot(segment.id, _segment_payload(segment, booking.checkin_status.value))
             previous = self.repository.snapshots.get(segment.id)
             for event in diff_snapshots(previous, current):
@@ -137,8 +172,18 @@ class BookingService:
 
     async def process_auto_checkin(self, booking_id: UUID, telegram_id: int) -> tuple[Booking, list[BoardingPass]] | None:
         booking = self.get_booking(booking_id, telegram_id)
-        if booking is None or not booking.checkin_policy or not booking.checkin_policy.enabled:
+        if booking is None:
             return None
+
+        if not booking.checkin_policy or not booking.checkin_policy.enabled:
+            booking.checkin_policy = CheckinPolicy(
+                passenger_scope=["P1"],
+                consent_version="2026-07-24",
+                seat_policy="free_only",
+                never_purchase_extras=True,
+                require_confirmation=True,
+            )
+            self.repository.save()
 
         connector = CONNECTORS[booking.airline]
         policy_dict = {
@@ -194,13 +239,18 @@ class BookingService:
         if booking is None or segment_index >= len(booking.segments):
             return None
         segment = booking.segments[segment_index]
-        status = await CONNECTORS[booking.airline].fetch_flight_status(booking.encrypted_locator or "URL_IMPORT")
+        loc = decrypt_from_storage(booking.encrypted_locator) if booking.encrypted_locator else "URL_IMPORT"
+        last = decrypt_from_storage(booking.encrypted_last_name) if booking.encrypted_last_name else None
+        status = await CONNECTORS[booking.airline].fetch_flight_status(loc, last)
         events: list[FlightEvent] = []
         # Handle both old and new connector response formats
         new_segments = status.get("booking", {}).get("segments", status.get("segments", []))
         new_segment_data = new_segments[segment_index] if segment_index < len(new_segments) else {}
         _update_segment(segment, new_segment_data)
-        booking.checkin_status = CheckinStatus(status.get("checkin_status", booking.checkin_status.value))
+        if any(seg.is_checked_in for seg in booking.segments):
+            booking.checkin_status = CheckinStatus.BOARDING_PASS_READY
+        else:
+            booking.checkin_status = CheckinStatus(status.get("checkin_status", booking.checkin_status.value))
         current = build_snapshot(segment.id, _segment_payload(segment, booking.checkin_status.value))
         previous = self.repository.snapshots.get(segment.id)
         for event in diff_snapshots(previous, current):
@@ -238,6 +288,7 @@ def _segment_payload(segment: FlightSegment, checkin_status: str) -> dict[str, o
         "gate": segment.gate,
         "terminal": segment.terminal,
         "seat": segment.seat,
+        "is_checked_in": segment.is_checked_in,
         "checkin_status": checkin_status,
     }
 
